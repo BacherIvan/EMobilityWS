@@ -1,0 +1,9 @@
+# BROWSERSLIST RULES
+# used by webpack, babel, autoprefixer, eslint, ...
+# each rules is seperated by newline
+# for testing, look here: https://browserl.ist/
+
+last 3 version
+not ie <= 12
+not ie_mob <= 12
+not <= 1%

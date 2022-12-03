@@ -1,0 +1,15 @@
+/*  ==========================================================================
+    VARIABLES
+    Collection of all variables
+
+    INFO:
+    - try to use variables as much as possible, it makes life easier
+    - try to use meaningful prefixes, e.g. "$clr-" for color variables
+      or "$fs-" for font-sizes
+    ========================================================================== */
+
+@import 'lib/class-names';
+@import 'lib/colors';
+@import 'lib/dimensions';
+@import 'lib/media-queries';
+@import 'lib/typography';

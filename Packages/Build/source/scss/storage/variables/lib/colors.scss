@@ -1,0 +1,39 @@
+/*  ==========================================================================
+    COLORS
+    List all colors concerning your project here
+
+    INFO:
+    - use for your colors at least the prefix "$clr-"
+    ========================================================================== */
+
+// default
+$clr-black: #000000;
+$clr-white: #FFFFFF;
+$clr-correct: #008000;
+$clr-error: #E8002D;
+$clr-warning: #e8c305;
+$clr-whatsapp: #3EA021;
+
+// emobility.tk ci
+$clr-tk-red: #ae173b;
+$clr-tk-grey: #c5c6c6;
+
+// your project ci
+$clr-tk-grey-dark: #041319;
+$clr-tk-grey-custom: #0e1c22;
+$clr-tk-grey-light: #17252b;
+$clr-tk-grey-secondary: #09181E;
+$clr-tk-grey-team: #6e6e6e;
+$clr-tk-grey-hover: #a7a7a7;
+$clr-tk-twine: #C59960;
+
+// specified (should be always last, so above defined colors can be reused here!)
+$clr-number: rgba($clr-white, 0.15);
+$clr-overline: $clr-white;
+$clr-overline-before: rgba($clr-white, 0.5);
+$clr-headline: $clr-white;
+$clr-rte-text: $clr-white;
+$clr-link: $clr-white;
+$clr-link-hover: rgba($clr-white, 0.5);
+$clr-button: $clr-white;
+$clr-button-before: rgba($clr-white, 0.5);

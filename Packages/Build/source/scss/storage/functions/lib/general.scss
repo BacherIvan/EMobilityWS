@@ -1,0 +1,25 @@
+/*  ==========================================================================
+    GENERAL
+    Useful global functions
+    ========================================================================== */
+
+// calculate em (https://css-tricks.com/snippets/sass/px-to-em-functions/)
+@function em($target, $context: 10) {
+  @return ($target / $context) * 1em;
+}
+
+// strip unit from value
+// means: 10em -> 10
+// means: 20px -> 20
+// means: 30 -> 30
+@function strip-unit($number) {
+  @if type-of($number) == 'number' and not unitless($number) {
+    @return $number / ($number * 0 + 1);
+  }
+  @return $number;
+}
+
+// convert em to px
+@function convEmToPx($value) {
+  @return strip-unit($value) * 10;
+}

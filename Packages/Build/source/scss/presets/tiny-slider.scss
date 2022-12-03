@@ -1,0 +1,16 @@
+/*  ==========================================================================
+    TINY SLIDER
+    Custom css rules for the tiny-slider module
+
+    INFO:
+    - don't change anything here
+    ========================================================================== */
+
+/*
+ * To reset calculated font-size from tiny slider,
+ * so the font-sizes set with em inside the item were correct displayed
+ */
+.tns-slider,
+.tns-item {
+  font-size: inherit !important;
+}

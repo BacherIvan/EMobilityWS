@@ -1,0 +1,23 @@
+/*  ==========================================================================
+    RTE
+     specific rules for the Rich Text Editor (ckeditor)
+    ========================================================================== */
+
+/*
+ * This rules come from the Typo3's RTE textfield's.
+ * You can style it as you wish.
+ */
+.T3-rte-align {
+  &--left {
+    text-align: left !important;
+  }
+  &--center {
+    text-align: center !important;
+  }
+  &--right {
+    text-align: right !important;
+  }
+  &--justify {
+    text-align: justify !important;
+  }
+}

@@ -1,0 +1,151 @@
+/*  ==========================================================================
+    VISTA
+    Helper to add base style to the vista output.
+
+    INFO:
+    - Usage example:
+      @include vista(100vh, 75vh, 100vh, 60vh, true);
+    ========================================================================== */
+
+@mixin vista(
+  $prefix,              // prefix
+  $hgt-desktop-full,    // desktop height if "hero element - fullscreen" is set (e.g. 100vh)
+  $hgt-desktop-half,    // desktop height if "hero element - default" is set (e.g. 75vh)
+  $min-hgt-desktop,     // desktop min height (e.g. 650px)
+  $hgt-tablet-full,     // tablet height if "hero element - fullscreen" is set (e.g. 100vh)
+  $hgt-tablet-half,     // tablet height if "hero element - default" is set (e.g. 60vh)
+  $hgt-mobile-full,     // mobile height if "hero element - fullscreen" is set (e.g. 100vh)
+  $hgt-mobile-half,     // mobile height if "hero element - default" is set (e.g. 60vh)
+  $opt-mobile-full,     // activate/deactivate full hero on mobile devices (true/false)
+) {
+  &__vista {
+    background-color: $clr-black;
+    overflow: hidden;
+
+    // --- children ---
+    &__slide {
+      display: none;
+      &:first-child,
+      &.tns-item {
+        display: block;
+      }
+      &.tns-item {
+        float: left;
+      }
+    }
+      &__item {
+        @include img-responsive-PARENT();
+        overflow: hidden;
+        position: relative;
+        width: 100%;
+        iframe,
+        video {
+          height: 100%;
+          left: 0;
+          position: absolute;
+          top: 0;
+          width: 100%;
+          z-index: 5;
+        }
+        iframe {
+          border: 0;
+        }
+        video {
+          @include img-cover();
+        }
+        &--video {
+          background-color: $clr-black;
+        }
+      }
+
+    // --- properties ---
+    &.tns-slider {
+      @include clearfix();
+      background-color: transparent;
+    }
+  }
+
+  /* RESPONSIVE
+   * --------------------------------------------------------------------------- */
+
+  @media #{$mq-landscape-desktop} {
+    &__vista {
+
+      // --- children ---
+      &__item {
+        @include img-cover-PARENT();
+        min-height: $min-hgt-desktop;
+      }
+
+      // --- properties ---
+      &[data-hero-layout="half"] {
+        #{$prefix}__vista {
+          &__item {
+            height: $hgt-desktop-half;
+          }
+        }
+      }
+      &[data-hero-layout="full"] {
+        #{$prefix}__vista {
+          &__item {
+            height: $hgt-desktop-full;
+          }
+        }
+      }
+    }
+  }
+
+  @if $opt-mobile-full {
+    @media #{$mq-portrait-tablet} {
+      &__vista {
+
+        // --- children ---
+        &__item {
+          @include img-cover-PARENT();
+        }
+
+        // --- properties ---
+        &[data-hero-layout="half"] {
+          #{$prefix}__vista {
+            &__item {
+              height: $hgt-tablet-half;
+            }
+          }
+        }
+        &[data-hero-layout="full"] {
+          #{$prefix}__vista {
+            &__item {
+              height: $hgt-tablet-full;
+            }
+          }
+        }
+      }
+    }
+
+    @media #{$mq-portrait-phone} {
+      &__vista {
+
+        // --- children ---
+        &__item {
+          @include img-cover-PARENT();
+        }
+
+        // --- properties ---
+        &[data-hero-layout="half"] {
+          #{$prefix}__vista {
+            &__item {
+              height: $hgt-mobile-half;
+            }
+          }
+        }
+        &[data-hero-layout="full"] {
+          #{$prefix}__vista {
+            &__item {
+              height: $hgt-mobile-full;
+            }
+          }
+        }
+      }
+    }
+  }
+}

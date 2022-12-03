@@ -1,0 +1,37 @@
+/*  ==========================================================================
+    MEDIA QUERIES
+    Collection of media queries.
+    ========================================================================== */
+
+// descending steps (normal)
+$mq-desktop-large: "(max-width: 1920px)";
+$mq-desktop-small: "(max-width: 1600px)";
+$mq-laptop: "(max-width: 1366px)";
+$mq-tablet: "(max-width: 1024px)";
+$mq-phablet: "(max-width: 767px)";
+$mq-phone: "(max-width: 480px)";
+$mq-phone-small: "(max-width: 350px)";
+
+// ascending steps
+$mq-desktop-large-asc: "(min-width: 1921px)";
+$mq-desktop-small-asc: "(min-width: 1601px)";
+$mq-laptop-asc: "(min-width: 1367px)";
+$mq-tablet-asc: "(min-width: 1025px)";
+$mq-phablet-asc: "(min-width: 768px)";
+$mq-phone-asc: "(min-width: 481px)";
+$mq-phone-small-asc: "(min-width: 351px)";
+
+// special steps
+$mq-landscape-desktop: "(min-width: 1025px) and (orientation: landscape)";
+$mq-landscape-mobile: "(max-width: 1024px) and (orientation: landscape)";
+$mq-portrait-tablet: "(max-width: 1024px) and (orientation: portrait)";
+$mq-portrait-phone: "(max-width: 767px) and (orientation: portrait)";
+$mq-mobile-no: "(min-width: 1025px)";
+$mq-mobile-yes: "(max-width: 1024px)";
+
+// browser detection
+$mq-ff-detection: "(min--moz-device-pixel-ratio:0)";
+$mq-ie-detection: "(-ms-high-contrast: active) and (-ms-high-contrast: none)";
+
+// customs steps
+// ..

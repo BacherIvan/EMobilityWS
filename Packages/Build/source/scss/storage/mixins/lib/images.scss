@@ -1,0 +1,61 @@
+/*  ==========================================================================
+    IMAGES
+    Collection of all helpers for images
+
+    INFO:
+    - all mixins should start with "img" as prefix
+    ========================================================================== */
+
+// responsive image
+@mixin img-responsive() {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+@mixin img-responsive-PARENT() {
+  img {
+    @include img-responsive();
+  }
+}
+
+// cover image
+@mixin img-cover() {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+@mixin img-cover-PARENT() {
+  img {
+    @include img-cover();
+  }
+}
+
+// contain image
+@mixin img-contain() {
+  height: 100%;
+  object-fit: contain;
+  width: 100%;
+}
+@mixin img-contain-PARENT() {
+  img {
+    @include img-contain();
+  }
+}
+
+// cover image reset
+@mixin img-cover-reset() {
+  height: auto;
+  object-fit: none; /* fallback because "unset" does not work/exist according to "https://developer.mozilla.org/de/docs/Web/CSS/object-fit" */
+  object-fit: unset;
+  width: auto;
+}
+
+// image crisp edges rendering (ATTENTION: don't use "image-rendering: -moz-crisp-edges;" because it doesn't work good in firefox!)
+@mixin img-rendering-crisp-edges() {
+  image-rendering: -o-crisp-edges;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+}

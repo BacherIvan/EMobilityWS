@@ -1,0 +1,56 @@
+/*  ==========================================================================
+    TYPOGRAPHY
+    Font settings concerning your project.
+
+    INFO:
+    - don't delete anything!
+    - use changes in here with care
+    - try to use prefixes (f.e. "ff" for "font-family", "fs" for "font-size", "fw" for "font-weight" ecc.)
+    - don't put all properties in here, only well selected ones (it's not a trashcan!)
+    ========================================================================== */
+
+// font families
+$ff-primary: 'Inter', sans-serif;
+
+// font sizes
+$fs-button: 14;
+$fs-button-tablet: 13;
+$fs-button-mobile: 12;
+$fs-number: 90;
+$fs-number-tablet: 80;
+$fs-number-mobile: 75;
+$fs-headline: 50;
+$fs-headline-tablet: 45;
+$fs-headline-mobile: 36;
+$fs-overline: 15;
+$fs-overline-tablet: 15;
+$fs-overline-mobile: 14;
+$fs-text: 14;
+$fs-text-tablet: 14;
+$fs-text-mobile: 14;
+$fs-button: 14;
+$fs-button-tablet: 14;
+$fs-button-mobile: 14;
+
+// font weights
+$fw-bold: 600;
+$fw-light: 300;
+$fw-semi-bold: 500;
+$fw-regular: 400;
+
+// letter spacing
+$ls-desktop: 5;
+$ls-mobile: 3;
+
+// line heights
+$lh-body: 1.4;
+$lh-headline: 1.1;
+$lh-overline: 1.1;
+$lh-text: 1.8;
+$lh-number: 0.8;
+$lh-button: 2.7;
+
+// opacity
+$op-text: 1;
+$op-text-mobile: 0.65;
+

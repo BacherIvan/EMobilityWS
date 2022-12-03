@@ -1,0 +1,491 @@
+/*  ==========================================================================
+    GLOBAL
+    Styling for general parts which affect the whole page, like:
+    - Text Selection
+    - Typography
+    - Loaders
+    - ...
+
+    INFO:
+    - adjust the preconfigured code relevant for your project (eg. colors,
+        font-family ...)
+    - use it with care, its not a trash can!
+    - contributions for the kickstarter are welcome!
+    ========================================================================== */
+
+@import 'source/scss/storage/storage';
+
+/* VARS
+ * --------------------------------------------------------------------------- */
+
+// selection
+$clr-selection: $clr-white;
+$clr-selection-bg: $clr-black;
+
+// scroll bar
+$clr-scroll-track: $clr-hmm-grey-dark;
+$clr-scroll-thumb: $clr-white;
+
+// typography
+$clr-body: $clr-white;
+$ff-body: 'Inter', sans-serif;
+$fs-body-default: 68.8%;
+$fs-body-desktop-large: 62.5%;
+$fs-body-desktop-small: 56.3%;
+$fs-body-laptop: 50%;
+$fs-body-tablet: 62.5%;
+$fs-body-phablet: 62.5%;
+$fs-body-phone: 56.3%;
+$fs-body-phone-small: 50%;
+
+// link
+$clr-link: $clr-white;
+$clr-link-hover: rgba($clr-white, 0.8);
+
+// hr
+$clr-hr: $clr-black;
+
+// emobility.tk scroller
+$zi-scroller: 100;
+$clr-scroller-bg: transparent;
+$clr-scroller-bar: $clr-white;
+
+// loader
+$clr-loader: $clr-white;
+
+// no result
+$clr-no-result: $clr-white;
+$fs-no-result: em(15);
+
+// table
+$clr-table-overlay: $clr-white;
+$clr-table-overlay-bg: rgba($clr-black, 0.25);
+
+// module space bottom
+$dim-mod-bottom-large--desktop: 230;
+$dim-mod-bottom-medium--desktop: 160;
+$dim-mod-bottom-small--desktop: 135;
+
+$dim-mod-bottom-large--tablet: 120;
+$dim-mod-bottom-medium--tablet: 100;
+$dim-mod-bottom-small--tablet: 70;
+
+$dim-mod-bottom-large--mobile: 100;
+$dim-mod-bottom-medium--mobile: 90;
+$dim-mod-bottom-small--mobile: 60;
+
+// wrap
+$dim-wrap-max-width--large: 1310;
+$dim-wrap-max-width--medium: 1250;
+$dim-wrap-max-width--small: 1000;
+
+$dim-wrap-padding--desktop: 75;
+$dim-wrap-padding--tablet: 50;
+$dim-wrap-padding--mobile: 25;
+
+/* STYLING
+ * --------------------------------------------------------------------------- */
+
+/*
+ * SELECTION
+ */
+
+::-moz-selection {
+  background: $clr-selection-bg;
+  color: $clr-selection;
+}
+::selection {
+  background: $clr-selection-bg;
+  color: $clr-selection;
+}
+
+/*
+ * WAYPOINTS
+ */
+
+.EBIl-waypoint {
+  height: 0px!important;
+  width: 100%;
+  overflow: hidden!important;
+  position: absolute;
+  &--1 {
+    top: 10px;
+  }
+}
+
+/*
+ * SCROLLBAR
+ */
+
+::-webkit-scrollbar {
+  height: em(10);
+  width: em(10);
+  &-track {
+    background-color: $clr-scroll-track;
+  }
+  &-thumb {
+    background-color: $clr-scroll-thumb;
+  }
+  &-button {
+    display: none;
+  }
+}
+body {
+  * {
+    &::-webkit-scrollbar {
+      height: em(5);
+      width: em(5);
+    }
+  }
+}
+
+/*
+ * CREDITS
+ */
+
+body {
+  &[data-page-id="3"],
+  &[data-page-id="4"],
+  &[data-page-id="5"],
+  &[data-page-id="6"],
+  &[data-page-id="8"] {
+    .JS-main-menu-trigger,
+    [data-id="sidenav"] {
+      display: none !important;
+    }
+  }
+}
+
+// moz
+html {
+  scrollbar-color: $clr-scroll-thumb $clr-scroll-track;
+  scrollbar-width: auto;
+}
+body {
+  * {
+    scrollbar-width: thin;
+  }
+}
+
+// block scrolling
+body {
+  &[data-scroll="0"] {
+    height: 100%;
+    overflow: hidden;
+
+    .EBIL-scroller {
+      display: none;
+    }
+  }
+}
+
+/*
+ * SAFE AREA
+ * for further info, see here: https://developer.mozilla.org/en-US/docs/Web/CSS/env
+ */
+
+body {
+  padding-left: env(safe-area-inset-left);
+  padding-right: env(safe-area-inset-right);
+}
+
+/*
+ * TYPOGRAPHY
+ */
+
+body {
+  background-color: $clr-hmm-grey-dark;
+  color: $clr-body;
+  font-family: $ff-body;
+  font-weight: $fw-regular;
+
+  // e.g.: 62.5% of default value on the html tag (which should be 16px).
+  // now you can easily exchange px to em (f.e. 12px are 1.2em)
+  // and adjust the font-size globally for responsive.
+  // for proper understanding how this works: http://pxtoem.com/
+  font-size: $fs-body-default;
+
+  // --- responsive ---
+  @media #{$mq-desktop-large} {
+    font-size: $fs-body-desktop-large;
+  }
+  @media #{$mq-desktop-small} {
+    font-size: $fs-body-desktop-small;
+  }
+  @media #{$mq-laptop} {
+    font-size: $fs-body-laptop;
+  }
+  @media #{$mq-tablet} {
+    font-size: $fs-body-tablet;
+  }
+  @media #{$mq-phablet} {
+    font-size: $fs-body-phablet;
+  }
+  @media #{$mq-phone} {
+    font-size: $fs-body-phone;
+  }
+  @media #{$mq-phone-small} {
+    font-size: $fs-body-phone-small;
+  }
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-weight: $fw-regular;
+}
+a {
+  color: $clr-link;
+  &:hover {
+    color: $clr-link-hover;
+  }
+}
+hr {
+  border-color: $clr-hr;
+}
+b,
+strong {
+  font-weight: $fw-bold;
+}
+
+/*
+ * ANONYMOUS LINKS
+ */
+
+.JS-anonymous-link {
+  color: $clr-link;
+  cursor: pointer;
+  display: inline;
+  &:hover {
+    color: $clr-link-hover;
+  }
+}
+
+/*
+ * BLOCK TOUCH
+ */
+
+.JS-block-touch {
+  * {
+    pointer-events: none;
+  }
+}
+
+/*
+ * SLIDER: ARROWS, NAVIGATION & PAGINATION
+ */
+
+.JS-slider {
+  &-arrows,
+  &-arrows__arrow,
+  &-nav,
+  &-pagination {
+    &[data-active="0"] {
+      display: none!important;
+    }
+  }
+}
+
+/*
+ * NO RESULT
+ */
+
+.EBIL-no-result {
+  @include typo-font-size(14);
+  color: $clr-no-result;
+  font-size: $fs-no-result;
+  font-style: italic;
+  text-align: center;
+}
+
+/*
+ * LOADER
+ */
+
+.EBIL-loader {
+  color: $clr-loader;
+  text-align: center;
+  &__symbol {
+    display: inline-block;
+    height: em(30);
+    margin-bottom: em(5);
+    width: em(30);
+    &:before {
+      animation: loader-spinning 1.2s linear infinite;
+      border-color: $clr-loader transparent $clr-loader transparent;
+      border-radius: 50%;
+      border-style: solid;
+      border-width: em(3);
+      content: '';
+      display: block;
+      height: 100%;
+      margin: 1px;
+      width: 100%;
+    }
+  }
+  &__text {
+    font-size: em(14);
+  }
+}
+
+/*
+ * SCROLLER
+ */
+
+.EBIL-scroller {
+  background: $clr-scroller-bg;
+  height: em(5);
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: $zi-scroller;
+  &__bar {
+    background: $clr-scroller-bar;
+    height: 100%;
+    width: 0;
+  }
+}
+
+/*
+ * Specific
+ */
+.EBIL-number {
+  @include typo-number($clr-number);
+}
+.EBIL-overline {
+  @include typo-overline($clr-overline, $clr-overline-before);
+}
+.EBIL-headline {
+  @include typo-headline($clr-headline);
+}
+.EBIL-rte {
+  @include typo-rte($clr-rte-text, $clr-link, $clr-link-hover, $clr-link-hover);
+}
+.EBIL-button {
+  @include typo-button($clr-button, $clr-button-before);
+}
+
+/*
+ * TABLE-WRAP
+ */
+
+.EBIL-table {
+  position: relative;
+  &__wrap {
+    min-height: em(100);
+    overflow-x: auto;
+    table {
+      border-collapse: collapse;
+      margin-left: auto;
+      margin-right: auto;
+      min-width: 100%;
+    }
+  }
+  &__overlay {
+    background-color: $clr-table-overlay-bg;
+    color: $clr-table-overlay;
+    display: none;
+    height: 100%;
+    justify-content: center;
+    left: 0;
+    padding-top: em(25);
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 5;
+    span {
+      font-size: em(25);
+    }
+  }
+
+  // --- properties ---
+  &:hover {
+    .EBIL-table {
+      &__overlay {
+        display: none !important;
+      }
+    }
+  }
+
+  // --- responsive ---
+  @media #{$mq-phablet} {
+    &__overlay {
+      display: flex;
+    }
+  }
+}
+
+/*
+ * MODULES
+ */
+
+.EBIL-module {
+  position: relative;
+  &[data-space-bottom="large"] {
+    margin-bottom: em($dim-mod-bottom-large--desktop);
+  }
+  &[data-space-bottom="medium"] {
+    margin-bottom: em($dim-mod-bottom-medium--desktop);
+  }
+  &[data-space-bottom="small"] {
+    margin-bottom: em($dim-mod-bottom-small--desktop);
+  }
+
+  // --- responsive ---
+  @media #{$mq-tablet} {
+    &[data-space-bottom="large"] {
+      margin-bottom: em($dim-mod-bottom-large--tablet);
+    }
+    &[data-space-bottom="medium"] {
+      margin-bottom: em($dim-mod-bottom-medium--tablet);
+    }
+    &[data-space-bottom="small"] {
+      margin-bottom: em($dim-mod-bottom-small--tablet);
+    }
+  }
+  @media #{$mq-phablet} {
+    &[data-space-bottom="large"] {
+      margin-bottom: em($dim-mod-bottom-large--mobile);
+    }
+    &[data-space-bottom="medium"] {
+      margin-bottom: em($dim-mod-bottom-medium--mobile);
+    }
+    &[data-space-bottom="small"] {
+      margin-bottom: em($dim-mod-bottom-small--mobile);
+    }
+  }
+}
+
+/*
+ * WRAP
+ */
+
+* {
+  // large
+  &[data-wrap-width="large"] {
+    @include set-wrap-dimension($dim-wrap-max-width--large, $dim-wrap-padding--desktop, $dim-wrap-padding--tablet, $dim-wrap-padding--mobile);
+    // no padding
+    &[data-wrap-padding="none"] {
+      @include set-wrap-dimension($dim-wrap-max-width--large, 0, 0, 0);
+    }
+  }
+  // medium
+  &[data-wrap-width="medium"] {
+    @include set-wrap-dimension($dim-wrap-max-width--medium, $dim-wrap-padding--desktop, $dim-wrap-padding--tablet, $dim-wrap-padding--mobile);
+    // no padding
+    &[data-wrap-padding="none"] {
+      @include set-wrap-dimension($dim-wrap-max-width--medium, 0, 0, 0);
+    }
+  }
+  // small
+  &[data-wrap-width="small"] {
+    @include set-wrap-dimension($dim-wrap-max-width--small, $dim-wrap-padding--desktop, $dim-wrap-padding--tablet, $dim-wrap-padding--mobile);
+    // no padding
+    &[data-wrap-padding="none"] {
+      @include set-wrap-dimension($dim-wrap-max-width--small, 0, 0, 0);
+    }
+  }
+}

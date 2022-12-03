@@ -1,0 +1,636 @@
+/*  ==========================================================================
+    TYPOGRAPHY
+    Helpers to arrange type
+
+    INFO:
+    - all mixins should start with "typo" as prefix
+    ========================================================================== */
+
+// sets the fontsize to the child element
+@mixin typo-font-size($fs) {
+  > * {
+    font-size: em($fs);
+  }
+}
+
+// create icon
+@mixin typo-create-icon($icon, $ff) {
+  content: $icon;
+  font-family: $ff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-style: normal;
+  font-variant: normal;
+  font-weight: $fw-regular;
+  line-height: 1;
+  speak: none;
+  text-transform: none;
+}
+
+// horizontal list
+@mixin typo-list-horizontal() {
+  @include clearfix();
+
+  list-style-type: none;
+  > li {
+    float: left;
+  }
+}
+
+// disallow lists
+@mixin typo-lock-list() {
+  ol,
+  ul {
+    display: none !important;
+  }
+}
+
+// disallow tables
+@mixin typo-lock-table() {
+  table {
+    display: none !important;
+  }
+}
+
+/*  PROPERTIES
+    ------------------------------------------------------------------------ */
+
+// inlink
+@mixin typo-inlink($clr,$clr-hover) {
+  a {
+    color: $clr;
+    &:hover {
+      color: $clr-hover;
+    }
+    &[href^="tel:"] {
+      color: inherit;
+      &:hover {
+        color: inherit;
+      }
+    }
+  }
+}
+
+// hide link
+@mixin typo-conceal-link() {
+  a {
+    color: inherit;
+    &:visited,
+    &:hover {
+      color: inherit;
+    }
+  }
+}
+
+// highlighting
+@mixin typo-highlighting($clr) {
+  b,
+  strong,
+  th {
+    font-weight: $fw-bold;
+  }
+  s,
+  u {
+    text-decoration-color: $clr;
+  }
+  sub,
+  sup {
+    font-size: 60%;
+  }
+  hr {
+    border-color: $clr;
+  }
+}
+
+/*  TEXT TYPES
+    ------------------------------------------------------------------------ */
+
+// paragraph
+@mixin typo-paragraph($clr, $clr-link, $clr-link-hover, $clr-accent, $opacity) {
+  @include typo-highlighting($clr-link);
+  @include typo-inlink($clr-link,$clr-link-hover);
+
+  color: $clr;
+  font-size: em($fs-text);
+  line-height: $lh-text;
+  opacity: $opacity;
+  * {
+    font-size: 1.0em;
+  }
+
+  // --- responsive ---
+  @media #{$mq-tablet} {
+    font-size: em($fs-text-tablet);
+  }
+  @media #{$mq-phablet} {
+    font-size: em($fs-text-mobile);
+  }
+}
+
+// unordered list
+@mixin typo-ul($clr,$clr-link,$clr-link-hover,$clr-accent) {
+  @include typo-highlighting($clr-link);
+  @include typo-inlink($clr-link,$clr-link-hover);
+
+  color: $clr;
+  font-size: em($fs-text);
+  line-height: $lh-text;
+  list-style-type: none;
+  padding-left: 0;
+  text-align: left;
+  * {
+    font-size: 1.0em !important;
+  }
+  li {
+    padding-left: em(10);
+    position: relative;
+    &:before {
+      content: '-';
+      color: $clr-accent;
+      left: 0;
+      line-height: inherit;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: em(15,$fs-text);
+    }
+  }
+  ul {
+    padding-left: em(10);
+  }
+
+  // --- responsive ---
+  @media #{$mq-tablet} {
+    font-size: em($fs-text-tablet);
+    li {
+      padding-left: em(20,$fs-text-tablet);
+      &:before {
+        width: em(15,$fs-text-tablet);
+      }
+    }
+    ul {
+      padding-left: em(40,$fs-text-tablet);
+    }
+  }
+  @media #{$mq-phablet} {
+    font-size: em($fs-text-mobile);
+    li {
+      padding-left: em(20,$fs-text-mobile);
+      &:before {
+        width: em(15,$fs-text-mobile);
+      }
+    }
+    ul {
+      padding-left: em(40,$fs-text-mobile);
+    }
+  }
+}
+
+// ordered list
+@mixin typo-ol($clr,$clr-link,$clr-link-hover,$clr-accent) {
+  @include typo-highlighting($clr-link);
+  @include typo-inlink($clr-link,$clr-link-hover);
+
+  color: $clr;
+  counter-reset: iterator;
+  font-size: em($fs-text);
+  line-height: $lh-text;
+  list-style-type: none;
+  padding-left: 0;
+  text-align: left;
+  * {
+    font-size: 1.0em !important;
+  }
+  li {
+    counter-increment: iterator;
+    padding-left: em(20,$fs-text);
+    position: relative;
+    &:before {
+      content: counter(iterator);
+      color: $clr-accent;
+      left: 0;
+      line-height: inherit;
+      position: absolute;
+      text-align: center;
+      top: 0;
+      width: em(15,$fs-text);
+    }
+  }
+  ol {
+    list-style-type: lower-alpha;
+    padding-left: em(40,$fs-text);
+    li {
+      display: list-item;
+      padding-left: 0;
+      &:before {
+        display: none;
+      }
+    }
+  }
+
+  // --- responsive ---
+  @media #{$mq-tablet} {
+    font-size: em($fs-text-tablet);
+    li {
+      padding-left: em(20,$fs-text-tablet);
+      &:before {
+        width: em(15,$fs-text-tablet);
+      }
+    }
+    ol {
+      padding-left: em(40,$fs-text-tablet);
+    }
+  }
+  @media #{$mq-phablet} {
+    font-size: em($fs-text-mobile);
+    li {
+      padding-left: em(20,$fs-text-mobile);
+      &:before {
+        width: em(15,$fs-text-mobile);
+      }
+    }
+    ol {
+      padding-left: em(40,$fs-text-mobile);
+    }
+  }
+}
+
+// default list
+@mixin typo-default-list() {
+  ul,
+  ol {
+    padding-left: em(20,$fs-text) !important;
+    li {
+      display: list-item !important;
+      padding-left: 0 !important;
+      &:before {
+        display: none !important;
+      }
+    }
+  }
+  ul {
+    list-style-type: square !important;
+  }
+  ol {
+    list-style-type: decimal !important;
+    ol {
+      list-style-type: lower-alpha !important;
+    }
+  }
+
+  // --- responsive ---
+  @media #{$mq-tablet} {
+    ul,
+    ol {
+      padding-left: em(20,$fs-text-tablet) !important;
+    }
+  }
+  @media #{$mq-phablet} {
+    ul,
+    ol {
+      padding-left: em(20,$fs-text-mobile) !important;
+    }
+  }
+}
+
+// table
+@mixin typo-table($clr,$clr-link,$clr-link-hover,$clr-accent) {
+  @include typo-highlighting($clr-link);
+  @include typo-inlink($clr-link, $clr-link-hover);
+
+  border-spacing: 0;
+  width: 100%;
+  tr {
+    th,
+    td {
+      border-bottom: 1px dashed $clr-accent;
+      border-left: 1px dashed $clr;
+      border-right: 1px dashed $clr;
+      color: $clr;
+      font-size: em($fs-text);
+      padding: em(25,$fs-text) em(40,$fs-text);
+      * {
+        font-size: 1.0em !important;
+      }
+      &:first-child {
+        border-left-color: transparent;
+      }
+      &:last-child {
+        border-right-color: transparent;
+      }
+    }
+    th {
+      font-weight: $fw-semi-bold;
+      text-align: center;
+      text-transform: uppercase;
+    }
+    &:hover {
+      td {
+        background-color: rgba($clr-accent, 0.15);
+      }
+    }
+  }
+  thead {
+    tr {
+      &:first-child {
+        th,
+        td {
+          padding-top: em(5,$fs-text);
+        }
+      }
+    }
+  }
+
+  // --- responsive ---
+  @media #{$mq-tablet} {
+    tr {
+      th,
+      td {
+        font-size: em($fs-text-tablet);
+        padding: em(20,$fs-text-tablet) em(30,$fs-text-tablet);
+      }
+    }
+    thead {
+      tr {
+        &:first-child {
+          th,
+          td {
+            padding-top: em(5,$fs-text-tablet);
+          }
+        }
+      }
+    }
+  }
+  @media #{$mq-phablet} {
+    tr {
+      th,
+      td {
+        font-size: em($fs-text-mobile);
+        padding: em(15,$fs-text-mobile) em(20,$fs-text-mobile);
+      }
+    }
+    thead {
+      tr {
+        &:first-child {
+          th,
+          td {
+            padding-top: em(5,$fs-text-mobile);
+          }
+        }
+      }
+    }
+  }
+  @media #{$mq-phone} {
+    tr {
+      th,
+      td {
+        padding: em(10,$fs-text-mobile);
+      }
+    }
+  }
+}
+
+// number
+@mixin typo-number($clr) {
+  color: $clr;
+  padding-bottom: em(30);
+  span {
+    font-size: em($fs-number);
+    font-weight: $fw-bold;
+    line-height: $lh-number;
+  }
+  &:visited,
+  &:hover {
+    color: $clr;
+  }
+
+  // --- responsive ---
+  @media #{$mq-tablet} {
+    span {
+      font-size: em($fs-number-tablet);
+    }
+  }
+  @media #{$mq-phablet} {
+    span {
+      font-size: em($fs-number-mobile);
+    }
+  }
+  @media #{$mq-phone} {
+    padding-bottom: em(17);
+  }
+}
+
+// overline
+@mixin typo-overline($clr, $clr-accent) {
+  color: $clr;
+  padding-bottom: em(10);
+  display: flex;
+  align-items: center;
+  span {
+    font-size: em($fs-overline);
+    font-weight: $fw-semi-bold;
+    line-height: $lh-overline;
+    text-transform: uppercase;
+  }
+  &:before {
+    position: relative;
+    background-color: $clr-accent;
+    content: '';
+    display: inline-block;
+    height: em(1);
+    width: em(30);
+    margin-right: em(5);
+    pointer-events: none;
+    z-index: 5;
+  }
+  &:visited,
+  &:hover {
+    color: $clr;
+  }
+
+  // --- responsive ---
+  @media #{$mq-tablet} {
+    span {
+      font-size: em($fs-overline-tablet);
+    }
+  }
+  @media #{$mq-phablet} {
+    span {
+      font-size: em($fs-overline-mobile);
+    }
+  }
+  @media #{$mq-phone} {
+    padding-bottom: em(25);
+  }
+}
+
+// headline
+@mixin typo-headline($clr) {
+  color: $clr;
+  span {
+    font-size: em($fs-headline);
+    font-weight: $fw-bold;
+    line-height: $lh-headline;
+  }
+  &:visited,
+  &:hover {
+    color: $clr;
+  }
+
+  // --- responsive ---
+  @media #{$mq-tablet} {
+    span {
+      font-size: em($fs-headline-tablet);
+    }
+  }
+  @media #{$mq-phablet} {
+    span {
+      font-size: em($fs-headline-mobile);
+    }
+  }
+}
+
+// headline
+@mixin typo-button($clr, $clr-accent) {
+  position: relative;
+  width: fit-content;
+  margin-top: em(10);
+  color: $clr;
+  cursor: pointer;
+  span {
+    font-size: em($fs-button);
+    font-weight: $fw-bold;
+    line-height: $lh-button;
+    transition: opacity 0.5s;
+    pointer-events: none;
+  }
+  &:before {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: $clr-accent;
+    content: '';
+    height: em(1);
+    width: em(30);
+    transition: width 0.5s;
+    pointer-events: none;
+  }
+  &:visited,
+  &:hover {
+    color: rgba($clr, 0.5);
+    &:before {
+      width: 0;
+    }
+  }
+
+  // --- responsive ---
+  @media #{$mq-tablet} {
+    span {
+      font-size: em($fs-button-tablet);
+      &:hover {
+        color: $clr;
+      }
+    }
+  }
+  @media #{$mq-phablet} {
+    span {
+      font-size: em($fs-button-mobile);
+    }
+  }
+}
+
+/*  BLOCKS/WRAPS
+    ------------------------------------------------------------------------ */
+
+// rte (styling for rich text editor outputs)
+@mixin typo-rte($clr, $clr-link, $clr-link-hover, $clr-accent) {
+  margin-top: em(30);
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    @include typo-paragraph($clr,$clr-link,$clr-link-hover,$clr-accent,$op-text);
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-weight: $fw-bold;
+  }
+  ul {
+    @include typo-ul($clr,$clr-link,$clr-link-hover,$clr-accent);
+  }
+  ol {
+    @include typo-ol($clr,$clr-link,$clr-link-hover,$clr-accent);
+  }
+  table {
+    @include typo-table($clr,$clr-link,$clr-link-hover,$clr-accent);
+  }
+  .JS-crop-text {
+    position: relative;
+    overflow: hidden;
+    max-height: em(150);
+    &:after {
+      position: absolute;
+      content: "";
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      height: em(80);
+      z-index: 1;
+      background: linear-gradient(180deg, rgba(transparent, 0) 0, rgba(transparent, 0) 25%, $clr-hmm-grey-dark);
+    }
+  }
+  &.DNA-rte {
+    &--no-list {
+      @include typo-lock-list();
+    }
+    &--no-table {
+      @include typo-lock-table();
+    }
+  }
+
+  // --- responsive ---
+  @media #{$mq-tablet} {
+    > * {
+      + * {
+        &:not(.DNA-table) {
+          margin-top: em(15,$fs-text-tablet);
+        }
+      }
+      + .DNA-table {
+        margin-top: em(30);
+      }
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p {
+      @include typo-paragraph($clr,$clr-link,$clr-link-hover,$clr-accent,$op-text-mobile);
+    }
+  }
+  @media #{$mq-phablet} {
+    position: relative;
+    > * {
+      + * {
+        &:not(.DNA-table) {
+          margin-top: em(10,$fs-text-mobile);
+        }
+      }
+      + .DNA-table {
+        margin-top: em(20);
+      }
+    }
+  }
+  @media #{$mq-phone} {
+
+  }
+}

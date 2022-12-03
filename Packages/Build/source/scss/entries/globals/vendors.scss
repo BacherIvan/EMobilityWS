@@ -1,0 +1,11 @@
+/*  ==========================================================================
+    VENDORS
+    ========================================================================== */
+
+@import '~tiny-slider/dist/tiny-slider.css';
+
+// paths overrides (for lightgallery plugin)
+$lg-path-fonts: '/typo3conf/ext/bn_package/Resources/Public/Icons/Lightgallery';
+$lg-path-images: '/typo3conf/ext/bn_package/Resources/Public/Images/lightgallery';
+
+@import '~lightgallery.js/src/sass/lightgallery';

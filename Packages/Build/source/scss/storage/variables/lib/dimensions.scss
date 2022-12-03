@@ -1,0 +1,34 @@
+/*  ==========================================================================
+    DIMENSIONS
+    List of some recurring dimensions.
+
+    INFO:
+    - don't delete any unit!
+    - do unit changes with care
+    - try to use prefixes (f.e. "zi" for "z-index", "hgt" for "height", "wdt" for "width" etc.)
+    - if possible try to define the main z-index values here
+    - don't put all dimensions in here, only well selected ones (it's not a trashcan!)
+    ========================================================================== */
+
+// heights ($hgt)
+// ...
+
+// font weight ($fw)
+$fw-light: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semi-bold: 600;
+$fw-bold: 700;
+
+// widths ($wdt)
+// ...
+
+// z-indexes ($zi)
+$zi-header: 50;
+$zi-hero: 30;
+$zi-sidenav: 20;
+$zi-main: 10;
+$zi-footer: 15;
+$zi-overlay: 40;
+$zi-popups: 1000;
+$zi-scroller: 500;
