@@ -1,0 +1,69 @@
+{
+  "description": "Frontend JS and SCSS builder - powered by webpack, babel and node-sass.",
+  "author": {
+    "name": "Matthias Ulpmer",
+    "email": "stulpmat@bx.fallmerayer.it"
+  },
+  "private": true,
+  "license": "UNLICENSED",
+  "version": "1.0.0",
+  "engines": {
+    "node": "^12"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/eslint-parser": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "autoprefixer": "^10.3.0",
+    "babel-loader": "^8.2.2",
+    "check-node-version": "^4.1.0",
+    "core-js": "^3.21.1",
+    "css-loader": "^6.6.0",
+    "cssnano": "^5.0.17",
+    "dotenv": "^16.0.0",
+    "eslint": "^8.22.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.23.4",
+    "glob": "^8",
+    "mini-css-extract-plugin": "^2.5.3",
+    "postcss-loader": "^7.0.0",
+    "sass": "^1.49.9",
+    "sass-loader": "^13.0.0",
+    "sass-migrator": "^1.5.4",
+    "upath": "^2.0.1",
+    "webpack": "^5.69.1",
+    "webpack-bundle-analyzer": "^4.4.2",
+    "webpack-cli": "^4.9.2",
+    "webpack-notifier": "^1.13.0",
+    "webpack-remove-empty-scripts": "^0.8.0",
+    "webpackbar": "^5.0.2"
+  },
+  "dependencies": {
+    "@juggle/resize-observer": "~3.3.1",
+    "animated-scroll-to": "^2.0.12",
+    "countup.js": "^2.1.0",
+    "date-fns": "^2.16.1",
+    "dom7": "~4.0.4",
+    "jquery-param": "^1.1.8",
+    "js-cookie": "^3.0.1",
+    "lazysizes": "^5.2.2",
+    "lg-thumbnail.js": "^1.2g.0",
+    "lightgallery": "^2.4.0",
+    "lodash-es": "^4.17.15",
+    "modern-normalize": "^1.1.0",
+    "quicklink": "^2.0.0",
+    "swiper": "~8.0.6",
+    "waypoints": "^4.0.1"
+  },
+  "scripts": {
+    "// -- BUNDLED TASKS": "echo \"bundled tasks which run all at once. INFO: 'watch:all' does run the tasks first normal and then incremental\"",
+    "watch:all": "check-node-version --package && webpack --watch",
+    "build:all": "check-node-version --package && webpack",
+    "// -- WATCHER": "echo \"watcher tasks for the .js and .scss files\"",
+    "watch:js": "check-node-version --package && webpack --config-name=scripts --watch",
+    "watch:scss": "check-node-version --package && webpack --config-name=styles --watch",
+    "// -- COMPILING": "echo \"compiler tasks for the .js and .scss files\"",
+    "compile:js": "check-node-version --package && webpack --config-name=scripts",
+    "compile:scss": "check-node-version --package && webpack --config-name=styles"
+  }
+}

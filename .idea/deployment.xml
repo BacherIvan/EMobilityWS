@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" promptOnRemoteOverwrite="CHECK_CONTENT" serverName="WebServer" confirmBeforeUploading="false">
+  <component name="PublishConfigData" promptOnRemoteOverwrite="CHECK_CONTENT" confirmBeforeUploading="false" notifyRemoteChanges="true">
     <option name="confirmBeforeUploading" value="false" />
     <serverData>
-      <paths name="WebServer">
+      <paths name="emobility.tk">
         <serverdata>
           <mappings>
-            <mapping deploy="/" local="$PROJECT_DIR$" web="Main.html" />
+            <mapping deploy="/var/www/html" local="$PROJECT_DIR$" web="/" />
           </mappings>
         </serverdata>
       </paths>
