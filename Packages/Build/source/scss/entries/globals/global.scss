@@ -23,7 +23,7 @@ $clr-selection: $clr-white;
 $clr-selection-bg: $clr-black;
 
 // scroll bar
-$clr-scroll-track: $clr-hmm-grey-dark;
+$clr-scroll-track: $clr-tk-grey-dark;
 $clr-scroll-thumb: $clr-white;
 
 // typography
@@ -194,7 +194,7 @@ body {
  */
 
 body {
-  background-color: $clr-hmm-grey-dark;
+  background-color: $clr-tk-grey-dark;
   color: $clr-body;
   font-family: $ff-body;
   font-weight: $fw-regular;
