@@ -1,1 +1,5 @@
-# THIS IS A DUMMY FILE TO PREVENT `deny from all`
+# UTF-8 encoding
+AddDefaultCharset utf-8
+<IfModule mod_mime.c>
+    AddCharset utf-8 .atom .css .js .json .manifest .rdf .rss .vtt .webapp .webmanifest .xml
+</IfModule>
