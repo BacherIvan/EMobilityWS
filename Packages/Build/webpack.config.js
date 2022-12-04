@@ -79,14 +79,14 @@ module.exports = [
                         test: /([\\/]Build[\\/]source[\\/]js[\\/])((?!entries[\\/]+))/,
                         enforce: true,
                         chunks: 'all',
-                        name: 'bn-internal-functions',
+                        name: 'tk-internal-functions',
                     },
                 },
             },
         },
         resolve: {
             alias: {
-                'bn-source-root': path.resolve(__dirname, sourcePath),
+                'tk-source-root': path.resolve(__dirname, sourcePath),
             },
         },
         stats: {
@@ -148,7 +148,7 @@ module.exports = [
         },
         resolve: {
             alias: {
-                'bn-source-root': path.resolve(__dirname, sourcePath),
+                'tk-source-root': path.resolve(__dirname, sourcePath),
             },
         },
         module: {

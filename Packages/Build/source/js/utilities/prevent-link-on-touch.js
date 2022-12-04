@@ -8,7 +8,7 @@
 import $ from 'cash-dom';
 
 // local imports
-import { LAYOUT } from 'Packages/Build/source/js/variables/variables';
+import { LAYOUT } from 'tk-source-root/js/variables/variables';
 
 /* CODE
  * --------------------------------------------------------------------------- */

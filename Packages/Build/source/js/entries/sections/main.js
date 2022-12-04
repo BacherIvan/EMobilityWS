@@ -6,7 +6,7 @@
 import $ from 'cash-dom';
 
 // local imports
-import * as vars from 'Packages/Build/source/js/variables/variables';
+import * as vars from 'tk-source-root/js/variables/variables';
 
 /* CODE
  * --------------------------------------------------------------------------- */

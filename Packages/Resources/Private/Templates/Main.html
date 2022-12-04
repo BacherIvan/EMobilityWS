@@ -1,0 +1,51 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en"
+      xmlns:f="http://typo3.org/ns/TYPO3/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers"
+      xmlns:bn="http://typo3.org/ns/BN/BnCore/ViewHelpers"
+      data-namespace-typo3-fluid="true"
+>
+<f:comment>
+    <!-- INFO:
+        Main Page Template File
+        "try to use more fluid than typoscript"
+    -->
+</f:comment>
+
+<f:layout name="Page/Default"/>
+
+<f:section name="Main">
+    <f:comment><!-- Assets - Styles --></f:comment>
+
+    <f:comment><!-- ... fonts and icons --></f:comment>
+    <bn:asset.css identifier="custom-css-fonts" href="EXT:bn_package/Resources/Public/Fonts/style.css" priority="1"/>
+    <bn:asset.css identifier="icomoon" href="EXT:bn_package/Resources/Public/Icons/Icomoon/style.css" priority="1"/>
+
+    <f:comment><!-- ... all others styles --></f:comment>
+    <bn:asset.css identifier="globals/vendors" priority="1"/>
+    <bn:asset.css identifier="globals/global" priority="1"/>
+
+    <f:comment><!-- Assets - Scripts --></f:comment>
+    <bn:asset.script identifier="globals/global" priority="1"/>
+    <f:if condition="{bn:constants.get(name: 'general.lang_redirect_active')} == 1">
+        <bn:asset.script identifier="globals/lang-redirect" priority="1"/>
+    </f:if>
+
+    <div id="branDNAmic" class="branDNAmic">
+        <f:comment><!-- Scroll indicator --></f:comment>
+        <f:render partial="Partials/Elements/Scroller"/>
+        <f:comment><!-- Sidenav --></f:comment>
+        <f:render partial="Sections/Sidenav" arguments="{dna: dna, mainmenu: mainmenu, page: _all}"/>
+
+        <f:render partial="Sections/Header" arguments="{_all}"/>
+        <f:if condition="{heroLayout} != 'none'">
+            <f:render partial="Sections/Hero" arguments="{_all}"/>
+        </f:if>
+        <f:render partial="Sections/Main" arguments="{_all}"/>
+        <f:render partial="Sections/Footer" arguments="{_all}"/>
+    </div>
+
+    <f:comment><!-- Waypoints --></f:comment>
+    <div id="JS-waypoint--1" class="DNA-waypoint DNA-waypoint--1"></div>
+</f:section>
+
+</html>

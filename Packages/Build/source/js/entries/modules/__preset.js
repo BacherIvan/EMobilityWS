@@ -6,8 +6,8 @@
 import $ from 'cash-dom';
 
 // local imports
-import * as vars from 'Packages/Build/source/js/variables/variables';
-import { inView } from 'Packages/Build/source/js/utilities/in-view';
+import * as vars from 'tk-source-root/js/variables/variables';
+import { inView } from 'tk-source-root/js/utilities/in-view';
 
 /* CODE
  * --------------------------------------------------------------------------- */

@@ -7,12 +7,12 @@ import $ from 'cash-dom';
 import 'lazysizes';
 
 // local imports
-import * as vars from '/Packages/Build/source/js/variables/variables';
+import * as vars from 'tk-source-root/js/variables/variables';
 
 import {
     onFirstUserAction,
-} from 'Packages/Build/source/js/utilities/first-user-interaction';
-import { initScroller } from 'Packages/Build/source/js/utilities/scroller';
+} from 'tk-source-root/js/utilities/first-user-interaction';
+import { initScroller } from 'tk-source-root/js/utilities/scroller';
 
 /* CODE
  * --------------------------------------------------------------------------- */

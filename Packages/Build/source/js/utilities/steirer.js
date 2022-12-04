@@ -13,7 +13,7 @@
 
 // node modules imports
 import $ from 'cash-dom';
-import { pixelWarp } from 'Packages/Build/source/js/utilities/pixel-warper';
+import { pixelWarp } from 'tk-source-root/js/utilities/pixel-warper';
 
 /* CODE
  * --------------------------------------------------------------------------- */
