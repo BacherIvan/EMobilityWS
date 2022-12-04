@@ -1,0 +1,47 @@
+## General
+# global environment variables files
+/.env
+
+
+# phpunit
+/.phpunit.result.cache
+
+## IDE
+# PhpStorm folder for all project settings
+/.idea/
+
+# VS Code folder for all project settings
+/.vscode/
+
+## Testing
+# folder for logfiles and other files which come from phpunit
+/.unit
+
+## PACKAGES
+# ignore everything from packages folder which is not 'whitelisted'
+# (so we can develop new extensions locally without worrying)
+/packages/*
+!/packages/bn_package/
+
+## BUILDING
+# folder for node modules, installed at project start
+/packages/bn_package/**/node_modules/
+/node_modules/
+
+# log files
+**/*.log
+
+# sourcemap files (js and css)
+**/*.map
+
+# webpack statistics
+webpack-stats.json
+
+## COMPOSER
+# folder for php packages, installed during development
+/vendor/
+
+# lock file, created from composer
+/composer.lock
+
+
