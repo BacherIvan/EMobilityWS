@@ -21,6 +21,7 @@ export const LAYOUT = {
     $head: $('head'),
     $body: $('body'),
     $page: $('#EmoBILity'),
+    $index: $('#EBIL-section--index'),
     $header: $('#EBIL-section--header'),
     $hero: $('#EBIL-section--hero'),
     $main: $('#EBIL-section--main'),
