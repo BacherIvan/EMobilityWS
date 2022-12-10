@@ -1,0 +1,22 @@
+{
+  "globals/global": {
+    "alias": "entry--globals--global",
+    "file": "entry--globals--global.js",
+    "dependencies": {
+      "tk-internal-functions": "tk-internal-functions.js",
+      "vendor--cash-dom": "vendor--cash-dom.js",
+      "vendor--lazysizes": "vendor--lazysizes.js",
+      "vendor--lodash-es": "vendor--lodash-es.js",
+      "webpack--runtime": "webpack--runtime.js"
+    }
+  },
+  "sections/main": {
+    "alias": "entry--sections--main",
+    "file": "entry--sections--main.js",
+    "dependencies": {
+      "tk-internal-functions": "tk-internal-functions.js",
+      "vendor--cash-dom": "vendor--cash-dom.js",
+      "webpack--runtime": "webpack--runtime.js"
+    }
+  }
+}

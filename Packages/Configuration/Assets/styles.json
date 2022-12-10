@@ -1,0 +1,7 @@
+{
+  "globals/global": "globals--global.css",
+  "globals/presets": "globals--presets.css",
+  "globals/print": "globals--print.css",
+  "globals/vendors": "globals--vendors.css",
+  "sections/main": "sections--main.css"
+}

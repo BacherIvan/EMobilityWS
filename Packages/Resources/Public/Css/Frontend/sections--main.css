@@ -1,0 +1,159 @@
+/*  ==========================================================================
+    MAIN
+    Styling for parts (which are not defined as modules), for eg. breadcrumb
+
+    INFO:
+    - don't style modules here, use the corresponding modules scss folder
+    ========================================================================== */
+/*  ==========================================================================
+    STORAGE
+    ========================================================================== */
+/*  ==========================================================================
+    VARIABLES
+    Collection of all variables
+
+    INFO:
+    - try to use variables as much as possible, it makes life easier
+    - try to use meaningful prefixes, e.g. "$clr-" for color variables
+      or "$fs-" for font-sizes
+    ========================================================================== */
+/*  ==========================================================================
+    CLASS NAMES
+    Collection of class-names.
+    ========================================================================== */
+/*  ==========================================================================
+    COLORS
+    List all colors concerning your project here
+
+    INFO:
+    - use for your colors at least the prefix "$clr-"
+    ========================================================================== */
+/*  ==========================================================================
+    DIMENSIONS
+    List of some recurring dimensions.
+
+    INFO:
+    - don't delete any unit!
+    - do unit changes with care
+    - try to use prefixes (f.e. "zi" for "z-index", "hgt" for "height", "wdt" for "width" etc.)
+    - if possible try to define the main z-index values here
+    - don't put all dimensions in here, only well selected ones (it's not a trashcan!)
+    ========================================================================== */
+/*  ==========================================================================
+    MEDIA QUERIES
+    Collection of media queries.
+    ========================================================================== */
+/*  ==========================================================================
+    TYPOGRAPHY
+    Font settings concerning your project.
+
+    INFO:
+    - don't delete anything!
+    - use changes in here with care
+    - try to use prefixes (f.e. "ff" for "font-family", "fs" for "font-size", "fw" for "font-weight" ecc.)
+    - don't put all properties in here, only well selected ones (it's not a trashcan!)
+    ========================================================================== */
+/*  ==========================================================================
+    FUNCIONS
+    Collection of all functions
+    ========================================================================== */
+/*  ==========================================================================
+    GENERAL
+    Useful global functions
+    ========================================================================== */
+/*  ==========================================================================
+    MIXINS
+    Collection of all mixins (mind the ordering!)
+    ========================================================================== */
+/*  ==========================================================================
+    GENERAL
+    Useful global helpers
+
+    INFO:
+    - no specific naming convention (no prefix) except to not use camelcase if possible!
+    - use it with care, its not a trash can!
+    - contributions for the kickstarter are welcome!
+    ========================================================================== */
+/*
+ * WRAPPER DIMENSIONS
+ * generates wrapper padding & max-width
+ */
+/*  ==========================================================================
+    BUTTONS
+    Helpers to edit buttons
+
+    INFO:
+    - all mixins should start with "btn" as prefix
+    ========================================================================== */
+/*  ==========================================================================
+    IMAGES
+    Collection of all helpers for images
+
+    INFO:
+    - all mixins should start with "img" as prefix
+    ========================================================================== */
+/*  ==========================================================================
+    TYPOGRAPHY
+    Helpers to arrange type
+
+    INFO:
+    - all mixins should start with "typo" as prefix
+    ========================================================================== */
+/*  PROPERTIES
+    ------------------------------------------------------------------------ */
+/*  TEXT TYPES
+    ------------------------------------------------------------------------ */
+/*  BLOCKS/WRAPS
+    ------------------------------------------------------------------------ */
+/*  ==========================================================================
+    VISTA
+    Helper to add base style to the vista output.
+
+    INFO:
+    - Usage example:
+      @include vista(100vh, 75vh, 100vh, 60vh, true);
+    ========================================================================== */
+/*  ==========================================================================
+    KEYFRAMES
+    Collection of all keyframes (mind the ordering!)
+    ========================================================================== */
+/*  ==========================================================================
+    LOADER
+    ========================================================================== */
+@keyframes loader-spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/* STYLING
+ * --------------------------------------------------------------------------- */
+.EBIL-section[data-id=main] {
+  padding-top: 9em;
+  /* RESPONSIVE
+   * --------------------------------------------------------------------------- */
+}
+.EBIL-section[data-id=main][data-hero-layout=none] {
+  padding-top: 25em;
+}
+@media (max-width: 767px) {
+  .EBIL-section[data-id=main] {
+    padding-top: 3em;
+  }
+  .EBIL-section[data-id=main][data-hero-layout=none] {
+    padding-top: 20em;
+  }
+}

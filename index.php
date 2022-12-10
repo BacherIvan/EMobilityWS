@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
         <title> EMobility - Wir bewegen Südtirol</title>
+        <!-- Javascript imports -->
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--globals--global.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--sections--main.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/tk-internal-functions.js"></script>
@@ -11,6 +12,13 @@
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--lazysizes.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--lodash-es.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/webpack--runtime.js"></script>
+        <!-- CSS imports -->
+        <link type="text/css" href="/Packages/Resources/Public/Css/Frontend/globals--global.css">
+        <link type="text/css" href="/Packages/Resources/Public/Css/Frontend/globals--presets.css">
+        <link type="text/css" href="/Packages/Resources/Public/Css/Frontend/globals--print.css">
+        <link type="text/css" href="/Packages/Resources/Public/Css/Frontend/globals--vendors.css">
+        <link type="text/css" href="/Packages/Resources/Public/Css/Frontend/sections--main.css">
+        <link type="text/css" href="/Packages/Resources/Public/Fonts/style.css">
     </head>
     <body data-hero-layout="full">
         <div id="EmoBILity" class="EmoBILity">

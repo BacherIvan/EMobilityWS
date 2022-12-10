@@ -20,12 +20,9 @@
 ## PACKAGES
 # ignore everything from packages folder which is not 'whitelisted'
 # (so we can develop new extensions locally without worrying)
-/packages/*
-!/packages/bn_package/
-
+/packages/Build/node_modules/
 ## BUILDING
 # folder for node modules, installed at project start
-/packages/bn_package/**/node_modules/
 /node_modules/
 
 # log files

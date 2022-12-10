@@ -1,17 +1,17 @@
 @font-face {
-  font-family: 'DNA';
+  font-family: 'EBIL';
   src:
-    url('/typo3conf/ext/bn_package/Resources/Public/Icons/Icomoon/fonts/DNA.ttf?9ucogn') format('truetype'),
-    url('/typo3conf/ext/bn_package/Resources/Public/Icons/Icomoon/fonts/DNA.woff?9ucogn') format('woff'),
-    url('/typo3conf/ext/bn_package/Resources/Public/Icons/Icomoon/fonts/DNA.svg?9ucogn#DNA') format('svg');
+    url('/var/www/Packages/Resources/Public/Icons/Icomoon/fonts/EBIL.ttf') format('truetype'),
+    url('/var/www/Packages/Resources/Public/Icons/Icomoon/fonts/EBIL.woff') format('woff'),
+    url('/var/www/Packages/Resources/Public/Icons/Icomoon/fonts/EBIL.svg') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="DNA-icon--"], [class*=" DNA-icon--"] {
+[class^="EBIL-icon--"], [class*=" EBIL-icon--"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'DNA' !important;
+  font-family: 'EBIL' !important;
   speak: never;
   font-style: normal;
   font-weight: normal;

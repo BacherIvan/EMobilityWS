@@ -1,0 +1,463 @@
+/*  ==========================================================================
+    PRINT STYLES
+    Styling for the printed version of the page
+
+    INFO:
+    - try not to modify the defaults
+    - append your custom rules at the end after 'OWN RULES'
+    - contributions for the kickstarter are welcome!
+    ========================================================================== */
+/*  INCLUDES
+    ------------------------------------------------------------------------ */
+/*  ==========================================================================
+    STORAGE
+    ========================================================================== */
+/*  ==========================================================================
+    VARIABLES
+    Collection of all variables
+
+    INFO:
+    - try to use variables as much as possible, it makes life easier
+    - try to use meaningful prefixes, e.g. "$clr-" for color variables
+      or "$fs-" for font-sizes
+    ========================================================================== */
+/*  ==========================================================================
+    CLASS NAMES
+    Collection of class-names.
+    ========================================================================== */
+/*  ==========================================================================
+    COLORS
+    List all colors concerning your project here
+
+    INFO:
+    - use for your colors at least the prefix "$clr-"
+    ========================================================================== */
+/*  ==========================================================================
+    DIMENSIONS
+    List of some recurring dimensions.
+
+    INFO:
+    - don't delete any unit!
+    - do unit changes with care
+    - try to use prefixes (f.e. "zi" for "z-index", "hgt" for "height", "wdt" for "width" etc.)
+    - if possible try to define the main z-index values here
+    - don't put all dimensions in here, only well selected ones (it's not a trashcan!)
+    ========================================================================== */
+/*  ==========================================================================
+    MEDIA QUERIES
+    Collection of media queries.
+    ========================================================================== */
+/*  ==========================================================================
+    TYPOGRAPHY
+    Font settings concerning your project.
+
+    INFO:
+    - don't delete anything!
+    - use changes in here with care
+    - try to use prefixes (f.e. "ff" for "font-family", "fs" for "font-size", "fw" for "font-weight" ecc.)
+    - don't put all properties in here, only well selected ones (it's not a trashcan!)
+    ========================================================================== */
+/*  ==========================================================================
+    FUNCIONS
+    Collection of all functions
+    ========================================================================== */
+/*  ==========================================================================
+    GENERAL
+    Useful global functions
+    ========================================================================== */
+/*  ==========================================================================
+    MIXINS
+    Collection of all mixins (mind the ordering!)
+    ========================================================================== */
+/*  ==========================================================================
+    GENERAL
+    Useful global helpers
+
+    INFO:
+    - no specific naming convention (no prefix) except to not use camelcase if possible!
+    - use it with care, its not a trash can!
+    - contributions for the kickstarter are welcome!
+    ========================================================================== */
+/*
+ * WRAPPER DIMENSIONS
+ * generates wrapper padding & max-width
+ */
+/*  ==========================================================================
+    BUTTONS
+    Helpers to edit buttons
+
+    INFO:
+    - all mixins should start with "btn" as prefix
+    ========================================================================== */
+/*  ==========================================================================
+    IMAGES
+    Collection of all helpers for images
+
+    INFO:
+    - all mixins should start with "img" as prefix
+    ========================================================================== */
+/*  ==========================================================================
+    TYPOGRAPHY
+    Helpers to arrange type
+
+    INFO:
+    - all mixins should start with "typo" as prefix
+    ========================================================================== */
+/*  PROPERTIES
+    ------------------------------------------------------------------------ */
+/*  TEXT TYPES
+    ------------------------------------------------------------------------ */
+/*  BLOCKS/WRAPS
+    ------------------------------------------------------------------------ */
+/*  ==========================================================================
+    VISTA
+    Helper to add base style to the vista output.
+
+    INFO:
+    - Usage example:
+      @include vista(100vh, 75vh, 100vh, 60vh, true);
+    ========================================================================== */
+/*  ==========================================================================
+    KEYFRAMES
+    Collection of all keyframes (mind the ordering!)
+    ========================================================================== */
+/*  ==========================================================================
+    LOADER
+    ========================================================================== */
+@keyframes loader-spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*  STYLING
+    ------------------------------------------------------------------------ */
+* {
+  -webkit-print-color-adjust: exact;
+  background: transparent !important;
+  color: #000 !important;
+  /* Black prints faster: h5bp.com/s */
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+a,
+a:visited {
+  text-decoration: underline;
+}
+
+abbr[title]:after {
+  content: " (" attr(title) ")";
+}
+
+/*
+ * Don't show links for images, or javascript/internal links
+ */
+.ir a:after,
+a[href^="javascript:"]:after,
+a[href^="#"]:after {
+  content: "";
+}
+
+pre,
+blockquote {
+  border: 1px solid #999;
+  page-break-inside: avoid;
+}
+
+thead {
+  display: table-header-group;
+  /* h5bp.com/t */
+}
+
+tr,
+img {
+  page-break-inside: avoid;
+}
+
+img {
+  max-width: 100% !important;
+}
+
+@page {
+  margin: 0.5cm;
+}
+p,
+h2,
+h3 {
+  orphans: 3;
+  widows: 3;
+}
+
+h2,
+h3 {
+  page-break-after: avoid;
+}
+
+video {
+  display: none;
+}
+
+/* Own Rules
+ * --------------------------------------------------------------------------- */
+/*
+ * GENERAL
+ */
+*:before,
+*:after {
+  display: none;
+}
+
+a[href]:after {
+  display: none;
+}
+
+abbr[title]:after {
+  display: none;
+}
+
+img {
+  display: none;
+  height: auto;
+  width: 100%;
+}
+
+svg {
+  display: none;
+}
+
+iframe {
+  display: none;
+}
+
+video {
+  display: none;
+}
+
+form,
+label,
+input,
+select,
+textarea,
+button {
+  display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.EBIL-button,
+.EBIL-number,
+.EBIL-load-more,
+.EBIL-show-more,
+.EBIL-section__slogan,
+#EBIL-section--sidenav,
+.JS-tabs {
+  display: none;
+}
+
+.EBIL-loader,
+.EBIL-no-result {
+  display: none;
+}
+
+.EBIL-slider-arrows,
+.EBIL-slider-nav,
+.EBIL-slider-pagination {
+  display: none !important;
+}
+
+.JS-tab-panel__tabs {
+  display: none;
+}
+
+.tns-outer {
+  display: none;
+}
+
+/*
+ * TYPOGRAPHY
+ */
+* {
+  color: #000000 !important;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 12px !important;
+}
+
+a {
+  color: #000000 !important;
+  text-decoration: underline !important;
+}
+a:visited, a:hover {
+  color: #000000 !important;
+  text-decoration: underline;
+}
+
+a * {
+  color: #000000 !important;
+}
+
+b,
+strong {
+  color: #000000 !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+table,
+blockquote,
+pre {
+  margin: 15px 0 15px 0;
+}
+
+ul,
+ol {
+  padding: 0 0 0 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #000000 !important;
+}
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  text-decoration: none !important;
+}
+
+h1 {
+  font-size: 26px !important;
+}
+
+h2 {
+  font-size: 20px !important;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-size: 16px !important;
+}
+
+blockquote {
+  border: 0;
+  font-style: italic;
+  text-align: center;
+}
+
+pre {
+  border: 1px solid #777777;
+  padding: 15px;
+}
+
+table {
+  border: 1px solid #dddddd;
+  width: 100%;
+}
+
+table tr th {
+  background: #EEEEEE !important;
+  color: #000000 !important;
+  font-size: 16px !important;
+  -webkit-print-color-adjust: exact;
+}
+
+.EBIL-table__overlay {
+  display: none;
+}
+
+/*
+ * HEADER
+ */
+#EBIL-section--header {
+  border-bottom: 2px solid #777777;
+  display: block !important;
+  margin-bottom: 30px;
+  padding: 0 0 30px 0;
+}
+#EBIL-section--header .EBIL-section__wrap {
+  display: block !important;
+}
+#EBIL-section--header .EBIL-section__wrap > * {
+  display: none;
+}
+#EBIL-section--header .EBIL-section__wrap .EBIL-section__logo {
+  background-color: #EEEEEE !important;
+  display: block !important;
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
+  width: 200px;
+}
+#EBIL-section--header .EBIL-section__wrap .EBIL-section__logo i {
+  color: #041319;
+}
+#EBIL-section--header .EBIL-section__wrap .EBIL-section__menu {
+  display: none !important;
+}
+
+/*
+ * FOOTER
+ */
+#EBIL-section--footer {
+  border-top: 2px solid #777777;
+  display: block !important;
+  margin-top: 30px;
+  padding: 30px 0 0 0;
+}
+#EBIL-section--footer .EBIL-section__wrap--2 {
+  display: block !important;
+}
+#EBIL-section--footer .EBIL-section__wrap--2 > * {
+  display: none;
+}
+#EBIL-section--footer .EBIL-section__wrap--2 .EBIL-section__row--2 {
+  display: block !important;
+}
+#EBIL-section--footer .EBIL-section__wrap--2 .EBIL-section__row--2 > * {
+  display: none;
+}
+#EBIL-section--footer .EBIL-section__wrap--2 .EBIL-section__row--2 .EBIL-section__col--contact {
+  display: block !important;
+}
+#EBIL-section--footer .EBIL-section__wrap--2 .EBIL-section__row--2 .EBIL-section__col--contact .EBIL-section__contact__logo {
+  display: none;
+}
+#EBIL-section--footer .EBIL-section__wrap--2 .EBIL-section__row--2 .EBIL-section__col--contact .EBIL-section__contact__address {
+  display: block !important;
+  font-size: 10px !important;
+  font-style: italic;
+  text-align: center;
+}
