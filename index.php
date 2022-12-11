@@ -19,15 +19,16 @@
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--waypoints.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/webpack--runtime.js"></script>
         <!-- CSS imports -->
-        <link rel="stylesheet" href="/Packages/Resources/Public/Css/Frontend/globals--global.css">
-        <link rel="stylesheet" href="/Packages/Resources/Public/Css/Frontend/globals--presets.css">
-        <link rel="stylesheet" href="/Packages/Resources/Public/Css/Frontend/globals--print.css">
-        <link rel="stylesheet" href="/Packages/Resources/Public/Css/Frontend/globals--vendors.css">
-        <link rel="stylesheet" href="/Packages/Resources/Public/Css/Frontend/sections--main.css">
-        <link rel="stylesheet" href="/Packages/Resources/Public/Css/Frontend/sections--sidenav.css">
-        <link rel="stylesheet" href="/Packages/Resources/Public/Css/Frontend/sections--header.css">
-        <link rel="stylesheet" href="/Packages/Resources/Public/Fonts/style.css">
-        <link rel="stylesheet" href="/Packages/Resources/Public/Icons/Icomoon/style.css">
+        <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/globals--global.css">
+        <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/globals--presets.css">
+        <link media="print" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/globals--print.css">
+        <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/globals--vendors.css">
+        <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/sections--main.css">
+        <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/sections--sidenav.css">
+        <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/sections--header.css">
+        <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Fonts/style.css">
+        <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Icons/Icomoon/style.css">
+
         <!-- ICONS (apple-touchIcon,favicon) -->
     </head>
     <body data-hero-layout="full">
