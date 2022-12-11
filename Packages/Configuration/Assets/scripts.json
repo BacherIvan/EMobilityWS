@@ -10,6 +10,17 @@
       "webpack--runtime": "webpack--runtime.js"
     }
   },
+  "sections/header": {
+    "alias": "entry--sections--header",
+    "file": "entry--sections--header.js",
+    "dependencies": {
+      "tk-internal-functions": "tk-internal-functions.js",
+      "vendor--animated-scroll-to": "vendor--animated-scroll-to.js",
+      "vendor--cash-dom": "vendor--cash-dom.js",
+      "vendor--waypoints": "vendor--waypoints.js",
+      "webpack--runtime": "webpack--runtime.js"
+    }
+  },
   "sections/main": {
     "alias": "entry--sections--main",
     "file": "entry--sections--main.js",

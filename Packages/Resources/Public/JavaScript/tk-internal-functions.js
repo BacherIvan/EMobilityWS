@@ -369,6 +369,69 @@ const EasingFunctions = {
 
 /***/ }),
 
+/***/ "./source/js/utilities/prevent-link-on-touch.js":
+/*!******************************************************!*\
+  !*** ./source/js/utilities/prevent-link-on-touch.js ***!
+  \******************************************************/
+/*! exports provided: initPreventLinkOnTouch */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initPreventLinkOnTouch", function() { return initPreventLinkOnTouch; });
+/* harmony import */ var cash_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! cash-dom */ "./node_modules/cash-dom/dist/cash.js");
+/* harmony import */ var cash_dom__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(cash_dom__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tk-source-root/js/variables/variables */ "./source/js/variables/variables.js");
+/*  ==========================================================================
+    PREVENT LINK ON HOVER
+    Add functionality for the first main navigation level, so that
+    the navigation is more user-friendly on touch-devices
+    ========================================================================== */
+
+// node modules imports
+
+
+// local imports
+
+
+/* CODE
+ * --------------------------------------------------------------------------- */
+
+/**
+ * Function which initialize the trigger for the first level-links in the main
+ * navigation menu. It triggers only on touch devices. The corresponding links
+ * doesn't link on the first touch-click but on the second. The first click opens
+ * just the submenu so you can have access to them, too.
+ *
+ * @param {string} linkClass - the class for the first level-links in the menu
+ */
+function initPreventLinkOnTouch(linkClass) {
+  const $links = cash_dom__WEBPACK_IMPORTED_MODULE_0___default()(`.${linkClass}`);
+  if ($links.length) {
+    tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_1__["LAYOUT"].$html.on('touchstart', e => {
+      const $target = cash_dom__WEBPACK_IMPORTED_MODULE_0___default()(e.target);
+      if (!$target.hasClass(linkClass)) {
+        $links.removeClass(`${linkClass}--act`);
+      }
+      if ($target.hasClass(linkClass) && !$target.hasClass(`${linkClass}--act`)) {
+        $links.removeClass(`${linkClass}--act`);
+      }
+      $links.on('click', event => {
+        const $this = cash_dom__WEBPACK_IMPORTED_MODULE_0___default()(event.currentTarget);
+        if (!$this.hasClass(`${linkClass}--act`)) {
+          event.preventDefault();
+          $links.removeClass(`${linkClass}--act`);
+          $this.addClass(`${linkClass}--act`);
+        }
+      });
+    });
+  } else {
+    console.log('No menu elements for \'preventLinkOnTouch\' found.');
+  }
+}
+
+/***/ }),
+
 /***/ "./source/js/utilities/scroller.js":
 /*!*****************************************!*\
   !*** ./source/js/utilities/scroller.js ***!
