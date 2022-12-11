@@ -928,18 +928,18 @@ strong {
   z-index: 1;
   background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 25%, #041319);
 }
-.EBIL-rte.DNA-rte--no-list ol,
-.EBIL-rte.DNA-rte--no-list ul {
+.EBIL-rte.EBIL-rte--no-list ol,
+.EBIL-rte.EBIL-rte--no-list ul {
   display: none !important;
 }
-.EBIL-rte.DNA-rte--no-table table {
+.EBIL-rte.EBIL-rte--no-table table {
   display: none !important;
 }
 @media (max-width: 1024px) {
-  .EBIL-rte > * + *:not(.DNA-table) {
+  .EBIL-rte > * + *:not(.EBIL-table) {
     margin-top: 1.0714285714em;
   }
-  .EBIL-rte > * + .DNA-table {
+  .EBIL-rte > * + .EBIL-table {
     margin-top: 3em;
   }
   .EBIL-rte h1,
@@ -1090,10 +1090,10 @@ strong {
   .EBIL-rte {
     position: relative;
   }
-  .EBIL-rte > * + *:not(.DNA-table) {
+  .EBIL-rte > * + *:not(.EBIL-table) {
     margin-top: 0.7142857143em;
   }
-  .EBIL-rte > * + .DNA-table {
+  .EBIL-rte > * + .EBIL-table {
     margin-top: 2em;
   }
 }

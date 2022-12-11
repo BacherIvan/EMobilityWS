@@ -586,7 +586,7 @@
       background: linear-gradient(180deg, rgba(transparent, 0) 0, rgba(transparent, 0) 25%, $clr-tk-grey-dark);
     }
   }
-  &.DNA-rte {
+  &.EBIL-rte {
     &--no-list {
       @include typo-lock-list();
     }
@@ -599,11 +599,11 @@
   @media #{$mq-tablet} {
     > * {
       + * {
-        &:not(.DNA-table) {
+        &:not(.EBIL-table) {
           margin-top: em(15,$fs-text-tablet);
         }
       }
-      + .DNA-table {
+      + .EBIL-table {
         margin-top: em(30);
       }
     }
@@ -621,11 +621,11 @@
     position: relative;
     > * {
       + * {
-        &:not(.DNA-table) {
+        &:not(.EBIL-table) {
           margin-top: em(10,$fs-text-mobile);
         }
       }
-      + .DNA-table {
+      + .EBIL-table {
         margin-top: em(20);
       }
     }
