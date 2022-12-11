@@ -33,6 +33,7 @@
                 error_reporting(E_ALL);
                 ini_set ('display_errors', 'On');
                 include("./Packages/Resources/Private/Partials/Elements/Scroller.html");
+                include("./Packages/Resources/Private/Sections/Sidenav.html");
             ?>
         </div>
     </body>
