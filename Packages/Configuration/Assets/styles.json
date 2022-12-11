@@ -3,5 +3,5 @@
   "globals/presets": "globals--presets.css",
   "globals/print": "globals--print.css",
   "globals/vendors": "globals--vendors.css",
-  "sections/main": "sections--main.css"
+  "sections/sidenav": "sections--sidenav.css"
 }

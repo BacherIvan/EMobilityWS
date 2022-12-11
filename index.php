@@ -9,10 +9,12 @@
         <!-- Javascript imports -->
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--globals--global.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--sections--main.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--sections--sidenav.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/tk-internal-functions.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--cash-dom.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--lazysizes.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--lodash-es.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--animated-scroll-to.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/webpack--runtime.js"></script>
         <!-- CSS imports -->
         <link type="text/css" href="/Packages/Resources/Public/Css/Frontend/globals--global.css">
@@ -20,8 +22,10 @@
         <link type="text/css" href="/Packages/Resources/Public/Css/Frontend/globals--print.css">
         <link type="text/css" href="/Packages/Resources/Public/Css/Frontend/globals--vendors.css">
         <link type="text/css" href="/Packages/Resources/Public/Css/Frontend/sections--main.css">
+        <link type="text/css" href="/Packages/Resources/Public/Css/Frontend/sections--sidenav.css">
         <link type="text/css" href="/Packages/Resources/Public/Fonts/style.css">
         <link type="text/css" href="/Packages/Resources/Public/Icons/Icomoon/style.css">
+        <!-- ICONS (apple-touchIcon,favicon) -->
     </head>
     <body data-hero-layout="full">
         <div id="EmoBILity" class="EmoBILity">

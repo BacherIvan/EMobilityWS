@@ -1,0 +1,99 @@
+/*  ==========================================================================
+    Sidenav
+    Styling for parts (which are not defined as modules), for eg. breadcrumb
+
+    INFO:
+    - don't style modules here, use the corresponding modules scss folder
+    ========================================================================== */
+
+@import 'source/scss/storage/storage';
+
+/* STYLING
+ * --------------------------------------------------------------------------- */
+
+$identifier: 'sidenav';
+
+#{$sect}[data-id="#{$identifier}"] {
+  position: fixed;
+  right: 0;
+  bottom: 50%;
+  transform: translateY(50%);
+  z-index: $zi-sidenav;
+  // --- children ---
+  #{$sect} {
+    &__item {
+      padding: em(15) 0;
+      text-align: right;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      &__title,
+      &__counter {
+        font-size: em(12);
+        text-transform: uppercase;
+        cursor: pointer;
+        opacity: 0.3;
+        transition: opacity 0.5s, width 0.5s;
+        &:hover {
+          opacity: 1;
+        }
+      }
+      &__title {
+        opacity: 0;
+        visibility: hidden;
+      }
+      &__counter {
+        display: inline-flex;
+        width: em(20);
+        opacity: 0.3;
+      }
+      &:after {
+        display: block;
+        content: '';
+        width: em(20);
+        height: 2px;
+        background-color: $clr-white;
+        margin-left: em(10);
+        opacity: 0.3;
+        transition: width 0.5s, opacity 0.5s;
+      }
+      &.JS-act {
+        &:after {
+          width: em(30);
+          opacity: 1;
+        }
+        #{$sect} {
+          &__item {
+            &__title,
+            &__counter {
+              pointer-events: none;
+              opacity: 0.3;
+            }
+            &__title {
+              opacity: 1;
+              visibility: visible;
+            }
+            &__counter {
+              opacity: 0;
+              width: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // --- properties ---
+  &:hover {
+    #{$sect} {
+
+    }
+  }
+
+  /* RESPONSIVE
+   * --------------------------------------------------------------------------- */
+
+  @media #{$mq-tablet} {
+    display: none;
+  }
+}

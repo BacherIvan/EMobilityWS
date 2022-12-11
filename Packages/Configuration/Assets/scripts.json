@@ -18,5 +18,16 @@
       "vendor--cash-dom": "vendor--cash-dom.js",
       "webpack--runtime": "webpack--runtime.js"
     }
+  },
+  "sections/sidenav": {
+    "alias": "entry--sections--sidenav",
+    "file": "entry--sections--sidenav.js",
+    "dependencies": {
+      "tk-internal-functions": "tk-internal-functions.js",
+      "vendor--animated-scroll-to": "vendor--animated-scroll-to.js",
+      "vendor--cash-dom": "vendor--cash-dom.js",
+      "vendor--lodash-es": "vendor--lodash-es.js",
+      "webpack--runtime": "webpack--runtime.js"
+    }
   }
 }
