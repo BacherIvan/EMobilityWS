@@ -3,6 +3,8 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="theme-color" content="#ffffff">
         <title> EMobility - Wir bewegen Südtirol</title>
         <!-- Javascript imports -->
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--globals--global.js"></script>
@@ -19,6 +21,7 @@
         <link type="text/css" href="/Packages/Resources/Public/Css/Frontend/globals--vendors.css">
         <link type="text/css" href="/Packages/Resources/Public/Css/Frontend/sections--main.css">
         <link type="text/css" href="/Packages/Resources/Public/Fonts/style.css">
+        <link type="text/css" href="/Packages/Resources/Public/Icons/Icomoon/style.css">
     </head>
     <body data-hero-layout="full">
         <div id="EmoBILity" class="EmoBILity">

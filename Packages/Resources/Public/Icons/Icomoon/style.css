@@ -24,36 +24,98 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.DNA-icon--website:before {
-  content: "\e90a";
-}
-.DNA-icon--powered-by-bn:before {
-  content: "\e909";
-}
-.DNA-icon--hmm-logo:before {
+.EBIL-icon--add-outline:before {
   content: "\e900";
 }
-.DNA-icon--arrow-left:before {
+.EBIL-icon--add-solid:before {
   content: "\e901";
 }
-.DNA-icon--arrow-right:before {
+.EBIL-icon--arrow-thin-down:before {
   content: "\e902";
 }
-.DNA-icon--close:before {
+.EBIL-icon--arrow-thin-left:before {
   content: "\e903";
 }
-.DNA-icon--location:before {
+.EBIL-icon--arrow-thin-right:before {
   content: "\e904";
 }
-.DNA-icon--mail:before {
+.EBIL-icon--arrow-thin-up:before {
   content: "\e905";
 }
-.DNA-icon--menu:before {
+.EBIL-icon--cheveron-down:before {
   content: "\e906";
 }
-.DNA-icon--phone:before {
+.EBIL-icon--cheveron-left:before {
   content: "\e907";
 }
-.DNA-icon--scroll:before {
+.EBIL-icon--cheveron-outline-down:before {
   content: "\e908";
 }
+.EBIL-icon--cheveron-outline-left:before {
+  content: "\e909";
+}
+.EBIL-icon--cheveron-outline-right:before {
+  content: "\e90a";
+}
+.EBIL-icon--cheveron-outline-up:before {
+  content: "\e90b";
+}
+.EBIL-icon--cheveron-right:before {
+  content: "\e90c";
+}
+.EBIL-icon--cheveron-up:before {
+  content: "\e90d";
+}
+.EBIL-icon--close:before {
+  content: "\e90e";
+}
+.EBIL-icon--close-outline:before {
+  content: "\e90f";
+}
+.EBIL-icon--close-solid:before {
+  content: "\e910";
+}
+.EBIL-icon--code:before {
+  content: "\e911";
+}
+.EBIL-icon--code:before {
+  content: "\e911";
+}
+.EBIL-icon--code:before {
+  content: "\e911";
+}
+.EBIL-icon--cog:before {
+  content: "\e912";
+}
+.EBIL-icon--envelope:before {
+  content: "\e913";
+}
+.EBIL-icon--exclamation-solid:before {
+  content: "\e914";
+}
+.EBIL-icon--hand-stop:before {
+  content: "\e915";
+}
+.EBIL-icon--information-solid:before {
+  content: "\e916";
+}
+.EBIL-icon--key:before {
+  content: "\e917";
+}
+.EBIL-icon--location:before {
+  content: "\e918";
+}
+.EBIL-icon--lock-closed:before {
+  content: "\e919";
+}
+.EBIL-icon--phone:before {
+  content: "\e91a";
+}
+.EBIL-icon--user:before {
+  content: "\e91b";
+}
+.EBIL-icon--user-solid-circle:before {
+  content: "\e91c";
+}
+
+
