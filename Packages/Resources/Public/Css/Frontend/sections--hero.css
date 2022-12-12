@@ -1,0 +1,533 @@
+/*  ==========================================================================
+    HERO
+    Styling of the 'header-image-slider' part
+    ========================================================================== */
+/*  ==========================================================================
+    STORAGE
+    ========================================================================== */
+/*  ==========================================================================
+    VARIABLES
+    Collection of all variables
+
+    INFO:
+    - try to use variables as much as possible, it makes life easier
+    - try to use meaningful prefixes, e.g. "$clr-" for color variables
+      or "$fs-" for font-sizes
+    ========================================================================== */
+/*  ==========================================================================
+    CLASS NAMES
+    Collection of class-names.
+    ========================================================================== */
+/*  ==========================================================================
+    COLORS
+    List all colors concerning your project here
+
+    INFO:
+    - use for your colors at least the prefix "$clr-"
+    ========================================================================== */
+/*  ==========================================================================
+    DIMENSIONS
+    List of some recurring dimensions.
+
+    INFO:
+    - don't delete any unit!
+    - do unit changes with care
+    - try to use prefixes (f.e. "zi" for "z-index", "hgt" for "height", "wdt" for "width" etc.)
+    - if possible try to define the main z-index values here
+    - don't put all dimensions in here, only well selected ones (it's not a trashcan!)
+    ========================================================================== */
+/*  ==========================================================================
+    MEDIA QUERIES
+    Collection of media queries.
+    ========================================================================== */
+/*  ==========================================================================
+    TYPOGRAPHY
+    Font settings concerning your project.
+
+    INFO:
+    - don't delete anything!
+    - use changes in here with care
+    - try to use prefixes (f.e. "ff" for "font-family", "fs" for "font-size", "fw" for "font-weight" ecc.)
+    - don't put all properties in here, only well selected ones (it's not a trashcan!)
+    ========================================================================== */
+/*  ==========================================================================
+    FUNCIONS
+    Collection of all functions
+    ========================================================================== */
+/*  ==========================================================================
+    GENERAL
+    Useful global functions
+    ========================================================================== */
+/*  ==========================================================================
+    MIXINS
+    Collection of all mixins (mind the ordering!)
+    ========================================================================== */
+/*  ==========================================================================
+    GENERAL
+    Useful global helpers
+
+    INFO:
+    - no specific naming convention (no prefix) except to not use camelcase if possible!
+    - use it with care, its not a trash can!
+    - contributions for the kickstarter are welcome!
+    ========================================================================== */
+/*
+ * WRAPPER DIMENSIONS
+ * generates wrapper padding & max-width
+ */
+/*  ==========================================================================
+    BUTTONS
+    Helpers to edit buttons
+
+    INFO:
+    - all mixins should start with "btn" as prefix
+    ========================================================================== */
+/*  ==========================================================================
+    IMAGES
+    Collection of all helpers for images
+
+    INFO:
+    - all mixins should start with "img" as prefix
+    ========================================================================== */
+/*  ==========================================================================
+    TYPOGRAPHY
+    Helpers to arrange type
+
+    INFO:
+    - all mixins should start with "typo" as prefix
+    ========================================================================== */
+/*  PROPERTIES
+    ------------------------------------------------------------------------ */
+/*  TEXT TYPES
+    ------------------------------------------------------------------------ */
+/*  BLOCKS/WRAPS
+    ------------------------------------------------------------------------ */
+/*  ==========================================================================
+    VISTA
+    Helper to add base style to the vista output.
+
+    INFO:
+    - Usage example:
+      @include vista(100vh, 75vh, 100vh, 60vh, true);
+    ========================================================================== */
+/*  ==========================================================================
+    KEYFRAMES
+    Collection of all keyframes (mind the ordering!)
+    ========================================================================== */
+/*  ==========================================================================
+    LOADER
+    ========================================================================== */
+@keyframes loader-spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*  ==========================================================================
+    CONFETTI
+    ========================================================================== */
+@keyframes makeItRain {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    top: 65%;
+  }
+}
+/* VARS
+ * --------------------------------------------------------------------------- */
+/* STYLING
+ * --------------------------------------------------------------------------- */
+.EBIL-section[data-id=hero] {
+  position: relative;
+  z-index: 30;
+  /* RESPONSIVE
+   * --------------------------------------------------------------------------- */
+  /* KEYFRAMES
+   * --------------------------------------------------------------------------- */
+}
+.EBIL-section[data-id=hero] .EBIL-section {
+  /* RESPONSIVE
+   * --------------------------------------------------------------------------- */
+}
+.EBIL-section[data-id=hero] .EBIL-section__vista {
+  background-color: #000000;
+  overflow: hidden;
+}
+.EBIL-section[data-id=hero] .EBIL-section__vista__slide {
+  display: none;
+}
+.EBIL-section[data-id=hero] .EBIL-section__vista__slide:first-child, .EBIL-section[data-id=hero] .EBIL-section__vista__slide.tns-item {
+  display: block;
+}
+.EBIL-section[data-id=hero] .EBIL-section__vista__slide.tns-item {
+  float: left;
+}
+.EBIL-section[data-id=hero] .EBIL-section__vista__item {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+.EBIL-section[data-id=hero] .EBIL-section__vista__item img {
+  display: block;
+  height: auto;
+  width: 100%;
+}
+.EBIL-section[data-id=hero] .EBIL-section__vista__item iframe,
+.EBIL-section[data-id=hero] .EBIL-section__vista__item video {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 5;
+}
+.EBIL-section[data-id=hero] .EBIL-section__vista__item iframe {
+  border: 0;
+}
+.EBIL-section[data-id=hero] .EBIL-section__vista__item video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.EBIL-section[data-id=hero] .EBIL-section__vista__item--video {
+  background-color: #000000;
+}
+.EBIL-section[data-id=hero] .EBIL-section__vista.tns-slider {
+  *zoom: 1;
+  background-color: transparent;
+}
+.EBIL-section[data-id=hero] .EBIL-section__vista.tns-slider:before, .EBIL-section[data-id=hero] .EBIL-section__vista.tns-slider:after {
+  content: " ";
+  display: table;
+}
+.EBIL-section[data-id=hero] .EBIL-section__vista.tns-slider:after {
+  clear: both;
+}
+@media (min-width: 1025px) and (orientation: landscape) {
+  .EBIL-section[data-id=hero] .EBIL-section__vista__item {
+    min-height: 650px;
+  }
+  .EBIL-section[data-id=hero] .EBIL-section__vista__item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .EBIL-section[data-id=hero] .EBIL-section__vista[data-hero-layout=half] .EBIL-section__vista__item {
+    height: 75vh;
+  }
+  .EBIL-section[data-id=hero] .EBIL-section__vista[data-hero-layout=full] .EBIL-section__vista__item {
+    height: 100vh;
+  }
+}
+@media (max-width: 1024px) and (orientation: portrait) {
+  .EBIL-section[data-id=hero] .EBIL-section__vista__item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .EBIL-section[data-id=hero] .EBIL-section__vista[data-hero-layout=half] .EBIL-section__vista__item {
+    height: calc(var(--vh, 1vh) * 60);
+  }
+  .EBIL-section[data-id=hero] .EBIL-section__vista[data-hero-layout=full] .EBIL-section__vista__item {
+    height: calc(var(--vh, 1vh) * 100);
+  }
+}
+@media (max-width: 767px) and (orientation: portrait) {
+  .EBIL-section[data-id=hero] .EBIL-section__vista__item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+  .EBIL-section[data-id=hero] .EBIL-section__vista[data-hero-layout=half] .EBIL-section__vista__item {
+    height: calc(var(--vh, 1vh) * 60);
+  }
+  .EBIL-section[data-id=hero] .EBIL-section__vista[data-hero-layout=full] .EBIL-section__vista__item {
+    height: calc(var(--vh, 1vh) * 100);
+  }
+}
+.EBIL-section[data-id=hero] .EBIL-section__animation-wrap {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 9999999;
+}
+.EBIL-section[data-id=hero] .EBIL-section__confetti-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item {
+  position: absolute;
+  width: 8px;
+  height: 16px;
+  background: #C59960;
+  top: 0;
+  opacity: 0;
+}
+.EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(1) {
+  left: 7%;
+  transform: rotate(-23deg);
+  animation: makeItRain 1000ms infinite ease-out;
+  animation-delay: 137ms;
+  animation-duration: 1097ms;
+}
+.EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(2) {
+  left: 14%;
+  transform: rotate(-15deg);
+  animation: makeItRain 1000ms infinite ease-out;
+  animation-delay: 249ms;
+  animation-duration: 962ms;
+}
+.EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(3) {
+  left: 21%;
+  transform: rotate(-44deg);
+  animation: makeItRain 1000ms infinite ease-out;
+  animation-delay: 346ms;
+  animation-duration: 1050ms;
+}
+.EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(4) {
+  left: 28%;
+  transform: rotate(-35deg);
+  animation: makeItRain 1000ms infinite ease-out;
+  animation-delay: 367ms;
+  animation-duration: 1120ms;
+}
+.EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(5) {
+  left: 35%;
+  transform: rotate(-72deg);
+  animation: makeItRain 1000ms infinite ease-out;
+  animation-delay: 59ms;
+  animation-duration: 1076ms;
+}
+.EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(6) {
+  left: 42%;
+  transform: rotate(65deg);
+  animation: makeItRain 1000ms infinite ease-out;
+  animation-delay: 96ms;
+  animation-duration: 1197ms;
+}
+.EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(7) {
+  left: 49%;
+  transform: rotate(58deg);
+  animation: makeItRain 1000ms infinite ease-out;
+  animation-delay: 242ms;
+  animation-duration: 1070ms;
+}
+.EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(8) {
+  left: 56%;
+  transform: rotate(59deg);
+  animation: makeItRain 1000ms infinite ease-out;
+  animation-delay: 262ms;
+  animation-duration: 1170ms;
+}
+.EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(9) {
+  left: 63%;
+  transform: rotate(-46deg);
+  animation: makeItRain 1000ms infinite ease-out;
+  animation-delay: 74ms;
+  animation-duration: 1027ms;
+}
+.EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(10) {
+  left: 70%;
+  transform: rotate(77deg);
+  animation: makeItRain 1000ms infinite ease-out;
+  animation-delay: 145ms;
+  animation-duration: 1198ms;
+}
+.EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(11) {
+  left: 77%;
+  transform: rotate(46deg);
+  animation: makeItRain 1000ms infinite ease-out;
+  animation-delay: 105ms;
+  animation-duration: 1118ms;
+}
+.EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(12) {
+  left: 84%;
+  transform: rotate(-9deg);
+  animation: makeItRain 1000ms infinite ease-out;
+  animation-delay: 140ms;
+  animation-duration: 1133ms;
+}
+.EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(13) {
+  left: 91%;
+  transform: rotate(-29deg);
+  animation: makeItRain 1000ms infinite ease-out;
+  animation-delay: 149ms;
+  animation-duration: 1046ms;
+}
+.EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(even) {
+  z-index: 1;
+}
+.EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(4n) {
+  width: 5px;
+  height: 12px;
+  animation-duration: 2000ms;
+}
+.EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(3n) {
+  width: 3px;
+  height: 10px;
+  animation-duration: 2500ms;
+  animation-delay: 1000ms;
+}
+.EBIL-section[data-id=hero] .EBIL-section__scroller {
+  position: absolute;
+  left: 50%;
+  bottom: 6em;
+  transform: translateX(-50%);
+  opacity: 1;
+  z-index: 1;
+}
+.EBIL-section[data-id=hero] .EBIL-section__scroller-wrapper {
+  cursor: pointer;
+  padding: 0.5em;
+  height: 2em;
+  border: 0.2em solid #FFFFFF;
+  border-radius: 2.5em;
+  box-sizing: content-box;
+  transition: 0.25s;
+}
+.EBIL-section[data-id=hero] .EBIL-section__scroller-wrapper:hover {
+  transform: translateY(0.5em);
+  transition: 0.25s;
+}
+.EBIL-section[data-id=hero] .EBIL-section__scroller-dot {
+  width: 0.7em;
+  height: 0.7em;
+  border-radius: 50%;
+  background-color: #FFFFFF;
+  animation-name: scroll;
+  animation-duration: 2s;
+  animation-timing-function: cubic-bezier(0.15, 0.41, 0.69, 0.94);
+  animation-iteration-count: infinite;
+}
+.EBIL-section[data-id=hero] .EBIL-section__overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  background: transparent linear-gradient(180deg, #0000008B 0%, #01070971 44%, #030D119F 72%, #031014BE 85%, #041319 100%) 0% 0% no-repeat padding-box;
+}
+.EBIL-section[data-id=hero] .EBIL-section__slogan {
+  position: absolute;
+  width: 20%;
+  left: 50%;
+  bottom: 50%;
+  transform: translate(-50%, 50%);
+  overflow: hidden;
+  pointer-events: all;
+}
+.EBIL-section[data-id=hero] .EBIL-section__slogan__text {
+  color: #FFFFFF;
+  line-height: 1;
+  letter-spacing: 0.128em;
+  padding: 4em 0;
+  text-align: center;
+  text-transform: uppercase;
+}
+.EBIL-section[data-id=hero] .EBIL-section__slogan__text span {
+  font-size: 2em;
+}
+.EBIL-section[data-id=hero] .EBIL-section__nav {
+  pointer-events: all;
+  position: absolute;
+  bottom: 6em;
+  left: 9em;
+  color: #FFFFFF;
+  display: flex;
+  z-index: 1;
+}
+.EBIL-section[data-id=hero] .EBIL-section__nav__dot {
+  background-color: #FFFFFF;
+  width: 1.5em;
+  height: 0.25em;
+  margin: 0 0.5em;
+  border-radius: 1em;
+  opacity: 0.2;
+  cursor: pointer;
+}
+.EBIL-section[data-id=hero] .EBIL-section__nav__dot.tns-nav-active {
+  opacity: 1;
+}
+.EBIL-section[data-id=hero][data-menu-open="1"] .EBIL-section__scroller, .EBIL-section[data-id=hero][data-menu-open="1"] .EBIL-section__slogan, .EBIL-section[data-id=hero][data-menu-open="1"] .EBIL-section__nav {
+  display: none;
+}
+@media (max-width: 1024px) {
+  .EBIL-section[data-id=hero] .EBIL-section__nav {
+    left: 5em;
+  }
+  .EBIL-section[data-id=hero] .EBIL-section__slogan {
+    width: 43%;
+  }
+  .EBIL-section[data-id=hero] .EBIL-section__lang-menu {
+    pointer-events: all;
+    gap: 3.5em;
+    right: 12em;
+    top: 5.1em;
+  }
+}
+@media (max-width: 767px) {
+  .EBIL-section[data-id=hero] .EBIL-section__slogan {
+    width: 60%;
+    bottom: 30%;
+  }
+  .EBIL-section[data-id=hero] .EBIL-section__nav {
+    left: 50%;
+    bottom: 10em;
+    transform: translateX(-50%);
+  }
+  .EBIL-section[data-id=hero] .EBIL-section__lang-menu {
+    display: none;
+    pointer-events: none;
+  }
+  .EBIL-section[data-id=hero] .EBIL-section__scroller {
+    bottom: 4em;
+  }
+}
+@keyframes scroll {
+  0% {
+    opacity: 0;
+  }
+  10% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+}

@@ -1,0 +1,261 @@
+/*  ==========================================================================
+    HERO
+    Styling of the 'header-image-slider' part
+    ========================================================================== */
+
+@import 'source/scss/storage/storage';
+
+/* VARS
+ * --------------------------------------------------------------------------- */
+
+$vista-hgt-desktop-full: 100vh;   // desktop height if "vista element - fullscreen" is set (e.g. 100vh)
+$vista-hgt-desktop-half: 75vh;    // desktop height if "vista element - default" is set (e.g. 75vh)
+$vista-min-hgt-desktop: 650px;    // desktop min height (e.g. 650px)
+$vista-hgt-tablet-full: calc(var(--vh, 1vh) * 100);    // tablet height if "vista element - fullscreen" is set (e.g. 100vh)
+$vista-hgt-tablet-half: calc(var(--vh, 1vh) * 60);     // tablet height if "vista element - default" is set (e.g. 60vh)
+$vista-hgt-mobile-full: calc(var(--vh, 1vh) * 100);    // mobile height if "vista element - fullscreen" is set (e.g. 100vh)
+$vista-hgt-mobile-half: calc(var(--vh, 1vh) * 60);     // mobile height if "vista element - default" is set (e.g. 60vh)
+$vista-opt-mobile-full: true;     // activate/deactivate full vista on mobile devices (true/false)
+
+/* STYLING
+ * --------------------------------------------------------------------------- */
+
+$identifier: 'hero';
+
+#{$sect}[data-id="#{$identifier}"] {
+  position: relative;
+  z-index: $zi-hero;
+  // --- children ---
+  #{$sect} {
+    @include vista(
+      $sect,                      // prefix
+      $vista-hgt-desktop-full,    // desktop height if "hero element - fullscreen" is set (e.g. 100vh)
+      $vista-hgt-desktop-half,    // desktop height if "hero element - default" is set (e.g. 75vh)
+      $vista-min-hgt-desktop,     // desktop min height (e.g. 650px)
+      $vista-hgt-tablet-full,     // tablet height if "hero element - fullscreen" is set (e.g. 100vh)
+      $vista-hgt-tablet-half,     // tablet height if "hero element - default" is set (e.g. 60vh)
+      $vista-hgt-mobile-full,     // mobile height if "hero element - fullscreen" is set (e.g. 100vh)
+      $vista-hgt-mobile-half,     // mobile height if "hero element - default" is set (e.g. 60vh)
+      $vista-opt-mobile-full,     // activate/deactivate full hero on mobile devices (true/false)
+    );
+
+    &__animation-wrap {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 9999999;
+    }
+
+    &__confetti-wrap {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &__confetti-item {
+        position: absolute;
+        width: 8px;
+        height: 16px;
+        background: $clr-tk-twine;
+        top: 0;
+        opacity: 0;
+
+        $duration: 1000;
+        @function randomNum($min, $max) {
+          $rand: random();
+          $randomNum: $min + floor($rand * (($max - $min) + 1));
+
+          @return $randomNum;
+        }
+
+        @for $i from 1 through 13 {
+          &:nth-child(#{$i}) {
+            left: $i * 7%;
+            transform: rotate(#{randomNum(-80, 80)}deg);
+            animation: makeItRain $duration * 1ms infinite ease-out;
+            animation-delay: #{randomNum(0, $duration * .5)}ms;
+            animation-duration: #{randomNum($duration * .9, $duration * 1.2)}ms
+          }
+        }
+
+        &:nth-child(even) {
+          z-index: 1;
+        }
+
+        &:nth-child(4n) {
+          width: 5px;
+          height: 12px;
+          animation-duration: $duration * 2ms;
+        }
+
+        &:nth-child(3n) {
+          width: 3px;
+          height: 10px;
+          animation-duration: $duration * 2.5ms;
+          animation-delay: $duration * 1ms;
+        }
+      }
+    }
+
+    &__scroller {
+      position: absolute;
+      left: 50%;
+      bottom: em(60);
+      transform: translateX(-50%);
+      opacity: 1;
+      z-index: 1;
+      &-wrapper {
+        cursor: pointer;
+        padding: em(5);
+        height: em(20);
+        border: em(2) solid $clr-white;
+        border-radius: em(25);
+        box-sizing: content-box;
+        transition: 0.25s;
+        &:hover {
+          transform: translateY(em(5));
+          transition: 0.25s;
+        }
+      }
+      &-dot {
+        width: em(7);
+        height: em(7);
+        border-radius: 50%;
+        background-color: $clr-white;
+        animation-name: scroll;
+        animation-duration: 2s;
+        animation-timing-function: cubic-bezier(.15,.41,.69,.94);
+        animation-iteration-count: infinite;
+      }
+    }
+    &__overlay {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      background: transparent linear-gradient(180deg, #0000008B 0%, #01070971 44%, #030D119F 72%, #031014BE 85%, $clr-tk-grey-dark 100%) 0% 0% no-repeat padding-box;
+    }
+    &__slogan {
+      position: absolute;
+      width: 20%;
+      left: 50%;
+      bottom: 50%;
+      transform: translate(-50%, 50%);
+      overflow: hidden;
+      pointer-events: all;
+      &__text {
+        color: $clr-white;
+        line-height: 1;
+        letter-spacing: em(1.28);
+        padding: em(40) 0;
+        text-align: center;
+        text-transform: uppercase;
+        span {
+          font-size: em(20);
+        }
+      }
+    }
+    &__nav {
+      pointer-events: all;
+      position: absolute;
+      bottom: em(60);
+      left: em(90);
+      color: $clr-white;
+      display: flex;
+      z-index: 1;
+      &__dot {
+        background-color: $clr-white;
+        width: em(15);
+        height: em(2.5);
+        margin: 0 em(5);
+        border-radius: em(10);
+        opacity: 0.2;
+        cursor: pointer;
+        &.tns-nav-active {
+          opacity: 1;
+        }
+      }
+    }
+  }
+
+  // --- properties ---
+  &:hover {
+    #{$sect} {
+
+    }
+  }
+
+  &[data-menu-open="1"] {
+    #{$sect} {
+      &__scroller,
+      &__slogan,
+      &__nav {
+        display: none;
+      }
+    }
+  }
+
+  /* RESPONSIVE
+   * --------------------------------------------------------------------------- */
+
+  @media #{$mq-tablet} {
+    // --- children ---
+    #{$sect} {
+      &__nav {
+        left: em(50);
+      }
+      &__slogan {
+        width: 43%;
+      }
+      &__lang-menu {
+        pointer-events: all;
+        gap: em(35);
+        right: em(120);
+        top: em(51);
+      }
+    }
+  }
+
+  @media #{$mq-phablet} {
+    // --- children ---
+    #{$sect} {
+      &__slogan {
+        width: 60%;
+        bottom: 30%;
+      }
+      &__nav {
+        left: 50%;
+        bottom: em(100);
+        transform: translateX(-50%);
+      }
+      &__lang-menu {
+        display: none;
+        pointer-events: none;
+      }
+      &__scroller {
+        bottom: em(40);
+      }
+    }
+  }
+
+  /* KEYFRAMES
+   * --------------------------------------------------------------------------- */
+
+  @keyframes scroll {
+    0% {
+      opacity: 0;
+    }
+    10% {
+      transform: translateY(0); opacity: 1;
+    }
+    100% {
+      transform: translateY(15px); opacity: 0;
+    }
+  }
+}
+

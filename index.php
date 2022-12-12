@@ -11,12 +11,55 @@
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--sections--main.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--sections--sidenav.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--sections--header.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--sections--hero.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/tk-internal-functions.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--cash-dom.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--lazysizes.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--lodash-es.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--animated-scroll-to.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--waypoints.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tiny-slider.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-engine.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-interaction-external-attract.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-interaction-external-bounce.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-interaction-external-bubble.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-interaction-external-connect.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-interaction-external-grab.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-interaction-external-pause.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-interaction-external-push.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-interaction-external-remove.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-interaction-external-repulse.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-interaction-external-slow.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-interaction-external-trail.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-interaction-particles-attract.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-interaction-particles-collisions.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-interaction-particles-links.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-move-base.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-move-parallax.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-particles-js.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-plugin-absorbers.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-plugin-emitters.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-shape-circle.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-shape-image.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-shape-line.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-shape-polygon.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-shape-square.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-shape-star.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-shape-text.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-slim.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-updater-angle.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-updater-color.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-updater-destroy.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-updater-life.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-updater-opacity.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-updater-out-modes.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-updater-roll.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-updater-size.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-updater-stroke-color.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-updater-tilt.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-updater-twinkle.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-updater-wobble.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/webpack--runtime.js"></script>
         <!-- CSS imports -->
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/globals--global.css">
@@ -26,6 +69,7 @@
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/sections--main.css">
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/sections--sidenav.css">
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/sections--header.css">
+        <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/sections--hero.css">
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Fonts/style.css">
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Icons/Icomoon/style.css">
 
@@ -39,7 +83,10 @@
                 include("./Packages/Resources/Private/Partials/Elements/Scroller.html");
                 include("./Packages/Resources/Private/Sections/Sidenav.html");
                 include("./Packages/Resources/Private/Sections/Header.php");
+                include("./Packages/Resources/Private/Sections/Hero.php");
             ?>
+            <!-- Waypoints -->
+            <div id="JS-waypoint--1" class="EBIL-waypoint EBIL-waypoint--1"></div>
         </div>
     </body>
 </html>

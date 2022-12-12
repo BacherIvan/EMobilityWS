@@ -5,7 +5,7 @@
 
             <div class="EBIL-section__left">
                 <!-- Logo -->
-                <a href="/" title="Emobility" target="_top" class="EBIL-section__logo GTM--click-event" data-gtm-action="header logo" data-gtm-category="click header" data-gtm-label="HMM Campus">
+                <a href="/" title="Emobility" target="_top" class="EBIL-section__logo GTM--click-event" data-gtm-action="header logo" data-gtm-category="click header">
                     <div class="EBIL-section__logo__item EBIL-section__logo__item--large">
                         <img src="/Packages/Resources/Public/Images/logo/EmoBILityLogo.png" alt="Emobility Logo" title="Emobility Logo">
                     </div>

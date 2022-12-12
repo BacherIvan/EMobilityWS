@@ -1,7 +1,18 @@
 /*  ==========================================================================
-    KEYFRAMES
-    Collection of all keyframes (mind the ordering!)
+    CONFETTI
     ========================================================================== */
 
-@import 'lib/loader';
-@import "lib/confetti";
+// confetti
+@keyframes makeItRain {
+  from {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    top: 65%;
+  }
+}
