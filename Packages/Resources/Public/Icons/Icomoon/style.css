@@ -1,9 +1,9 @@
 @font-face {
   font-family: 'EBIL';
   src:
-    url('/var/www/Packages/Resources/Public/Icons/Icomoon/fonts/EBIL.ttf') format('truetype'),
-    url('/var/www/Packages/Resources/Public/Icons/Icomoon/fonts/EBIL.woff') format('woff'),
-    url('/var/www/Packages/Resources/Public/Icons/Icomoon/fonts/EBIL.svg') format('svg');
+    url('./fonts/EBIL.ttf') format('truetype'),
+    url('./fonts/EBIL.woff') format('woff'),
+    url('./fonts/EBIL.svg') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
