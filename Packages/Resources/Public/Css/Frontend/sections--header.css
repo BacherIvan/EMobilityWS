@@ -162,9 +162,9 @@
 }
 .EBIL-section[data-id=header] .EBIL-section__logo {
   position: fixed;
+  width: 15em;
 }
 .EBIL-section[data-id=header] .EBIL-section__logo__item img {
-  display: block;
   height: auto;
   width: 100%;
   transition: all 0.5s;

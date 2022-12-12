@@ -33,9 +33,9 @@ $identifier: 'header';
 
     &__logo {
       position: fixed;
+      width: em(150);
       &__item {
         img {
-          display: block;
           height: auto;
           width: 100%;
           transition: all 0.5s;
