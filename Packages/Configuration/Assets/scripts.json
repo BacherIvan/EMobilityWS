@@ -10,6 +10,21 @@
       "webpack--runtime": "webpack--runtime.js"
     }
   },
+  "modules/text-pic": {
+    "alias": "entry--modules--text-pic",
+    "file": "entry--modules--text-pic.js",
+    "dependencies": {
+      "tk-internal-functions": "tk-internal-functions.js",
+      "vendor--cash-dom": "vendor--cash-dom.js",
+      "vendor--lg-thumbnail-js": "vendor--lg-thumbnail-js.js",
+      "vendor--lg-video-js": "vendor--lg-video-js.js",
+      "vendor--lightgallery-js": "vendor--lightgallery-js.js",
+      "vendor--lodash-es": "vendor--lodash-es.js",
+      "vendor--progressbar-js": "vendor--progressbar-js.js",
+      "vendor--shifty": "vendor--shifty.js",
+      "webpack--runtime": "webpack--runtime.js"
+    }
+  },
   "sections/header": {
     "alias": "entry--sections--header",
     "file": "entry--sections--header.js",

@@ -3,6 +3,7 @@
   "globals/presets": "globals--presets.css",
   "globals/print": "globals--print.css",
   "globals/vendors": "globals--vendors.css",
+  "modules/text-pic": "modules--text-pic.css",
   "sections/header": "sections--header.css",
   "sections/hero": "sections--hero.css",
   "sections/sidenav": "sections--sidenav.css"

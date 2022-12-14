@@ -8,17 +8,24 @@
         <title> EMobility - Wir bewegen Südtirol</title>
         <!-- Javascript imports -->
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--globals--global.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--modules--text-pic.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--sections--main.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--sections--sidenav.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--sections--header.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--sections--hero.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/tk-internal-functions.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--cash-dom.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--countup-js.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--lg-thumbnail-js.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--lg-video-js.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--lightgallery-js.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--lazysizes.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--progressbar-js.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--lodash-es.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--animated-scroll-to.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--waypoints.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tiny-slider.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--shifty.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-engine.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-interaction-external-attract.js"></script>
@@ -70,6 +77,7 @@
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/sections--sidenav.css">
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/sections--header.css">
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/sections--hero.css">
+        <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/modules--text-pic.css">
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Fonts/style.css">
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Icons/Icomoon/style.css">
 
@@ -84,6 +92,7 @@
                 include("./Packages/Resources/Private/Sections/Sidenav.html");
                 include("./Packages/Resources/Private/Sections/Header.php");
                 include("./Packages/Resources/Private/Sections/Hero.php");
+                include("./Packages/Resources/Private/Sections/Main.php");
             ?>
             <!-- Waypoints -->
             <div id="JS-waypoint--1" class="EBIL-waypoint EBIL-waypoint--1"></div>

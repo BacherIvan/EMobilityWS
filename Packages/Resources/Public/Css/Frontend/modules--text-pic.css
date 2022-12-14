@@ -1,0 +1,223 @@
+/*  ==========================================================================
+    MODULE
+    ========================================================================== */
+/*  ==========================================================================
+    STORAGE
+    ========================================================================== */
+/*  ==========================================================================
+    VARIABLES
+    Collection of all variables
+
+    INFO:
+    - try to use variables as much as possible, it makes life easier
+    - try to use meaningful prefixes, e.g. "$clr-" for color variables
+      or "$fs-" for font-sizes
+    ========================================================================== */
+/*  ==========================================================================
+    CLASS NAMES
+    Collection of class-names.
+    ========================================================================== */
+/*  ==========================================================================
+    COLORS
+    List all colors concerning your project here
+
+    INFO:
+    - use for your colors at least the prefix "$clr-"
+    ========================================================================== */
+/*  ==========================================================================
+    DIMENSIONS
+    List of some recurring dimensions.
+
+    INFO:
+    - don't delete any unit!
+    - do unit changes with care
+    - try to use prefixes (f.e. "zi" for "z-index", "hgt" for "height", "wdt" for "width" etc.)
+    - if possible try to define the main z-index values here
+    - don't put all dimensions in here, only well selected ones (it's not a trashcan!)
+    ========================================================================== */
+/*  ==========================================================================
+    MEDIA QUERIES
+    Collection of media queries.
+    ========================================================================== */
+/*  ==========================================================================
+    TYPOGRAPHY
+    Font settings concerning your project.
+
+    INFO:
+    - don't delete anything!
+    - use changes in here with care
+    - try to use prefixes (f.e. "ff" for "font-family", "fs" for "font-size", "fw" for "font-weight" ecc.)
+    - don't put all properties in here, only well selected ones (it's not a trashcan!)
+    ========================================================================== */
+/*  ==========================================================================
+    FUNCIONS
+    Collection of all functions
+    ========================================================================== */
+/*  ==========================================================================
+    GENERAL
+    Useful global functions
+    ========================================================================== */
+/*  ==========================================================================
+    MIXINS
+    Collection of all mixins (mind the ordering!)
+    ========================================================================== */
+/*  ==========================================================================
+    GENERAL
+    Useful global helpers
+
+    INFO:
+    - no specific naming convention (no prefix) except to not use camelcase if possible!
+    - use it with care, its not a trash can!
+    - contributions for the kickstarter are welcome!
+    ========================================================================== */
+/*
+ * WRAPPER DIMENSIONS
+ * generates wrapper padding & max-width
+ */
+/*  ==========================================================================
+    BUTTONS
+    Helpers to edit buttons
+
+    INFO:
+    - all mixins should start with "btn" as prefix
+    ========================================================================== */
+/*  ==========================================================================
+    IMAGES
+    Collection of all helpers for images
+
+    INFO:
+    - all mixins should start with "img" as prefix
+    ========================================================================== */
+/*  ==========================================================================
+    TYPOGRAPHY
+    Helpers to arrange type
+
+    INFO:
+    - all mixins should start with "typo" as prefix
+    ========================================================================== */
+/*  PROPERTIES
+    ------------------------------------------------------------------------ */
+/*  TEXT TYPES
+    ------------------------------------------------------------------------ */
+/*  BLOCKS/WRAPS
+    ------------------------------------------------------------------------ */
+/*  ==========================================================================
+    VISTA
+    Helper to add base style to the vista output.
+
+    INFO:
+    - Usage example:
+      @include vista(100vh, 75vh, 100vh, 60vh, true);
+    ========================================================================== */
+/*  ==========================================================================
+    KEYFRAMES
+    Collection of all keyframes (mind the ordering!)
+    ========================================================================== */
+/*  ==========================================================================
+    LOADER
+    ========================================================================== */
+@keyframes loader-spinning {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes loader-blink {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+/*  ==========================================================================
+    CONFETTI
+    ========================================================================== */
+@keyframes makeItRain {
+  from {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  to {
+    top: 65%;
+  }
+}
+/* STYLING
+ * --------------------------------------------------------------------------- */
+.EBIL-module[data-id=text-pic] {
+  /* RESPONSIVE
+   * --------------------------------------------------------------------------- */
+}
+.EBIL-module[data-id=text-pic] .EBIL-module__wrap {
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  transform: translateY(10em);
+  transition: 1.5s ease-out;
+  transition-delay: 0.5s;
+}
+.EBIL-module[data-id=text-pic] .EBIL-module__col--media {
+  margin-right: 6em;
+}
+.EBIL-module[data-id=text-pic] .EBIL-module__col--text {
+  max-width: 70em;
+}
+.EBIL-module[data-id=text-pic] .EBIL-module__animation {
+  padding-top: 0.3em;
+  width: 15em;
+  margin: auto;
+  height: auto;
+}
+.EBIL-module[data-id=text-pic] .EBIL-module__animation.JS-animation {
+  opacity: 0;
+  transition: opacity 1s;
+}
+.EBIL-module[data-id=text-pic] .EBIL-module__animation.JS-animation.JS-act {
+  opacity: 1;
+}
+.EBIL-module[data-id=text-pic] .EBIL-module__animation > svg {
+  width: 100%;
+  height: 100%;
+}
+.EBIL-module[data-id=text-pic] .EBIL-module__image {
+  padding: 0.625em;
+  outline: 3px solid #6e6e6e;
+  outline-offset: 100vmax;
+  clip-path: polygon(0 0, 0 -100vmax, 100% -100vmax, 100% 0, calc(100% + 100vmax) 0, calc(100% + 100vmax) 100%, 100% 100%, 100% calc(100% + 100vmax), 0% calc(100% + 100vmax), 0% 100%, -100vmax 100%, -100vmax 0);
+  transition: 0.4s;
+}
+.EBIL-module[data-id=text-pic] .EBIL-module__image img {
+  width: 100%;
+  height: auto;
+}
+.EBIL-module[data-id=text-pic] .EBIL-module__image > a {
+  cursor: zoom-in;
+}
+.EBIL-module[data-id=text-pic] .EBIL-module__image:hover {
+  outline-offset: -3px;
+  outline-color: #041319;
+}
+.EBIL-module[data-id=text-pic].JS-fade-in .EBIL-module__wrap {
+  opacity: 1;
+  transform: translateY(0);
+}
+@media (max-width: 1024px) {
+  .EBIL-module[data-id=text-pic] .EBIL-module__wrap {
+    flex-direction: column;
+  }
+  .EBIL-module[data-id=text-pic] .EBIL-module__col--media {
+    margin-right: 0;
+  }
+  .EBIL-module[data-id=text-pic] .EBIL-module__col--text {
+    margin-top: 5em;
+    max-width: none;
+    width: 100%;
+  }
+}

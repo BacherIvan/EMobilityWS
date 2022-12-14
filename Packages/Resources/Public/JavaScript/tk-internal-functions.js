@@ -1,5 +1,68 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["tk-internal-functions"],{
 
+/***/ "./source/js/utilities/_general.js":
+/*!*****************************************!*\
+  !*** ./source/js/utilities/_general.js ***!
+  \*****************************************/
+/*! exports provided: clickToggleClass, rteMore */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "clickToggleClass", function() { return clickToggleClass; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "rteMore", function() { return rteMore; });
+/* harmony import */ var cash_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! cash-dom */ "./node_modules/cash-dom/dist/cash.js");
+/* harmony import */ var cash_dom__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(cash_dom__WEBPACK_IMPORTED_MODULE_0__);
+/*  ==========================================================================
+    GENERAL
+    In this file are functions which can't be assigned to specifc groups or
+    topics like the other files.
+    ========================================================================== */
+
+// node modules imports
+
+
+/* CODE
+ * --------------------------------------------------------------------------- */
+
+/**
+ * Gives the possibility to toggle a class on an element by a click on
+ * a different (or the same) element
+ *
+ * @param trigger the target on which the 'click' event will be triggered
+ * @param target the element which will be altered
+ * @param className the class which will be either added or removed
+ */
+function clickToggleClass(trigger, target, className) {
+  cash_dom__WEBPACK_IMPORTED_MODULE_0___default()(trigger).on('click', () => {
+    if (!cash_dom__WEBPACK_IMPORTED_MODULE_0___default()(target).hasClass(className)) {
+      cash_dom__WEBPACK_IMPORTED_MODULE_0___default()(target).addClass(className);
+    } else {
+      cash_dom__WEBPACK_IMPORTED_MODULE_0___default()(target).removeClass(className);
+    }
+  });
+}
+
+/**
+ * RTE MORE
+ * Shows entire text on mobile devices if text was collapsed
+ * * @param $module
+ */
+function rteMore($module) {
+  $module.on('click', '.JS-rte-more', e => {
+    $module.find('.JS-rte-text').removeClass('JS-crop-text');
+    $module.find('.JS-rte-more').remove();
+  });
+}
+
+/**
+ * START COUNTER
+ * Shows entire text on mobile devices if text was collapsed
+ * * @param $module
+ */
+
+/***/ }),
+
 /***/ "./source/js/utilities/first-user-interaction.js":
 /*!*******************************************************!*\
   !*** ./source/js/utilities/first-user-interaction.js ***!
@@ -224,6 +287,64 @@ function inView(elements, callback) {
     return;
   }
   throw new Error("'in-view' Error: unknown type of given elements... convert it to either an Array, NodeList or Node");
+}
+
+/***/ }),
+
+/***/ "./source/js/utilities/lightbox.js":
+/*!*****************************************!*\
+  !*** ./source/js/utilities/lightbox.js ***!
+  \*****************************************/
+/*! exports provided: initLightBoxGallery */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initLightBoxGallery", function() { return initLightBoxGallery; });
+/* harmony import */ var lodash_es__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! lodash-es */ "./node_modules/lodash-es/lodash.js");
+/* harmony import */ var lightgallery_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! lightgallery.js */ "./node_modules/lightgallery.js/lib/js/lightgallery.js");
+/* harmony import */ var lightgallery_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(lightgallery_js__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var lg_thumbnail_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! lg-thumbnail.js */ "./node_modules/lg-thumbnail.js/dist/lg-thumbnail.js");
+/* harmony import */ var lg_thumbnail_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(lg_thumbnail_js__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var lg_video_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! lg-video.js */ "./node_modules/lg-video.js/dist/lg-video.js");
+/* harmony import */ var lg_video_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(lg_video_js__WEBPACK_IMPORTED_MODULE_3__);
+/*  ==========================================================================
+    LIGHTBOX
+    It uses the 'lightgallery.js' plugin
+    ========================================================================== */
+
+// node modules imports
+
+
+
+
+
+/* CODE
+ * --------------------------------------------------------------------------- */
+
+function initLightBoxGallery(element, overrides) {
+  // default options
+  const defaults = {
+    selector: '.JS-lbox__item',
+    counter: false,
+    thumbnail: false,
+    exThumbImage: 'data-exthumbimage',
+    download: false,
+    videojs: true,
+    videojsOptions: {
+      controls: 1
+    },
+    iframeMaxWidth: '100%',
+    thumbWidth: 70,
+    thumbContHeight: 90
+  };
+
+  // options overrides
+  const options = Object(lodash_es__WEBPACK_IMPORTED_MODULE_0__["merge"])(Object(lodash_es__WEBPACK_IMPORTED_MODULE_0__["cloneDeep"])(defaults), overrides);
+
+  // initialize
+  // eslint-disable-next-line no-undef
+  lightGallery(element, options);
 }
 
 /***/ }),

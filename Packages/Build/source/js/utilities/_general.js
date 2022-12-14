@@ -6,7 +6,6 @@
 
 // node modules imports
 import $ from 'cash-dom';
-import {CountUp} from "countup.js";
 
 /* CODE
  * --------------------------------------------------------------------------- */
@@ -46,21 +45,3 @@ export function rteMore($module) {
  * Shows entire text on mobile devices if text was collapsed
  * * @param $module
  */
-
-export function startCounter($container) {
-    const $counter = $container.find('.JS-counter');
-    $counter.each(function () {
-        const $this = $(this);
-        if (!$this.hasClass('JS-counter--act')) {
-            $this.addClass('JS-counter--act');
-            const value = $this.attr('data-value');
-            const options = {
-                duration: '3',
-                decimal: ',',
-                separator: '',
-            };
-            const countUp = new CountUp($this[0], value, options);
-            countUp.start();
-        }
-    });
-}
