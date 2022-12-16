@@ -107,33 +107,16 @@ Object(tk_source_root_js_utilities_in_view__WEBPACK_IMPORTED_MODULE_3__["inView"
 
   // read more function on mobile devices
   Object(tk_source_root_js_utilities_general__WEBPACK_IMPORTED_MODULE_2__["rteMore"])($container);
-
+  console.log($container.find('.JS-lbox').get(0));
   // init Light Box Gallery
   Object(tk_source_root_js_utilities_lightbox__WEBPACK_IMPORTED_MODULE_4__["initLightBoxGallery"])($container.find('.JS-lbox').get(0));
 
   // add fade in
   $container.addClass('JS-fade-in');
-
-  // heart animation
-  $container.find('.JS-animation').addClass('JS-act');
-  if ($container.find('.JS-animation').hasClass('JS-act')) {
-    // eslint-disable-next-line no-shadow,global-require
-    const ProgressBar = __webpack_require__(/*! progressbar.js */ "./node_modules/progressbar.js/src/main.js");
-    const bar = new ProgressBar.Path($container.find('.JS-rbox')[0], {
-      easing: 'easeInOut',
-      duration: 2500,
-      delay: 1800
-    });
-    bar.set(0);
-    bar.animate(1.0);
-    setTimeout(function () {
-      $container.find('.JS-animation').removeClass('JS-act');
-    }, 5000);
-  }
 }, {
   rootMargin: '0px'
 });
 
 /***/ })
 
-},[["./source/js/entries/modules/text-pic.js","webpack--runtime","vendor--cash-dom","tk-internal-functions","vendor--lodash-es","vendor--progressbar-js","vendor--lightgallery-js","vendor--lg-thumbnail-js","vendor--lg-video-js","vendor--shifty"]]]);
+},[["./source/js/entries/modules/text-pic.js","webpack--runtime","vendor--cash-dom","tk-internal-functions","vendor--lodash-es","vendor--lightgallery-js","vendor--lg-thumbnail-js","vendor--lg-video-js"]]]);

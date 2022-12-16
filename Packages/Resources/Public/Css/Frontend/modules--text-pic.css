@@ -169,40 +169,12 @@
 .EBIL-module[data-id=text-pic] .EBIL-module__col--text {
   max-width: 70em;
 }
-.EBIL-module[data-id=text-pic] .EBIL-module__animation {
-  padding-top: 0.3em;
-  width: 15em;
-  margin: auto;
-  height: auto;
-}
-.EBIL-module[data-id=text-pic] .EBIL-module__animation.JS-animation {
-  opacity: 0;
-  transition: opacity 1s;
-}
-.EBIL-module[data-id=text-pic] .EBIL-module__animation.JS-animation.JS-act {
-  opacity: 1;
-}
-.EBIL-module[data-id=text-pic] .EBIL-module__animation > svg {
-  width: 100%;
-  height: 100%;
-}
-.EBIL-module[data-id=text-pic] .EBIL-module__image {
-  padding: 0.625em;
-  outline: 3px solid #6e6e6e;
-  outline-offset: 100vmax;
-  clip-path: polygon(0 0, 0 -100vmax, 100% -100vmax, 100% 0, calc(100% + 100vmax) 0, calc(100% + 100vmax) 100%, 100% 100%, 100% calc(100% + 100vmax), 0% calc(100% + 100vmax), 0% 100%, -100vmax 100%, -100vmax 0);
-  transition: 0.4s;
-}
 .EBIL-module[data-id=text-pic] .EBIL-module__image img {
   width: 100%;
   height: auto;
 }
 .EBIL-module[data-id=text-pic] .EBIL-module__image > a {
   cursor: zoom-in;
-}
-.EBIL-module[data-id=text-pic] .EBIL-module__image:hover {
-  outline-offset: -3px;
-  outline-color: #041319;
 }
 .EBIL-module[data-id=text-pic].JS-fade-in .EBIL-module__wrap {
   opacity: 1;

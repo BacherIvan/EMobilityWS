@@ -6,5 +6,6 @@
   "modules/text-pic": "modules--text-pic.css",
   "sections/header": "sections--header.css",
   "sections/hero": "sections--hero.css",
+  "sections/main": "sections--main.css",
   "sections/sidenav": "sections--sidenav.css"
 }

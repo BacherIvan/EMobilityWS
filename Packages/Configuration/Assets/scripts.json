@@ -20,8 +20,6 @@
       "vendor--lg-video-js": "vendor--lg-video-js.js",
       "vendor--lightgallery-js": "vendor--lightgallery-js.js",
       "vendor--lodash-es": "vendor--lodash-es.js",
-      "vendor--progressbar-js": "vendor--progressbar-js.js",
-      "vendor--shifty": "vendor--shifty.js",
       "webpack--runtime": "webpack--runtime.js"
     }
   },

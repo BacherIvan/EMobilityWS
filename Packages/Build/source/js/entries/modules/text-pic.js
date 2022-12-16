@@ -24,30 +24,13 @@ inView($modules.get(), (item) => {
 
     // read more function on mobile devices
     rteMore($container);
-
+    console.log($container.find('.JS-lbox').get(0));
     // init Light Box Gallery
     initLightBoxGallery($container.find('.JS-lbox').get(0));
 
     // add fade in
     $container.addClass('JS-fade-in');
 
-    // heart animation
-    $container.find('.JS-animation').addClass('JS-act');
-    if ($container.find('.JS-animation').hasClass('JS-act')) {
-        // eslint-disable-next-line no-shadow,global-require
-        const ProgressBar = require('progressbar.js');
-        const bar = new ProgressBar.Path($container.find('.JS-rbox')[0], {
-            easing: 'easeInOut',
-            duration: 2500,
-            delay: 1800,
-        });
-
-        bar.set(0);
-        bar.animate(1.0);
-        setTimeout(function () {
-            $container.find('.JS-animation').removeClass('JS-act');
-        }, 5000);
-    }
 }, {
     rootMargin: '0px',
 });
