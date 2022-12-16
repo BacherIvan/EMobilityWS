@@ -24,7 +24,6 @@ inView($modules.get(), (item) => {
 
     // read more function on mobile devices
     rteMore($container);
-    console.log($container.find('.JS-lbox').get(0));
     // init Light Box Gallery
     initLightBoxGallery($container.find('.JS-lbox').get(0));
 

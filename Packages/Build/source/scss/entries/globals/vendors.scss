@@ -5,7 +5,7 @@
 @import '~tiny-slider/dist/tiny-slider.css';
 
 // paths overrides (for lightgallery plugin)
-$lg-path-fonts: '/var/www/html/Packages/Resources/Public/Icons/Lightgallery';
-$lg-path-images: '/var/www/html/Packages/Resources/Public/Images/lightgallery';
+$lg-path-fonts: '/Packages/Resources/Public/Icons/Lightgallery';
+$lg-path-images: '/Packages/Resources/Public/Images/lightgallery';
 
 @import '~lightgallery.js/src/sass/lightgallery';

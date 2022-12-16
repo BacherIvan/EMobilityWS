@@ -215,15 +215,6 @@ body *::-webkit-scrollbar {
 /*
  * CREDITS
  */
-body[data-page-id="3"] .JS-main-menu-trigger,
-body[data-page-id="3"] [data-id=sidenav], body[data-page-id="4"] .JS-main-menu-trigger,
-body[data-page-id="4"] [data-id=sidenav], body[data-page-id="5"] .JS-main-menu-trigger,
-body[data-page-id="5"] [data-id=sidenav], body[data-page-id="6"] .JS-main-menu-trigger,
-body[data-page-id="6"] [data-id=sidenav], body[data-page-id="8"] .JS-main-menu-trigger,
-body[data-page-id="8"] [data-id=sidenav] {
-  display: none !important;
-}
-
 html {
   scrollbar-color: #FFFFFF #041319;
   scrollbar-width: auto;

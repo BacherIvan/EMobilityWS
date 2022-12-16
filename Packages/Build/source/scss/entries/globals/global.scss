@@ -143,18 +143,6 @@ body {
  * CREDITS
  */
 
-body {
-  &[data-page-id="3"],
-  &[data-page-id="4"],
-  &[data-page-id="5"],
-  &[data-page-id="6"],
-  &[data-page-id="8"] {
-    .JS-main-menu-trigger,
-    [data-id="sidenav"] {
-      display: none !important;
-    }
-  }
-}
 
 // moz
 html {

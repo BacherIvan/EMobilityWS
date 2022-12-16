@@ -107,7 +107,6 @@ Object(tk_source_root_js_utilities_in_view__WEBPACK_IMPORTED_MODULE_3__["inView"
 
   // read more function on mobile devices
   Object(tk_source_root_js_utilities_general__WEBPACK_IMPORTED_MODULE_2__["rteMore"])($container);
-  console.log($container.find('.JS-lbox').get(0));
   // init Light Box Gallery
   Object(tk_source_root_js_utilities_lightbox__WEBPACK_IMPORTED_MODULE_4__["initLightBoxGallery"])($container.find('.JS-lbox').get(0));
 
