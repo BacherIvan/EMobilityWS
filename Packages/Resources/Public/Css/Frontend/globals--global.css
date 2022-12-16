@@ -180,13 +180,13 @@
 /*
  * WAYPOINTS
  */
-.EBIl-waypoint {
+.EBIL-waypoint {
   height: 0px !important;
   width: 100%;
   overflow: hidden !important;
   position: absolute;
 }
-.EBIl-waypoint--1 {
+.EBIL-waypoint--1 {
   top: 10px;
 }
 
