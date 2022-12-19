@@ -81,7 +81,7 @@
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Fonts/style.css">
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Icons/Icomoon/style.css">
 
-        <!-- ICONS (apple-touchIcon,favicon) -->
+        <link rel="icon" type="image/png" sizes="16x16" href="/Packages/Resources/Public/Images/logo/favicon.png">
     </head>
     <body data-hero-layout="full">
         <div id="EmoBILity" class="EmoBILity">
