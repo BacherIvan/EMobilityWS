@@ -2,22 +2,22 @@
     <div class="EBIL-section__vista JS-vista" data-hero-layout="full">
         <div class="EBIL-section__vista__slide">
             <div class="EBIL-section__vista__item EBIL-section__vista__item--image">
-                <img src="/Packages/Resources/Public/Images/_custom/Luftaufnahme_2.jpg" alt="Luftaufnahme">
+                <img src="/Packages/Resources/Public/Images/_custom/HeroImage1.jpeg" alt="Berge">
             </div>
         </div>
         <div class="EBIL-section__vista__slide">
             <div class="EBIL-section__vista__item EBIL-section__vista__item--image">
-                <img src="/Packages/Resources/Public/Images/_custom/mountain-806915_1920.jpg" alt="Felsen">
+                <img src="/Packages/Resources/Public/Images/_custom/HeroImage2.jpeg" alt="Wald">
             </div>
         </div>
         <div class="EBIL-section__vista__slide">
             <div class="EBIL-section__vista__item EBIL-section__vista__item--image">
-                <img src="/Packages/Resources/Public/Images/_custom/shutterstock_1196199622.jpg" alt="Landschaft">
+                <img src="/Packages/Resources/Public/Images/_custom/HeroImage3.jpeg" alt="Lichtung">
             </div>
         </div>
         <div class="EBIL-section__vista__slide">
             <div class="EBIL-section__vista__item EBIL-section__vista__item--image">
-                <img src="/Packages/Resources/Public/Images/_custom/Fotolia_196553947_Subscription_Monthly_XXL.jpg" alt="Landschaft">
+                <img src="/Packages/Resources/Public/Images/_custom/HeroImage4.jpeg" alt="See">
             </div>
         </div>
     </div>
