@@ -94,7 +94,6 @@
                 include("./Packages/Resources/Private/Sections/Hero.php");
                 include("./Packages/Resources/Private/Sections/Main.php");
             ?>
-            <!-- Waypoints -->
             <div id="JS-waypoint--1" class="EBIL-waypoint EBIL-waypoint--1"></div>
         </div>
     </body>

@@ -184,8 +184,28 @@
   transition: all 0.5s;
 }
 .EBIL-section[data-id=header] .EBIL-section__right {
+  position: relative;
   z-index: 2;
   pointer-events: all;
+}
+.EBIL-section[data-id=header] .EBIL-section__right__item {
+  position: absolute;
+  right: 12em;
+  top: 0.5em;
+  cursor: pointer;
+}
+.EBIL-section[data-id=header] .EBIL-section__right__item .EBIL-icon--1 {
+  display: block;
+  transition: opacity 0.2s;
+  opacity: 1;
+  font-size: 2.6em;
+}
+.EBIL-section[data-id=header] .EBIL-section__right__item .EBIL-icon--2 {
+  padding-right: 0.26em;
+  display: none;
+  transition: opacity 0.2s;
+  opacity: 0;
+  font-size: 2.6em;
 }
 .EBIL-section[data-id=header] .EBIL-section__main-menu-trigger {
   display: flex;
@@ -253,6 +273,21 @@
   opacity: 0;
   transition: opacity 0.5s, transform 0.5s;
 }
+.EBIL-section[data-id=header] .EBIL-section__login {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #041319, rgba(4, 19, 25, 0.98), rgba(4, 19, 25, 0.95), rgba(4, 19, 25, 0.98), #041319);
+  z-index: 1;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+}
 .EBIL-section[data-id=header] .EBIL-section__main-menu {
   max-height: calc(100vh - 19.5em);
   overflow: auto;
@@ -291,6 +326,17 @@
 .EBIL-section[data-id=header] .EBIL-section__main-menu__number > span {
   font-size: 6.7em;
   font-weight: 600;
+}
+.EBIL-section[data-id=header] .EBIL-section__login-menu {
+  max-height: calc(100vh - 19.5em);
+  overflow: auto;
+}
+.EBIL-section[data-id=header] .EBIL-section__login-menu > span {
+  font-size: 1.5em;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
 }
 .EBIL-section[data-id=header] .EBIL-section__link {
   display: none;
@@ -346,6 +392,9 @@
     display: none;
   }
 }
+.EBIL-section[data-id=header][data-scrolling="1"] .EBIL-section__right__item .EBIL-icon {
+  opacity: 0;
+}
 .EBIL-section[data-id=header][data-scrolling="1"] .EBIL-section__main-menu-trigger {
   color: #FFFFFF;
 }
@@ -386,6 +435,16 @@
   opacity: 1;
   pointer-events: all;
 }
+.EBIL-section[data-id=header][data-menu-open="1"] .EBIL-section__right__item {
+  pointer-events: none;
+}
+.EBIL-section[data-id=header][data-menu-open="1"] .EBIL-section__right__item .EBIL-icon {
+  opacity: 0;
+}
+.EBIL-section[data-id=header][data-menu-open="1"] .EBIL-section__login {
+  pointer-events: none;
+  opacity: 0;
+}
 .EBIL-section[data-id=header][data-menu-open="1"] .EBIL-section__scroller, .EBIL-section[data-id=header][data-menu-open="1"] .EBIL-section__link {
   opacity: 0;
 }
@@ -408,12 +467,44 @@
 .EBIL-section[data-id=header][data-menu-open="1"] .EBIL-section__main-menu:hover .EBIL-section__main-menu__item:not(:hover) {
   opacity: 0.5;
 }
+.EBIL-section[data-id=header][data-login-open="1"] .EBIL-section__main-menu-trigger {
+  pointer-events: none;
+  display: none;
+}
+.EBIL-section[data-id=header][data-login-open="1"] .EBIL-section__logo {
+  position: fixed;
+}
+.EBIL-section[data-id=header][data-login-open="1"] .EBIL-section__login {
+  opacity: 1;
+  pointer-events: all;
+}
+.EBIL-section[data-id=header][data-login-open="1"] .EBIL-section__right__item .EBIL-icon--1 {
+  display: none;
+  opacity: 0;
+}
+.EBIL-section[data-id=header][data-login-open="1"] .EBIL-section__right__item .EBIL-icon--2 {
+  display: block;
+  opacity: 1;
+}
+.EBIL-section[data-id=header][data-login-open="1"] .EBIL-section__scroller, .EBIL-section[data-id=header][data-login-open="1"] .EBIL-section__link {
+  opacity: 0;
+}
+.EBIL-section[data-id=header][data-login-open="1"] .EBIL-section__main-menu {
+  pointer-events: none;
+  opacity: 0;
+}
+.EBIL-section[data-id=header][data-login-open="1"] .EBIL-section__login-menu {
+  opacity: 1;
+}
 @media (max-width: 1024px) {
   .EBIL-section[data-id=header] {
     padding: 4em 5em 0 5em;
   }
   .EBIL-section[data-id=header] .EBIL-section__logo__item img {
     display: none;
+  }
+  .EBIL-section[data-id=header] .EBIL-section__right__item {
+    right: 7em;
   }
   .EBIL-section[data-id=header] .EBIL-section__link {
     bottom: 4em;

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
-    <div id="EBIL-section--hero" class="EBIL-section" data-id="hero" data-hero-layout="full" data-scrolling="0" data-menu-open="0">
+    <div id="EBIL-section--hero" class="EBIL-section" data-id="hero" data-hero-layout="full" data-scrolling="0" data-menu-open="0" data-login-open="0">
         <div class="EBIL-section__animation-wrap JS-confetti-effect hidden">
             <div id="particle-animation" class="JS-animation"></div>
             <div class="EBIL-section__confetti-wrap">

@@ -44,8 +44,28 @@ $identifier: 'header';
     }
 
     &__right {
+      position: relative;
       z-index: 2;
       pointer-events: all;
+      &__item {
+        position: absolute;
+        right: em(120);
+        top: em(5);
+        cursor: pointer;
+        .EBIL-icon--1 {
+          display: block;
+          transition: opacity 0.2s;
+          opacity: 1;
+          font-size: em(26);
+        }
+        .EBIL-icon--2 {
+          padding-right: em(2.6);
+          display: none;
+          transition: opacity 0.2s;
+          opacity: 0;
+          font-size: em(26);
+        }
+      }
     }
 
     &__main-menu-trigger {
@@ -122,6 +142,22 @@ $identifier: 'header';
       transition: opacity 0.5s, transform 0.5s;
     }
 
+    &__login {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba($clr-tk-grey-dark, 1), rgba($clr-tk-grey-dark, 0.98), rgba($clr-tk-grey-dark, 0.95), rgba($clr-tk-grey-dark, 0.98), rgba($clr-tk-grey-dark, 1));
+      z-index: 1;
+      pointer-events: none;
+      opacity: 0;
+      transition: opacity 0.5s, transform 0.5s;
+    }
+
     &__main-menu {
       max-height: calc(100vh - 19.5em);
       overflow: auto;
@@ -164,6 +200,17 @@ $identifier: 'header';
       }
     }
 
+    &__login-menu {
+      max-height: calc(100vh - 19.5em);
+      overflow: auto;
+      > span {
+        font-size: em(15);
+        font-weight: $fw-semi-bold;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+      }
+    }
 
     &__link {
         display: none;
@@ -233,6 +280,14 @@ $identifier: 'header';
         }
       }
 
+      &__right {
+        &__item {
+          .EBIL-icon {
+            opacity: 0;
+          }
+        }
+      }
+
       &__main-menu-trigger {
         color: $clr-white;
 
@@ -284,6 +339,20 @@ $identifier: 'header';
         opacity: 1;
         pointer-events: all;
       }
+      &__right {
+        &__item {
+          pointer-events: none;
+          .EBIL-icon {
+            opacity: 0;
+          }
+        }
+      }
+
+      &__login {
+        pointer-events: none;
+        opacity: 0;
+      }
+
       &__scroller,
       &__link {
         opacity: 0;
@@ -322,6 +391,48 @@ $identifier: 'header';
     }
   }
 
+  &[data-login-open="1"] {
+    #{$sect} {
+      &__main-menu-trigger {
+        pointer-events: none;
+        display: none;
+      }
+      &__logo {
+        position: fixed;
+      }
+      &__login {
+        opacity: 1;
+        pointer-events: all;
+      }
+      &__right {
+        &__item {
+          .EBIL-icon--1 {
+            display: none;
+            opacity: 0;
+          }
+          .EBIL-icon--2 {
+            display: block;
+            opacity: 1;
+          }
+        }
+      }
+
+      &__scroller,
+      &__link {
+        opacity: 0;
+      }
+      &__main-menu {
+        pointer-events: none;
+        opacity: 0;
+      }
+
+      &__login-menu {
+        opacity: 1;
+      }
+
+    }
+  }
+
   &[data-hero-layout="none"] {
     #{$sect} {
 
@@ -340,6 +451,12 @@ $identifier: 'header';
           img {
             display: none;
           }
+        }
+      }
+
+      &__right {
+        &__item {
+          right: em(70);
         }
       }
 
@@ -402,6 +519,7 @@ $identifier: 'header';
       &__link {
         right: em(25);
       }
+
     }
   }
 
