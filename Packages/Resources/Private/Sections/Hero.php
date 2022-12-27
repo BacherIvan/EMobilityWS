@@ -24,7 +24,6 @@
             include $_SERVER["DOCUMENT_ROOT"] . "/Packages/Resources/Private/Partials/Elements/Vista.php";
         ?>
 
-        <!-- Slogan -->
         <div class="EBIL-section__slogan JS-slogan">
             <div class="EBIL-section__slogan__wrap" data-wrap-width="small">
                 <blockquote class="EBIL-section__slogan__text">

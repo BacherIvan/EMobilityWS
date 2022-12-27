@@ -33,11 +33,22 @@ if ($section.length) {
         vars.LAYOUT.$body.attr('data-scroll', pageScrollable = 1 - pageScrollable);
     });
 
+
     $section.on('click', '.JS-login-menu-trigger', () => {
         $section.attr('data-login-open', menuOpenHeader = 1 - menuOpenHeader);
         vars.LAYOUT.$hero.attr('data-login-open', menuOpenHero = 1 - menuOpenHero);
         vars.LAYOUT.$body.attr('data-scroll', pageScrollable = 1 - pageScrollable);
     });
+
+    var login = document.getElementById('JS-login');
+
+    window.onclick = function (event) {
+        if (event.target == login) {
+            $section.attr('data-login-open', menuOpenHeader = 1 - menuOpenHeader);
+            vars.LAYOUT.$hero.attr('data-login-open', menuOpenHero = 1 - menuOpenHero);
+            vars.LAYOUT.$body.attr('data-scroll', pageScrollable = 1 - pageScrollable);
+        }
+    }
 
     // menu scroll animation
     $section.find('.JS-anchor').on('click', function () {

@@ -27,11 +27,9 @@
                 ?>
             </div>
 
-            <div class="EBIL-section__login">
-                <?php
-                    include $_SERVER["DOCUMENT_ROOT"] . "/Packages/Resources/Private/Partials/Menus/LoginMenu.html";
-                ?>
-            </div>
+            <?php
+                include $_SERVER["DOCUMENT_ROOT"] . "/Packages/Resources/Private/Partials/Menus/LoginMenu.html";
+            ?>
         </div>
     </header>
 </html>

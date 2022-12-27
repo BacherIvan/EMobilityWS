@@ -55,6 +55,14 @@ if ($section.length) {
     tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__["LAYOUT"].$hero.attr('data-login-open', menuOpenHero = 1 - menuOpenHero);
     tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__["LAYOUT"].$body.attr('data-scroll', pageScrollable = 1 - pageScrollable);
   });
+  var login = document.getElementById('JS-login');
+  window.onclick = function (event) {
+    if (event.target == login) {
+      $section.attr('data-login-open', menuOpenHeader = 1 - menuOpenHeader);
+      tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__["LAYOUT"].$hero.attr('data-login-open', menuOpenHero = 1 - menuOpenHero);
+      tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__["LAYOUT"].$body.attr('data-scroll', pageScrollable = 1 - pageScrollable);
+    }
+  };
 
   // menu scroll animation
   $section.find('.JS-anchor').on('click', function () {
