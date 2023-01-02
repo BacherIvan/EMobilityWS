@@ -158,7 +158,7 @@ $identifier: 'header';
         background-color: $clr-tk-grey-light;
         margin: 5% auto 15% auto;
         border: 1px solid #888;
-        width: 80%;
+        width: 50%;
         height: 100%;
       }
     }
@@ -168,10 +168,10 @@ $identifier: 'header';
     }
 
     &__image {
-      width: em(240);
+      width: em(200);
       position: absolute;
-      top: em(10);
-      left: calc(80% - 40%);
+      top: em(20);
+      left: calc(50% - 14%);
       img {
         height: auto;
         width: 100%;
@@ -522,6 +522,13 @@ $identifier: 'header';
           > span {
             font-size: em(45);
           }
+        }
+      }
+
+      &__login {
+        &__content {
+          width: 80%;
+          top: em(10);
         }
       }
 
