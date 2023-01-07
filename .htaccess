@@ -1,3 +1,10 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond %{HTTP_HOST} ^185\.5\.199\.33$
+    RewriteRule ^(.*)$ http://emobility.tk/$1 [L,R=301]
+</IfModule>
+
 # UTF-8 encoding
 AddDefaultCharset utf-8
 <IfModule mod_mime.c>
