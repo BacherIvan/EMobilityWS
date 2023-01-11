@@ -29,8 +29,10 @@
                     if ($result->num_rows > 0) {
                         $row = $result->fetch_assoc();
                         if ($_POST['pwd'] == $row['pwd']) {
-                            //echo '<h2>Erfolgreich eingeloggt '. $row['usr'] . '</h2>';
-                            echo "Erfolgreich angemeldet!";
+                            $URL = "./Packages/Resources/Private/Sections/admin.php";
+                            echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
+                            echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
+                            //echo "Erfolgreich angemeldet!";
                         } else {
                             echo "Falsches Passwort!";
                         }
