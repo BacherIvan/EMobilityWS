@@ -28,12 +28,11 @@
 
                     if ($result->num_rows > 0) {
                         $row = $result->fetch_assoc();
-                        if ($_POST['pwd'] == $row['pwd']) {
-                            $URL = "./admin.php";
-                            echo "<script type='text/javascript'>document.location.href='{$URL}';</script>";
-                            echo '<META HTTP-EQUIV="refresh" content="0;URL=' . $URL . '">';
-                            //echo "Erfolgreich angemeldet!";
-                        } else {
+                        if ($_POST['pwd'] == $row['pwd']) {?>
+                            <script type="text/javascript">
+                                window.open('admin.php', '_blank');
+                            </script>
+                        <?php } else {
                             echo "Falsches Passwort!";
                         }
                     } else {
