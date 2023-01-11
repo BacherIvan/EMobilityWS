@@ -28,7 +28,7 @@
             </div>
 
             <?php
-                include $_SERVER["DOCUMENT_ROOT"] . "/Packages/Resources/Private/Partials/Menus/LoginMenu.html";
+                include $_SERVER["DOCUMENT_ROOT"] . "/Packages/Resources/Private/Partials/Menus/LoginMenu.php";
             ?>
         </div>
     </header>
