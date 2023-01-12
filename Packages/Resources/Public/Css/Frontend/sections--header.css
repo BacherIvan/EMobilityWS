@@ -291,7 +291,7 @@
   margin: 5% auto 15% auto;
   border: 1px solid #888;
   width: 50%;
-  height: calc(100% - 10em);
+  height: calc(100% - 18em);
 }
 .EBIL-section[data-id=header] .EBIL-section__animate {
   animation: animatezoom 0.6s;
@@ -310,6 +310,9 @@
 .EBIL-section[data-id=header] .EBIL-section__container {
   margin-top: 10em;
   padding: 16em;
+}
+.EBIL-section[data-id=header] .EBIL-section__lbl {
+  font-size: 1.3em;
 }
 .EBIL-section[data-id=header] .EBIL-section__input {
   width: 100%;
@@ -566,6 +569,7 @@
   .EBIL-section[data-id=header] .EBIL-section__login__content {
     width: 80%;
     top: 1em;
+    height: calc(100% - 10em);
   }
   .EBIL-section[data-id=header] .EBIL-section__nav {
     bottom: 5em;
