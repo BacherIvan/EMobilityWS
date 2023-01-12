@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="de">
-    <header id="EBIL-section--header" class="EBIL-section" data-id="header" data-scrolling="0" data-menu-open="0" data-login-open="0" data-hero-layout="full">
+    <header id="EBIL-section--header" class="EBIL-section" data-id="header" data-scrolling="0" data-menu-open="0" data-login-open="0" data-login-error="0" data-hero-layout="full">
         <div class="EBIL-section__wrap">
 
             <div class="EBIL-section__left">

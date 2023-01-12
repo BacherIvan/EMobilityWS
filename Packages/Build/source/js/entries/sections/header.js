@@ -36,6 +36,7 @@ if ($section.length) {
 
     $section.on('click', '.JS-login-menu-trigger', () => {
         $section.attr('data-login-open', menuOpenHeader = 1 - menuOpenHeader);
+        $section.attr('data-login-error', 0);
         vars.LAYOUT.$hero.attr('data-login-open', menuOpenHero = 1 - menuOpenHero);
         vars.LAYOUT.$body.attr('data-scroll', pageScrollable = 1 - pageScrollable);
     });
@@ -45,10 +46,15 @@ if ($section.length) {
     window.onclick = function (event) {
         if (event.target == login) {
             $section.attr('data-login-open', menuOpenHeader = 1 - menuOpenHeader);
+            $section.attr('data-login-error', 0);
             vars.LAYOUT.$hero.attr('data-login-open', menuOpenHero = 1 - menuOpenHero);
             vars.LAYOUT.$body.attr('data-scroll', pageScrollable = 1 - pageScrollable);
         }
     }
+
+    $section.on('click', '.JS-login-button', () => {
+        $section.attr('data-login-error', 1);
+    });
 
     // menu scroll animation
     $section.find('.JS-anchor').on('click', function () {

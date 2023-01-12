@@ -154,13 +154,17 @@ $identifier: 'header';
       display: none;
       padding-top: em(80);
       &__content {
-        position: relative;
         background-color: $clr-tk-grey-light;
         margin: 5% auto 15% auto;
         border: 1px solid #888;
         width: 50%;
         height: calc(100% - 18em);
       }
+    }
+
+    &__login-wrap {
+      position: relative;
+      height: 100%;
     }
 
     &__animate {
@@ -171,7 +175,7 @@ $identifier: 'header';
       width: em(200);
       position: absolute;
       top: em(20);
-      left: calc(50% - 14%);
+      left: calc(50% - 13%);
       img {
         height: auto;
         width: 100%;
@@ -180,7 +184,8 @@ $identifier: 'header';
     }
 
     &__container {
-      margin-top: em(100);
+      position: absolute;
+      top: em(100);
       padding: em(160);
     }
 
@@ -207,6 +212,16 @@ $identifier: 'header';
       width: 100%;
       &:hover {
         opacity: 0.8;
+      }
+    }
+
+    &__login-failed {
+      position: absolute;
+      left: em(160);
+      bottom: em(30);
+      > span {
+        color: $clr-tk-red;
+        font-size: em(13);
       }
     }
 
@@ -465,6 +480,22 @@ $identifier: 'header';
     }
   }
 
+  &[data-login-error="0"] {
+    #{$sect} {
+      &__login-failed {
+        display: none;
+      }
+    }
+  }
+  &[data-login-error="1"] {
+    #{$sect} {
+      &__login-failed {
+        display: block;
+      }
+    }
+  }
+
+
   &[data-hero-layout="none"] {
     #{$sect} {
 
@@ -532,9 +563,22 @@ $identifier: 'header';
       &__login {
         &__content {
           width: 80%;
-          top: em(10);
-          height: calc(100% - 10em);
+          height: calc(100% - 7em);
         }
+      }
+
+      &__image {
+        width: em(210);
+        left: calc(80% - 42%);
+      }
+
+      &__container {
+        top: em(150);
+        padding: em(90);
+      }
+
+      &__login-failed {
+        left: em(90);
       }
 
       &__nav {
@@ -548,16 +592,6 @@ $identifier: 'header';
         > span {
           padding: em(10) 0 0 0;
         }
-      }
-
-      &__image {
-        width: em(210);
-        left: calc(80% - 42%);
-      }
-
-      &__container {
-        margin-top: em(150);
-        padding: em(90);
       }
     }
   }
@@ -578,8 +612,13 @@ $identifier: 'header';
       }
 
       &__container {
-        margin-top: em(200);
+        top: em(200);
         padding: em(60);
+      }
+
+      &__login-failed {
+        left: em(60);
+        bottom: em(10);
       }
     }
   }
@@ -608,8 +647,18 @@ $identifier: 'header';
         left: calc(80% - 51%);
       }
       &__container {
-        margin-top: em(200);
+        top: em(200);
         padding: em(30);
+      }
+      &__login {
+        &__content {
+          width: 80%;
+          height: calc(100% - 10em);
+        }
+      }
+      &__login-failed {
+        left: em(30);
+        bottom: em(70);
       }
     }
   }
@@ -622,8 +671,11 @@ $identifier: 'header';
         left: calc(80% - 55%);
       }
       &__container {
-        margin-top: em(200);
+        top: em(200);
         padding: em(20);
+      }
+      &__login-failed {
+        left: em(20);
       }
     }
   }
@@ -636,8 +688,12 @@ $identifier: 'header';
         left: calc(80% - 57%);
       }
       &__container {
-        margin-top: em(200);
+        top: em(200);
         padding: em(10);
+      }
+      &__login-failed {
+        left: em(10);
+        bottom: em(180);
       }
     }
   }

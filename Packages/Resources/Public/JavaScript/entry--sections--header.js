@@ -52,6 +52,7 @@ if ($section.length) {
   });
   $section.on('click', '.JS-login-menu-trigger', () => {
     $section.attr('data-login-open', menuOpenHeader = 1 - menuOpenHeader);
+    $section.attr('data-login-error', 0);
     tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__["LAYOUT"].$hero.attr('data-login-open', menuOpenHero = 1 - menuOpenHero);
     tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__["LAYOUT"].$body.attr('data-scroll', pageScrollable = 1 - pageScrollable);
   });
@@ -59,10 +60,14 @@ if ($section.length) {
   window.onclick = function (event) {
     if (event.target == login) {
       $section.attr('data-login-open', menuOpenHeader = 1 - menuOpenHeader);
+      $section.attr('data-login-error', 0);
       tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__["LAYOUT"].$hero.attr('data-login-open', menuOpenHero = 1 - menuOpenHero);
       tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__["LAYOUT"].$body.attr('data-scroll', pageScrollable = 1 - pageScrollable);
     }
   };
+  $section.on('click', '.JS-login-button', () => {
+    $section.attr('data-login-error', 1);
+  });
 
   // menu scroll animation
   $section.find('.JS-anchor').on('click', function () {
