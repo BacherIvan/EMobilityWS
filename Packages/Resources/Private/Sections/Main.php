@@ -4,6 +4,7 @@
         <div class="EBIL-section__content">
             <?php
                 include $_SERVER["DOCUMENT_ROOT"] . "/Packages/Resources/Private/Mask/TextPic.html";
+                include $_SERVER["DOCUMENT_ROOT"] . "/Packages/Resources/Private/Mask/Impressions.php";
             ?>
         </div>
     </section>
