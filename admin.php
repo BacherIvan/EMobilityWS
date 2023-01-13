@@ -48,10 +48,11 @@
 
             if ($result->num_rows > 0) {
                 while($row = $result->fetch_assoc()){
-                    
+                    //print_r($row);
+                    echo $row['vorname'] .' '.  $row['nachname'] .', '. $row['startzeit'] .' - ' . $row['endzeit'] .'<br>';
+                    echo $row['eintrag'] . '<br><br>';
                 }
             }
-
             $result->free();
             $db->close();
         ?>
