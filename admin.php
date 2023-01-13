@@ -37,6 +37,24 @@
             <li><a href="#">Auto</a></li>
         </ul>
     </div>
+        <?php
+            $db = new mysqli('localhost', 'root', 'Schlecht69!', 'Tagebuch');
+
+            if ($db->connect_errno) {
+                die('Sorry - gerade gibt es ein Problem');
+            }
+
+            $result = $db->query('Select * from Eintrag natural join hatEintrag natural join Person;');
+
+            if ($result->num_rows > 0) {
+                while($row = $result->fetch_assoc()){
+                    
+                }
+            }
+
+            $result->free();
+            $db->close();
+        ?>
 </section>
 </html>
 
