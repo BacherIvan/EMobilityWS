@@ -54,6 +54,34 @@ if ($section.length) {
 
     $section.on('click', '.JS-login-button', () => {
         $section.attr('data-login-error', 1);
+        const mysql = require('mysql');
+
+        const connection = mysql.createConnection({
+            host: 'localhost',
+            user: 'root',
+            password: 'Schlecht69!',
+            database: 'Login'
+        });
+        connection.connect();
+
+        app.post('/admin.php', (req, res) => {
+            const { username, password } = req.body;
+            const query = `SELECT * FROM Admin WHERE username = '${username}' AND password = '${password}'`;
+
+            connection.query(query, (error, results) => {
+                if (error) {
+                    throw error;
+                }
+
+                if (results.length > 0) {
+                    // Login erfolgreich
+                    res.send('Erfolgreich eingeloggt');
+                } else {
+                    // Login fehlgeschlagen
+                    res.send('Falsche Login-Daten');
+                }
+            });
+        });
     });
 
     // menu scroll animation

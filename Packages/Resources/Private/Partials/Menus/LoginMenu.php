@@ -18,7 +18,9 @@
                     </label>
                 </div>
                 <div class="EBIL-section__login-failed">
+
                     <?php
+
                     if(isset($_POST['uname']) && isset($_POST['pwd'])) {
                         $db = new mysqli('localhost', 'root', 'Schlecht69!', 'Login');
 
@@ -43,6 +45,7 @@
                         $result->free();
                         $db->close();
                     }
+                    
                     ?>
                 </div>
             </div>
