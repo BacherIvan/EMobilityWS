@@ -2,7 +2,6 @@
 <html lang="de">
     <header id="EBIL-section--header" class="EBIL-section" data-id="header" data-scrolling="0" data-menu-open="0" data-login-open="0" data-login-error="0" data-hero-layout="full">
         <div class="EBIL-section__wrap">
-
             <div class="EBIL-section__left">
                 <a href="/" title="Emobility" target="_top" class="EBIL-section__logo GTM--click-event" data-gtm-action="header logo" data-gtm-category="click header">
                     <div class="EBIL-section__logo__item EBIL-section__logo__item--large">
