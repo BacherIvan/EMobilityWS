@@ -9,6 +9,7 @@
         <!-- Javascript imports -->
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--globals--global.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--modules--text-pic.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--modules--impressions.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--sections--main.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--sections--sidenav.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--sections--header.js"></script>
@@ -78,6 +79,7 @@
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/sections--header.css">
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/sections--hero.css">
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/modules--text-pic.css">
+        <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/modules--impressions.css">
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Fonts/style.css">
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Icons/Icomoon/style.css">
 

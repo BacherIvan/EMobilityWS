@@ -40,6 +40,7 @@ if ($section.length) {
         $section.attr('data-login-error', 0);
         vars.LAYOUT.$hero.attr('data-login-open', menuOpenHero = 1 - menuOpenHero);
         vars.LAYOUT.$body.attr('data-scroll', pageScrollable = 1 - pageScrollable);
+        $section.attr('data-login-error', 0);
     });
 
     var login = document.getElementById('JS-login');
@@ -50,6 +51,7 @@ if ($section.length) {
             $section.attr('data-login-error', 0);
             vars.LAYOUT.$hero.attr('data-login-open', menuOpenHero = 1 - menuOpenHero);
             vars.LAYOUT.$body.attr('data-scroll', pageScrollable = 1 - pageScrollable);
+            $section.attr('data-login-error', 0);
         }
     }
 
@@ -57,15 +59,29 @@ if ($section.length) {
         var xhttp = new XMLHttpRequest();
         var user = document.getElementById('JS-username').value;
         var pwd = document.getElementById('JS-password').value;
+        console.log(user);
+        console.log(pwd);
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 var values = JSON.parse(xhttp.responseText);
-                console.log(values);
-                // values ist hier jetzt ein Objekt bzw. ein Array aus Objekten. Teste dies mit Ausgabe: console.log(values);
+                //console.log(values);
+
+                if (values.statusCode == 0) {
+                    // Weiterleitung
+                    window.open('admin.php', '_blank');
+                } else if (values.statusCode == 1) {
+                    $section.attr('data-login-error', 1);
+                    document.getElementById('JS-displayError').innerHTML = "Benutzername nicht gefunden";
+                } else {
+                    $section.attr('data-login-error', 1);
+                    document.getElementById('JS-displayError').innerHTML = "Falsches Passwort";
+                }
             }
         };
-        xhttp.open("POST", "/config/db/Login.php", false);   //file.php muss natürlich angepasst werden
-        xhttp.send("uname="+user + "&pwd="+pwd);
+        xhttp.open("GET", "/config/db/Login.php?uname=" + user + "&pwd=" + pwd);
+        xhttp.send(null);
+        //xhttp.open("POST", "/config/db/Login.php", true);
+        //xhttp.send("uname="+user + "&pwd="+pwd);
     });
 
 
