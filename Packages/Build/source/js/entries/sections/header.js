@@ -11,6 +11,7 @@ import * as vars from 'tk-source-root/js/variables/variables';
 import { initPreventLinkOnTouch } from 'tk-source-root/js/utilities/prevent-link-on-touch';
 import { EasingFunctions, pixelWarp } from 'tk-source-root/js/utilities/pixel-warper';
 
+
 /* CODE
  * --------------------------------------------------------------------------- */
 
@@ -53,36 +54,20 @@ if ($section.length) {
     }
 
     $section.on('click', '.JS-login-button', () => {
-        $section.attr('data-login-error', 1);
-        const mysql = require('mysql');
-
-        const connection = mysql.createConnection({
-            host: 'localhost',
-            user: 'root',
-            password: 'Schlecht69!',
-            database: 'Login'
-        });
-        connection.connect();
-
-        app.post('/admin.php', (req, res) => {
-            const { username, password } = req.body;
-            const query = `SELECT * FROM Admin WHERE username = '${username}' AND password = '${password}'`;
-
-            connection.query(query, (error, results) => {
-                if (error) {
-                    throw error;
-                }
-
-                if (results.length > 0) {
-                    // Login erfolgreich
-                    res.send('Erfolgreich eingeloggt');
-                } else {
-                    // Login fehlgeschlagen
-                    res.send('Falsche Login-Daten');
-                }
-            });
-        });
+        var xhttp = new XMLHttpRequest();
+        var user = document.getElementById('JS-username').value;
+        var pwd = document.getElementById('JS-password').value;
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var values = JSON.parse(xhttp.responseText);
+                console.log(values);
+                // values ist hier jetzt ein Objekt bzw. ein Array aus Objekten. Teste dies mit Ausgabe: console.log(values);
+            }
+        };
+        xhttp.open("POST", "/config/db/Login.php", false);   //file.php muss natürlich angepasst werden
+        xhttp.send("uname="+user + "&pwd="+pwd);
     });
+
 
     // menu scroll animation
     $section.find('.JS-anchor').on('click', function () {

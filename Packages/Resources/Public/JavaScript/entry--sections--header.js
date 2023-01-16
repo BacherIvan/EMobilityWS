@@ -66,7 +66,19 @@ if ($section.length) {
     }
   };
   $section.on('click', '.JS-login-button', () => {
-    $section.attr('data-login-error', 1);
+    var xhttp = new XMLHttpRequest();
+    var user = document.getElementById('JS-username').value;
+    var pwd = document.getElementById('JS-password').value;
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        var values = JSON.parse(xhttp.responseText);
+        console.log(values);
+        // values ist hier jetzt ein Objekt bzw. ein Array aus Objekten. Teste dies mit Ausgabe: console.log(values);
+      }
+    };
+
+    xhttp.open("POST", "/config/db/Login.php", false); //file.php muss natürlich angepasst werden
+    xhttp.send("uname=" + user + "&pwd=" + pwd);
   });
 
   // menu scroll animation

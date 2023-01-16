@@ -10,6 +10,19 @@
       "webpack--runtime": "webpack--runtime.js"
     }
   },
+  "modules/impressions": {
+    "alias": "entry--modules--impressions",
+    "file": "entry--modules--impressions.js",
+    "dependencies": {
+      "tk-internal-functions": "tk-internal-functions.js",
+      "vendor--cash-dom": "vendor--cash-dom.js",
+      "vendor--lg-thumbnail-js": "vendor--lg-thumbnail-js.js",
+      "vendor--lg-video-js": "vendor--lg-video-js.js",
+      "vendor--lightgallery-js": "vendor--lightgallery-js.js",
+      "vendor--lodash-es": "vendor--lodash-es.js",
+      "webpack--runtime": "webpack--runtime.js"
+    }
+  },
   "modules/text-pic": {
     "alias": "entry--modules--text-pic",
     "file": "entry--modules--text-pic.js",

@@ -1,0 +1,87 @@
+/*  ==========================================================================
+    MODULE
+    ========================================================================== */
+
+@import 'source/scss/storage/storage';
+
+/* STYLING
+ * --------------------------------------------------------------------------- */
+
+$identifier: 'text-pic';
+
+#{$mod}[data-id="#{$identifier}"] {
+
+  // --- children ---
+  #{$mod} {
+
+    &__wrap {
+      display: flex;
+      justify-content: space-between;
+      opacity: 0;
+      transform: translateY(10em);
+      transition: 1.5s ease-out;
+      transition-delay: 0.5s;
+    }
+
+    &__col {
+      &--media {
+        margin-right: em(60);
+      }
+
+      &--text {
+        max-width: em(700);
+      }
+    }
+
+    &__image {
+      img {
+        width: 100%;
+        height: auto;
+      }
+
+      > a {
+        cursor: zoom-in;
+      }
+    }
+  }
+
+  &.JS-fade-in {
+    #{$mod} {
+      &__wrap {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  }
+
+
+  // --- properties ---
+  &:hover {
+    #{$mod} {
+
+    }
+  }
+
+  /* RESPONSIVE
+   * --------------------------------------------------------------------------- */
+
+  @media #{$mq-tablet} {
+
+    // --- children ---
+    #{$mod} {
+      &__wrap {
+        flex-direction: column;
+      }
+      &__col {
+        &--media {
+          margin-right: 0;
+        }
+        &--text {
+          margin-top: em(50);
+          max-width: none;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
