@@ -34,28 +34,10 @@
     <div class="EBIL-section__wrap">
         <ul>
             <li><a class="active" href="#home">Tagebuch</a></li>
-            <li><a href="#">Auto</a></li>
+            <li><a href="#auto">Auto</a></li>
         </ul>
     </div>
-        <?php
-            $db = new mysqli('localhost', 'root', 'Schlecht69!', 'Tagebuch');
 
-            if ($db->connect_errno) {
-                die('Sorry - gerade gibt es ein Problem');
-            }
-
-            $result = $db->query('Select * from Eintrag natural join hatEintrag natural join Person;');
-
-            if ($result->num_rows > 0) {
-                while($row = $result->fetch_assoc()){
-                    //print_r($row);
-                    echo $row['vorname'] .' '.  $row['nachname'] .', '. $row['startzeit'] .' - ' . $row['endzeit'] .'<br>';
-                    echo $row['eintrag'] . '<br><br>';
-                }
-            }
-            $result->free();
-            $db->close();
-        ?>
 </section>
 </html>
 
