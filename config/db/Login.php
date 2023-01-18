@@ -7,7 +7,12 @@
         }
         $user = $_GET['uname'];
         $pwd = $_GET['pwd'];
-        $result = $db->query("Select * from Admin where usr='$user'");
+
+        $stmt = $db->prepare("Select * from Admin where usr=?");
+        $stmt->bind_param("s", $user);
+        $stmt->execute();
+        $result = $stmt->get_result();
+
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
             if($row['pwd'] == $pwd){

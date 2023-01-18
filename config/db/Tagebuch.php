@@ -5,7 +5,7 @@
         die('Sorry - gerade gibt es ein Problem');
     }
 
-    $result = $db->query('Select * from Eintrag natural join hatEintrag natural join Person where Eintrag.startzeit=' . $_POST['date'] .';');
+    $result = $db->query('Select * from Eintrag natural join hatEintrag natural join Person where Eintrag.startzeit=' . $_GET['date'] .';');
 
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()){
