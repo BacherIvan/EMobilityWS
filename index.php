@@ -68,6 +68,7 @@
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-updater-tilt.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-updater-twinkle.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--tsparticles-updater-wobble.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--js-cookie.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/webpack--runtime.js"></script>
         <!-- CSS imports -->
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/globals--global.css">

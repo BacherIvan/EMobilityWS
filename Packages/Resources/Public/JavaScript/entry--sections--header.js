@@ -13,14 +13,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var cash_dom__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(cash_dom__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! waypoints/lib/noframework.waypoints */ "./node_modules/waypoints/lib/noframework.waypoints.js");
 /* harmony import */ var waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tk-source-root/js/variables/variables */ "./source/js/variables/variables.js");
-/* harmony import */ var tk_source_root_js_utilities_prevent_link_on_touch__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tk-source-root/js/utilities/prevent-link-on-touch */ "./source/js/utilities/prevent-link-on-touch.js");
-/* harmony import */ var tk_source_root_js_utilities_pixel_warper__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tk-source-root/js/utilities/pixel-warper */ "./source/js/utilities/pixel-warper.js");
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! js-cookie */ "./node_modules/js-cookie/src/js.cookie.js");
+/* harmony import */ var js_cookie__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(js_cookie__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tk-source-root/js/variables/variables */ "./source/js/variables/variables.js");
+/* harmony import */ var tk_source_root_js_utilities_prevent_link_on_touch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tk-source-root/js/utilities/prevent-link-on-touch */ "./source/js/utilities/prevent-link-on-touch.js");
+/* harmony import */ var tk_source_root_js_utilities_pixel_warper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! tk-source-root/js/utilities/pixel-warper */ "./source/js/utilities/pixel-warper.js");
 /*  ==========================================================================
     HEADER
     ========================================================================== */
 
 // node modules imports
+
 
 
 
@@ -36,10 +39,10 @@ __webpack_require__.r(__webpack_exports__);
 const identifier = 'header';
 
 // initialize module
-const $section = cash_dom__WEBPACK_IMPORTED_MODULE_0___default()(`.${tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__["CLASSNAMES"].sect}[data-id="${identifier}"]`);
+const $section = cash_dom__WEBPACK_IMPORTED_MODULE_0___default()(`.${tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_3__["CLASSNAMES"].sect}[data-id="${identifier}"]`);
 if ($section.length) {
   // prevent linking on touch
-  Object(tk_source_root_js_utilities_prevent_link_on_touch__WEBPACK_IMPORTED_MODULE_3__["initPreventLinkOnTouch"])('JS-block-touch');
+  Object(tk_source_root_js_utilities_prevent_link_on_touch__WEBPACK_IMPORTED_MODULE_4__["initPreventLinkOnTouch"])('JS-block-touch');
 
   // trigger mobile menu
   let menuOpenHeader = 0;
@@ -47,14 +50,14 @@ if ($section.length) {
   let pageScrollable = 1;
   $section.on('click', '.JS-main-menu-trigger', () => {
     $section.attr('data-menu-open', menuOpenHeader = 1 - menuOpenHeader);
-    tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__["LAYOUT"].$hero.attr('data-menu-open', menuOpenHero = 1 - menuOpenHero);
-    tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__["LAYOUT"].$body.attr('data-scroll', pageScrollable = 1 - pageScrollable);
+    tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_3__["LAYOUT"].$hero.attr('data-menu-open', menuOpenHero = 1 - menuOpenHero);
+    tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_3__["LAYOUT"].$body.attr('data-scroll', pageScrollable = 1 - pageScrollable);
   });
   $section.on('click', '.JS-login-menu-trigger', () => {
     $section.attr('data-login-open', menuOpenHeader = 1 - menuOpenHeader);
     $section.attr('data-login-error', 0);
-    tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__["LAYOUT"].$hero.attr('data-login-open', menuOpenHero = 1 - menuOpenHero);
-    tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__["LAYOUT"].$body.attr('data-scroll', pageScrollable = 1 - pageScrollable);
+    tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_3__["LAYOUT"].$hero.attr('data-login-open', menuOpenHero = 1 - menuOpenHero);
+    tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_3__["LAYOUT"].$body.attr('data-scroll', pageScrollable = 1 - pageScrollable);
     $section.attr('data-login-error', 0);
   });
   var login = document.getElementById('JS-login');
@@ -62,8 +65,8 @@ if ($section.length) {
     if (event.target == login) {
       $section.attr('data-login-open', menuOpenHeader = 1 - menuOpenHeader);
       $section.attr('data-login-error', 0);
-      tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__["LAYOUT"].$hero.attr('data-login-open', menuOpenHero = 1 - menuOpenHero);
-      tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__["LAYOUT"].$body.attr('data-scroll', pageScrollable = 1 - pageScrollable);
+      tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_3__["LAYOUT"].$hero.attr('data-login-open', menuOpenHero = 1 - menuOpenHero);
+      tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_3__["LAYOUT"].$body.attr('data-scroll', pageScrollable = 1 - pageScrollable);
       $section.attr('data-login-error', 0);
     }
   };
@@ -76,9 +79,15 @@ if ($section.length) {
     xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
         var values = JSON.parse(xhttp.responseText);
-        //console.log(values);
-
         if (values.statusCode == 0) {
+          // Cookies setzen
+          js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.set('uname', user, {
+            expires: 7
+          });
+          js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.set('pwd', pwd, {
+            expires: 7
+          });
+          $section.attr('data-login-error', 0);
           // Weiterleitung
           window.open('admin.php', '_blank');
         } else if (values.statusCode == 1) {
@@ -92,8 +101,6 @@ if ($section.length) {
     };
     xhttp.open("GET", "/config/db/Login.php?uname=" + user + "&pwd=" + pwd);
     xhttp.send(null);
-    //xhttp.open("POST", "/config/db/Login.php", true);
-    //xhttp.send("uname="+user + "&pwd="+pwd);
   });
 
   // menu scroll animation
@@ -101,12 +108,12 @@ if ($section.length) {
     const target = cash_dom__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-target'),
       $element = cash_dom__WEBPACK_IMPORTED_MODULE_0___default()(`#${target}`);
     $section.attr('data-menu-open', menuOpenHeader = 1 - menuOpenHeader);
-    tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__["LAYOUT"].$hero.attr('data-menu-open', menuOpenHero = 1 - menuOpenHero);
-    tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__["LAYOUT"].$body.attr('data-scroll', pageScrollable = 1 - pageScrollable);
-    Object(tk_source_root_js_utilities_pixel_warper__WEBPACK_IMPORTED_MODULE_4__["pixelWarp"])($element[0], {
+    tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_3__["LAYOUT"].$hero.attr('data-menu-open', menuOpenHero = 1 - menuOpenHero);
+    tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_3__["LAYOUT"].$body.attr('data-scroll', pageScrollable = 1 - pageScrollable);
+    Object(tk_source_root_js_utilities_pixel_warper__WEBPACK_IMPORTED_MODULE_5__["pixelWarp"])($element[0], {
       speed: 500,
       verticalOffset: -50,
-      easing: tk_source_root_js_utilities_pixel_warper__WEBPACK_IMPORTED_MODULE_4__["EasingFunctions"].easeInOutQuad
+      easing: tk_source_root_js_utilities_pixel_warper__WEBPACK_IMPORTED_MODULE_5__["EasingFunctions"].easeInOutQuad
     });
   });
 
@@ -116,11 +123,11 @@ if ($section.length) {
     handler: function (direction) {
       if (direction === 'down') {
         $section.attr('data-scrolling', '1');
-        tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__["LAYOUT"].$hero.attr('data-scrolling', '1');
-        tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__["LAYOUT"].$hero.find('.JS-confetti-effect').addClass('hidden');
+        tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_3__["LAYOUT"].$hero.attr('data-scrolling', '1');
+        tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_3__["LAYOUT"].$hero.find('.JS-confetti-effect').addClass('hidden');
       } else {
         $section.attr('data-scrolling', '0');
-        tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__["LAYOUT"].$hero.attr('data-scrolling', '0');
+        tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_3__["LAYOUT"].$hero.attr('data-scrolling', '0');
       }
     },
     offset: 0
@@ -129,4 +136,4 @@ if ($section.length) {
 
 /***/ })
 
-},[["./source/js/entries/sections/header.js","webpack--runtime","vendor--cash-dom","tk-internal-functions","vendor--animated-scroll-to","vendor--waypoints"]]]);
+},[["./source/js/entries/sections/header.js","webpack--runtime","vendor--cash-dom","tk-internal-functions","vendor--animated-scroll-to","vendor--js-cookie","vendor--waypoints"]]]);

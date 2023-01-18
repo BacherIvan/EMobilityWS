@@ -53,6 +53,7 @@
       "tk-internal-functions": "tk-internal-functions.js",
       "vendor--animated-scroll-to": "vendor--animated-scroll-to.js",
       "vendor--cash-dom": "vendor--cash-dom.js",
+      "vendor--js-cookie": "vendor--js-cookie.js",
       "vendor--waypoints": "vendor--waypoints.js",
       "webpack--runtime": "webpack--runtime.js"
     }

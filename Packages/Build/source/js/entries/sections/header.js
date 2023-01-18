@@ -5,11 +5,13 @@
 // node modules imports
 import $ from 'cash-dom';
 import 'waypoints/lib/noframework.waypoints';
+import Cookies from 'js-cookie';
 
 // local imports
 import * as vars from 'tk-source-root/js/variables/variables';
 import { initPreventLinkOnTouch } from 'tk-source-root/js/utilities/prevent-link-on-touch';
 import { EasingFunctions, pixelWarp } from 'tk-source-root/js/utilities/pixel-warper';
+
 
 
 /* CODE
@@ -59,14 +61,14 @@ if ($section.length) {
         var xhttp = new XMLHttpRequest();
         var user = document.getElementById('JS-username').value;
         var pwd = document.getElementById('JS-password').value;
-        console.log(user);
-        console.log(pwd);
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 var values = JSON.parse(xhttp.responseText);
-                //console.log(values);
-
                 if (values.statusCode == 0) {
+                    // Cookies setzen
+                    Cookies.set('uname', user, { expires: 7 });
+                    Cookies.set('pwd', pwd, { expires: 7 });
+                    $section.attr('data-login-error', 0);
                     // Weiterleitung
                     window.open('admin.php', '_blank');
                 } else if (values.statusCode == 1) {
@@ -80,8 +82,6 @@ if ($section.length) {
         };
         xhttp.open("GET", "/config/db/Login.php?uname=" + user + "&pwd=" + pwd);
         xhttp.send(null);
-        //xhttp.open("POST", "/config/db/Login.php", true);
-        //xhttp.send("uname="+user + "&pwd="+pwd);
     });
 
 
