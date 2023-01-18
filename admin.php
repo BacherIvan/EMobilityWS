@@ -1,3 +1,10 @@
+<?php
+    if(!isset($_COOKIE['usr']) || !isset($_COOKIE['pwd'])){
+        die("Keine Berechtigung");
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="de">
 <style>
