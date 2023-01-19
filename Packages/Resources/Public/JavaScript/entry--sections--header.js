@@ -74,8 +74,6 @@ if ($section.length) {
     var xhttp = new XMLHttpRequest();
     var user = document.getElementById('JS-username').value;
     var pwd = document.getElementById('JS-password').value;
-    console.log(user);
-    console.log(pwd);
     xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
         var values = JSON.parse(xhttp.responseText);

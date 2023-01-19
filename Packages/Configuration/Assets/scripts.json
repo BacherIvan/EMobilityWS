@@ -42,7 +42,6 @@
     "dependencies": {
       "tk-internal-functions": "tk-internal-functions.js",
       "vendor--cash-dom": "vendor--cash-dom.js",
-      "vendor--lodash-es": "vendor--lodash-es.js",
       "webpack--runtime": "webpack--runtime.js"
     }
   },
