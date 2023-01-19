@@ -40,19 +40,21 @@
         }
     </style>
     <script>
-        console.log("HAAAAALO");
+        class Eintrag{
+
+        }
+
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 var rows = JSON.parse(xhttp.responseText);
                 //const table = document.createElement("table");
-
+                //var i=1;
                 for (const item of rows) {
-                    document.getElementById("JS-vorname").innerHTML = item["vorname"];
-                    document.getElementById("JS-nachname").innerHTML = item["nachname"];
-                    document.getElementById("JS-startzeit").innerHTML = item["startzeit"];
-                    document.getElementById("JS-entzeit").innerHTML = item["entzeit"];
-                    document.getElementById("JS-eintrag").innerHTML = item["eintrag"];
+                    const span = document.getElementById('JS-eintrag');
+                    const text = document.createTextNode(item['vorname'] + ' ' + item['nachname'] + '<br>' + item['startzeit'] + ' - ' + item['endzeit'] + '<br>' + item['eintrag']);
+                    span.appendChild(text);
+
                 }
             }
         };
@@ -68,11 +70,7 @@
             <li><a class="active" href="#home">Tagebuch</a></li>
             <li><a href="#auto">Auto</a></li>
         </ul>
-        <span id="JS-vorname"></span>
-        <span id="JS-nachname"></span>
-        <span id="JS-startzeit"></span>
-        <span id="JS-entzeit"></span>
-        <span id="JS-eintrag"></span>
+        <div id="JS-eintrag"></div>
     </div>
 
 </section>
