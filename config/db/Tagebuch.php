@@ -14,20 +14,26 @@
     if ($db->connect_errno) {
         die('Sorry - gerade gibt es ein Problem');
     }
+    $stmt = $db->prepare("Select * from Eintrag natural join hatEintrag natural join Person where datum=?");
+    $stmt->bind_param("s", $_GET['datum']);
+    $stmt->execute();
+    $result = $stmt->get_result();
 
-    $result = $db->query('Select * from Eintrag natural join hatEintrag natural join Person where Eintrag.startzeit=' . $_GET['date'] .';');
-    $eintrag = new Eintrag();
     if ($result->num_rows > 0) {
+        $eintrage = array();
+        $i=0;
         while($row = $result->fetch_assoc()){
-            $eintrag->startzeit = $row['startzeit'];
-            $eintrag->endzeit = $row['endzeit'];
-            $eintrag->eintrag = $row['eintrag'];
-            $eintrag->vorname = $row['vorname'];
-            $eintrag->nachname = $row['nachname'];
-            echo json_encode(get_object_vars($eintrag));
+            $eintrag = ['startzeit' => $row['startzeit'],
+                        'endzeit' => $row['endzeit'],
+                        'eintrag' => $row['eintrag'],
+                        'vorname' => $row['vorname'],
+                        'nachname' => $row['nachname']];
+            $eintrage[$i] = $eintrag;
+            $i++;
         }
+        echo json_encode($eintrage);
     }else{
-        return 1;
+        echo json_encode("Fehler");
     }
 
     $result->free();
