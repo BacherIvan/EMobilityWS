@@ -1,12 +1,18 @@
 <?php
     class Eintrag{
         public $startzeit;
-        public $endzeit;
+        public $entzeit;
         public $eintrag;
         public $vorname;
         public $nachname;
 
-        public function __construct(){}
+        public function __construct($startzeit, $endzeit, $vorname, $nachname, $eintrag){
+            $this->startzeit = $startzeit;
+            $this->entzeit = $endzeit;
+            $this->vorname = $vorname;
+            $this->nachname = $nachname;
+            $this->eintrag = $eintrag;
+        }
     }
 
     $db = new mysqli('localhost', 'root', 'Schlecht69!', 'Tagebuch');
@@ -23,11 +29,7 @@
         $eintrage = array();
         $i=0;
         while($row = $result->fetch_assoc()){
-            $eintrag = ['startzeit' => $row['startzeit'],
-                        'endzeit' => $row['endzeit'],
-                        'eintrag' => $row['eintrag'],
-                        'vorname' => $row['vorname'],
-                        'nachname' => $row['nachname']];
+            $eintrag = new Eintrag($row['startzeit'], $row['endzeit'], $row['vorname'], $row['nachname'], $row['eintrag']);
             $eintrage[$i] = $eintrag;
             $i++;
         }
