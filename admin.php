@@ -52,19 +52,21 @@
                 //var i=1;
                 for (const item of rows) {
                     const span = document.getElementById('JS-eintrag');
+
                     var name = document.createTextNode(item['vorname'] + ' ' + item['nachname']);
                     span.appendChild(name);
-                    var br = document.createElement('br');
-                    span.appendChild(br);
+                    var linebreak = document.createElement('br');
+                    span.appendChild(linebreak);
 
-                    var time = document.createTextNode(item['startzeit'] + ' - ' + item['endzeit']);
+                    var time = document.createTextNode(item['startzeit'] + ' - ' + item['entzeit']);
                     span.appendChild(time);
-                    span.appendChild(br);
+                    linebreak = document.createElement('br');
+                    span.appendChild(linebreak);
 
                     var entry = document.createTextNode(item['eintrag']);
                     span.appendChild(entry);
-                    span.appendChild(br);
-
+                    linebreak = document.createElement('br');
+                    span.appendChild(linebreak);
                 }
             }
         };
