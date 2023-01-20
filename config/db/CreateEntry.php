@@ -13,15 +13,19 @@
     */
 
     //eintrag einfügen
-    $id = $db->query("SELECT MAX(IDE) FROM Eintrag");
     $stmt = $db->prepare("Insert into Eintrag values(null, ?, ?, ?, ?)");
     $stmt->bind_param("ssss", $_GET['datum'], $_GET['startzeit'], $_GET['entzeit'], $_GET['eintrag']);
     $stmt->execute();
-
     $result = $stmt->get_result();
 
     if ($result) {
-        echo 0;
+        $ide = $db->query("SELECT MAX(IDE) FROM Eintrag");
+        foreach ($_GET['persons'] as $p){
+            $stmt = $db->prepare("Insert into hatEintrag values(?, ?)");
+            $stmt-> bind_param("ii", $p, $ide);
+            $stmt->execute();
+        }
+
     }else{
         echo 1;
     }
