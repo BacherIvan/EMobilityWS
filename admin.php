@@ -2,7 +2,6 @@
     if(!isset($_COOKIE['uname']) || !isset($_COOKIE['pwd'])){
         die("Keine Berechtigung");
     }
-
 ?>
 
 <!DOCTYPE html>
@@ -40,16 +39,10 @@
         }
     </style>
     <script>
-        class Eintrag{
-
-        }
-
         var xhttp = new XMLHttpRequest();
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 var rows = JSON.parse(xhttp.responseText);
-                //const table = document.createElement("table");
-                //var i=1;
                 for (const item of rows) {
                     const span = document.getElementById('JS-eintrag');
 
@@ -72,6 +65,48 @@
         };
         xhttp.open("GET", "/config/db/Tagebuch.php?datum=" + "2022-11-21");
         xhttp.send(null);
+    </script>
+    <script>
+        class Person {
+            constructor(IDP, vorname, nachname) {
+                this.IDP = IDP;
+                this.vorname = vorname;
+                this.nachname = nachname;
+            }
+        }
+        class PersonList {
+            constructor() {
+                this.list = [];
+            }
+
+            addPerson(person) {
+                this.list.push(person);
+            }
+
+            getPerson(index) {
+                return this.list[index];
+            }
+
+            getPersonList() {
+                return this.list;
+            }
+        }
+
+        let personList = new PersonList();
+        var xhttpPersons = new XMLHttpRequest();
+        xhttpPersons.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var rows = JSON.parse(xhttpPersons.responseText);
+
+                for(const item of rows){
+                    let person = new Person(item["IDP"], item["vorname"], item["nachname"]);
+                    personList.addPerson(person);
+                }
+                console.log(personList.getPersonList());
+            }
+        };
+        xhttpPersons.open("GET", "/config/db/Persons.php");
+        xhttpPersons.send(null);
     </script>
     <link rel="icon" type="image/png" sizes="16x16" href="/Packages/Resources/Public/Images/logo/favicon.png">
 </head>
