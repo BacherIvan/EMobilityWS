@@ -156,23 +156,111 @@
 /* STYLING
  * --------------------------------------------------------------------------- */
 .EBIL-section[data-id=admin] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, #041319, rgba(4, 19, 25, 0.98), rgba(4, 19, 25, 0.95), rgba(4, 19, 25, 0.98), #041319);
+  color: #fff;
   /* RESPONSIVE
    * --------------------------------------------------------------------------- */
 }
-.EBIL-section[data-id=admin][data-hero-layout=none] {
-  padding-top: 25em;
+.EBIL-section[data-id=admin] .EBIL-section__wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #041319, rgba(4, 19, 25, 0.98), rgba(4, 19, 25, 0.95), rgba(4, 19, 25, 0.98), #041319);
+  pointer-events: all;
 }
-@media (max-width: 767px) {
+.EBIL-section[data-id=admin] .EBIL-section__admin-menu {
+  overflow: hidden;
+  border-bottom: solid white;
+}
+.EBIL-section[data-id=admin] .EBIL-section__admin-menu > ul {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 3em;
+  overflow: hidden;
+}
+.EBIL-section[data-id=admin] .EBIL-section__admin-menu > ul > li {
+  display: flex;
+  margin-bottom: 1.5em;
+  padding: 0 5em;
+  opacity: 0.5;
+  transition: opacity 0.2s;
+}
+.EBIL-section[data-id=admin] .EBIL-section__admin-menu > ul > li.JS-act {
+  opacity: 1;
+}
+.EBIL-section[data-id=admin] .EBIL-section__admin-menu > ul > li:hover {
+  opacity: 1;
+}
+.EBIL-section[data-id=admin] .EBIL-section__admin-menu > ul > li > a {
+  text-decoration: none;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+}
+.EBIL-section[data-id=admin] .EBIL-section__admin-menu > ul > li > a > span {
+  font-size: 1.5em;
+  font-weight: 500;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+}
+.EBIL-section[data-id=admin] .EBIL-section__admin-menu > ul > li > a > span:before {
+  display: block;
+  content: "";
+  width: 20px;
+  height: 1px;
+  background-color: #FFFFFF;
+  margin-right: 10px;
+}
+.EBIL-section[data-id=admin] .EBIL-section__admin-menu:hover .EBIL-section__main-menu__item:not(:hover) {
+  opacity: 0.5;
+}
+.EBIL-section[data-id=admin] .EBIL-section__admin-menu__number {
+  margin-right: 1em;
+}
+.EBIL-section[data-id=admin] .EBIL-section__admin-menu__number > span {
+  font-size: 1.5em;
+  font-weight: 600;
+}
+.EBIL-section[data-id=admin] .EBIL-section__tagebuch {
+  display: none;
+  flex-direction: column;
+  row-gap: 4em;
+  margin-top: 2em;
+  align-items: center;
+}
+.EBIL-section[data-id=admin] .EBIL-section__tagebuch.JS-act {
+  display: flex;
+}
+.EBIL-section[data-id=admin] .EBIL-section__eintrag-wrap {
+  background: linear-gradient(to bottom, #b4b4b4, rgba(180, 180, 180, 0.98), rgba(180, 180, 180, 0.95), rgba(180, 180, 180, 0.98), #b4b4b4);
+  max-width: calc(100% - 30em);
+  height: 25em;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align: center;
+}
+.EBIL-section[data-id=admin] .EBIL-section__auto {
+  display: none;
+}
+.EBIL-section[data-id=admin] .EBIL-section__auto.JS-act {
+  display: block;
+}
+@media (max-width: 1024px) {
   .EBIL-section[data-id=admin] {
     padding-top: 3em;
   }
-  .EBIL-section[data-id=admin][data-hero-layout=none] {
-    padding-top: 20em;
+  .EBIL-section[data-id=admin] .EBIL-section__admin-menu > ul {
+    overflow: visible;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+  }
+  .EBIL-section[data-id=admin] .EBIL-section__eintrag-wrap {
+    max-width: calc(100% - 10em);
+    height: 22em;
   }
 }

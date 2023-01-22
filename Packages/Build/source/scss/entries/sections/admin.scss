@@ -14,15 +14,110 @@
 $identifier: 'admin';
 
 #{$sect}[data-id="#{$identifier}"] {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to bottom, rgba($clr-tk-grey-dark, 1), rgba($clr-tk-grey-dark, 0.98), rgba($clr-tk-grey-dark, 0.95), rgba($clr-tk-grey-dark, 0.98), rgba($clr-tk-grey-dark, 1));
+  color: #fff;
   // --- children ---
   #{$sect} {
+    &__wrap {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(to bottom, rgba($clr-tk-grey-dark, 1), rgba($clr-tk-grey-dark, 0.98), rgba($clr-tk-grey-dark, 0.95), rgba($clr-tk-grey-dark, 0.98), rgba($clr-tk-grey-dark, 1));
+      pointer-events: all;
+    }
 
+    &__admin-menu {
+      overflow: hidden;
+      border-bottom: solid white;
+      > ul {
+        display: flex;
+        justify-content: space-between;
+        column-gap: em(30);
+        overflow: hidden;
+        > li {
+          display: flex;
+          margin-bottom: em(15);
+          padding: 0 em(50);
+          opacity: 0.5;
+          transition: opacity 0.2s;
+          &.JS-act {
+            opacity: 1;
+          }
+          &:hover {
+            opacity: 1;
+          }
+          > a {
+            text-decoration: none;
+            color: $clr-white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            user-select: none;
+            > span {
+              font-size: em(15);
+              font-weight: $fw-semi-bold;
+              text-transform: uppercase;
+              display: flex;
+              align-items: center;
+              &:before {
+                display: block;
+                content: '';
+                width: 20px;
+                height: 1px;
+                background-color: $clr-white;
+                margin-right: 10px;
+              }
+            }
+          }
+        }
+      }
+      &:hover {
+        #{$sect} {
+          &__main-menu {
+            &__item {
+              &:not(:hover) {
+                opacity: 0.5;
+              }
+            }
+          }
+        }
+      }
+      &__number {
+        margin-right: em(10);
+        > span {
+          font-size: em(15);
+          font-weight: $fw-bold;
+        }
+      }
+    }
+
+    &__tagebuch {
+      display: none;
+      flex-direction: column;
+      row-gap: em(40);
+      margin-top: em(20);
+      align-items: center;
+      &.JS-act {
+        display: flex;
+      }
+    }
+
+    &__eintrag-wrap {
+      background: linear-gradient(to bottom, rgba($clr-tk-admin, 1), rgba($clr-tk-admin, 0.98), rgba($clr-tk-admin, 0.95), rgba($clr-tk-admin, 0.98), rgba($clr-tk-admin, 1));
+      max-width: calc(100% - 30em);
+      height: em(250);
+      overflow-x: hidden;
+      overflow-y: auto;
+      text-align: center;
+    }
+
+    &__auto {
+      display: none;
+      &.JS-act {
+        display: block;
+      }
+    }
   }
 
   // --- properties ---
@@ -32,21 +127,25 @@ $identifier: 'admin';
     }
   }
 
-  &[data-hero-layout="none"] {
-    padding-top: em(250);
-  }
-
   /* RESPONSIVE
    * --------------------------------------------------------------------------- */
 
-  @media #{$mq-phablet} {
+  @media #{$mq-tablet} {
     padding-top: em(30);
     // --- children ---
     #{$sect} {
-      // ...
-    }
-    &[data-hero-layout="none"] {
-      padding-top: em(200);
+      &__admin-menu {
+        > ul {
+          overflow: visible;
+          flex-wrap: wrap;
+          flex-direction: column;
+          align-content: center;
+        }
+      }
+      &__eintrag-wrap {
+        max-width: calc(100% - 10em);
+        height: em(220);
+      }
     }
   }
 }
