@@ -1,5 +1,7 @@
 <?php
-    if(!isset($_COOKIE['uname']) || !isset($_COOKIE['pwd'])){
+    //Check Permission
+    require("checkLogin.php");
+    if((checkLogin($_COOKIE['uname'], $_COOKIE['pwd']))!= 0) {
         die("Keine Berechtigung");
     }
 ?>

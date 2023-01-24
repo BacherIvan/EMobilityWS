@@ -1,4 +1,10 @@
 <?php
+    //Check Permission
+    require("checkLogin.php");
+    if((checkLogin($_COOKIE['uname'], $_COOKIE['pwd']))!= 0) {
+        die("Keine Berechtigung");
+    }
+
     class Eintrag{
         public $startzeit;
         public $entzeit;

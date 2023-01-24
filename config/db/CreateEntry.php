@@ -1,4 +1,10 @@
 <?php
+    //Check Permission
+    require("checkLogin.php");
+    if((checkLogin($_COOKIE['uname'], $_COOKIE['pwd']))!= 0) {
+        die("Keine Berechtigung");
+    }
+
     $db = new mysqli('localhost', 'root', 'Schlecht69!', 'Tagebuch');
 
     if ($db->connect_errno) {

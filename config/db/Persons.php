@@ -1,4 +1,10 @@
 <?php
+    //Check Permission
+    require("checkLogin.php");
+    if((checkLogin($_COOKIE['uname'], $_COOKIE['pwd']))!= 0) {
+        die("Keine Berechtigung");
+    }
+
     class _Person {
         public $IDP;
         public $vorname;
