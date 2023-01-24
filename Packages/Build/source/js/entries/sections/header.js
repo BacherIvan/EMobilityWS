@@ -57,7 +57,15 @@ if ($section.length) {
         }
     }
 
+    var input = document.getElementById('JS-login');
+    input.addEventListener("keypress", function (event) {
+        if(event.key === "Enter") {
+            document.getElementById("JS-button").click();
+        }
+    });
+
     $section.on('click', '.JS-login-button', () => {
+        // Cookies überprüfen und direkt weiterleiten
         var xhttp = new XMLHttpRequest();
         var user = document.getElementById('JS-username').value;
         var pwd = document.getElementById('JS-password').value;

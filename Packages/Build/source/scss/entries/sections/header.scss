@@ -218,7 +218,7 @@ $identifier: 'header';
     &__login-failed {
       position: absolute;
       left: em(160);
-      bottom: em(30);
+      bottom: calc(0% + 3em);
       > span {
         color: $clr-tk-red;
         font-size: em(13);
@@ -618,7 +618,7 @@ $identifier: 'header';
 
       &__login-failed {
         left: em(60);
-        bottom: em(10);
+        bottom: calc(0% + 3em);
       }
     }
   }
@@ -658,7 +658,7 @@ $identifier: 'header';
       }
       &__login-failed {
         left: em(30);
-        bottom: em(70);
+        bottom: calc(0% + 7em);
       }
     }
   }
@@ -693,7 +693,7 @@ $identifier: 'header';
       }
       &__login-failed {
         left: em(10);
-        bottom: em(180);
+        bottom: calc(0% + 18em);
       }
     }
   }

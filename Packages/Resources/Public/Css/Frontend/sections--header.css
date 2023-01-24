@@ -341,7 +341,7 @@
 .EBIL-section[data-id=header] .EBIL-section__login-failed {
   position: absolute;
   left: 16em;
-  bottom: 3em;
+  bottom: calc(0% + 3em);
 }
 .EBIL-section[data-id=header] .EBIL-section__login-failed > span {
   color: #ae173b;
@@ -632,7 +632,7 @@
   }
   .EBIL-section[data-id=header] .EBIL-section__login-failed {
     left: 6em;
-    bottom: 1em;
+    bottom: calc(0% + 3em);
   }
 }
 @media (max-width: 570px) {
@@ -662,7 +662,7 @@
   }
   .EBIL-section[data-id=header] .EBIL-section__login-failed {
     left: 3em;
-    bottom: 7em;
+    bottom: calc(0% + 7em);
   }
 }
 @media (max-width: 415px) {
@@ -689,7 +689,7 @@
   }
   .EBIL-section[data-id=header] .EBIL-section__login-failed {
     left: 1em;
-    bottom: 18em;
+    bottom: calc(0% + 18em);
   }
 }
 @keyframes linefade {

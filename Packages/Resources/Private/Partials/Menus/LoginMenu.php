@@ -12,10 +12,7 @@
                     <label class="EBIL-section__lbl" for="psw"><b>Password</b></label>
                     <input id="JS-password" class="EBIL-section__input" type="password" placeholder="Enter Password" name="pwd" required>
 
-                    <button class="EBIL-section__button JS-login-button" type="button">Login</button>
-                    <label>
-                        <input class="EBIL-section__checkbox" type="checkbox" checked="checked" name="remember">Remember me
-                    </label>
+                    <button id="JS-button" class="EBIL-section__button JS-login-button" type="button">Login</button>
                 </div>
                 <div class="EBIL-section__login-failed">
                     <span id="JS-displayError"></span>
