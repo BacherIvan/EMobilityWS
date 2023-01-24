@@ -1,6 +1,6 @@
 <?php
     //Check Permission
-    require("checkLogin.php");
+    require("./config/db/checkLogin.php");
     if((checkLogin($_COOKIE['uname'], $_COOKIE['pwd']))!= 0) {
         die("Keine Berechtigung");
     }
