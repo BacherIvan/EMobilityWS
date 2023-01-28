@@ -4,6 +4,7 @@
 
 // node modules imports
 import $ from 'cash-dom';
+import flatpickr from 'flatpickr';
 
 // local imports
 import * as vars from 'tk-source-root/js/variables/variables';
@@ -87,21 +88,42 @@ if ($section.length) {
     xhttpPersons.open("GET", "/config/db/Persons.php");
     xhttpPersons.send(null);
 
+    // Datum empfangen
+    var dates = [];
+    var xhttpDates = new XMLHttpRequest();
+    xhttpDates.onreadystatechange = function() {
+        if (this.readyState == 4 && this.status == 200) {
+            var rows = JSON.parse(xhttpDates.responseText);
+            for(const item of rows) {
+                dates.push(item["datum"]);
+            }
+            flatpickr("#JS-calendar", {
+                enable: dates
+            });
+        }
+    };
+    xhttpDates.open("GET", "/config/db/Dates.php");
+    xhttpDates.send(null);
+
     // Auf den Menüpunkt, der gecklickt wurde, die Klasse 'JS-act' setzen
     $section.find('.JS-anchor').on('click', function () {
         $section.find('.JS-act').removeClass('JS-act');
         $(this).addClass('JS-act');
         const target = $(this).attr('data-target'), $element = $(`#${target}`);
         if (target == 'c51') {
+            var remove_calender = document.getElementById('JS-calendar');
             var remove_element = document.getElementById('c50');
             var add_element =  document.getElementById('c51');
             remove_element.classList.remove('JS-act');
             add_element.classList.add('JS-act');
+            remove_calender.classList.remove('JS-act');
         } else {
+            var add_calender = document.getElementById('JS-calendar');
             var remove_element = document.getElementById('c51');
             var add_element =  document.getElementById('c50');
             remove_element.classList.remove('JS-act');
-            add_element.classList.add('JS-act')
+            add_element.classList.add('JS-act');
+            add_calender.classList.add('JS-act');
         }
     });
 }

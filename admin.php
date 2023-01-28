@@ -7,7 +7,7 @@
 ?>
 
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
@@ -23,8 +23,12 @@
     <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--progressbar-js.js"></script>
     <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--lodash-es.js"></script>
     <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--shifty.js"></script>
+    <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--flatpickr.js"></script>
     <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/webpack--runtime.js"></script>
     <link rel="icon" type="image/png" sizes="16x16" href="/Packages/Resources/Public/Images/logo/favicon.png">
+    <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Icons/Icomoon/style.css">
+    <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Fonts/style.css">
+    <link rel="stylesheet" type="text/css" href="https://npmcdn.com/flatpickr/dist/themes/light.css">
 </head>
 
 <section id="EBIL-section--admin" class="EBIL-section" data-id="admin" data-hero-layout="full">
@@ -63,6 +67,13 @@
             <div class="EBIL-section__eintrag-wrap">
                 <div id="JS-eintrag"></div>
             </div>
+        </div>
+        <div class="EBIL-section__calendar JS-act">
+            <span>Datum auswählen</span>
+            <input type="date" placeholder="Tagebuch-Datum" id="JS-calendar" readonly>
+            <a class="EBIL-section__calendar__item">
+                <i class="EBIL-icon EBIL-icon--1 EBIL-icon--calendar"></i>
+            </a>
         </div>
         <div class="EBIL-section__auto" id="c51">
             <span>AUTOOO....FOCK DU</span>

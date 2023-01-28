@@ -42,6 +42,7 @@
     "dependencies": {
       "tk-internal-functions": "tk-internal-functions.js",
       "vendor--cash-dom": "vendor--cash-dom.js",
+      "vendor--flatpickr": "vendor--flatpickr.js",
       "webpack--runtime": "webpack--runtime.js"
     }
   },

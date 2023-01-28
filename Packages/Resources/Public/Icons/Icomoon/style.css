@@ -23,7 +23,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 .EBIL-icon--add-outline:before {
   content: "\e900";
 }
@@ -116,6 +115,9 @@
 }
 .EBIL-icon--user-solid-circle:before {
   content: "\e91c";
+}
+.EBIL-icon--calendar:before {
+  content: "\e91d";
 }
 
 

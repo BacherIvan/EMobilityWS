@@ -166,7 +166,7 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, #041319, rgba(4, 19, 25, 0.98), rgba(4, 19, 25, 0.95), rgba(4, 19, 25, 0.98), #041319);
+  background: linear-gradient(to bottom, #141414, rgba(20, 20, 20, 0.98), rgba(20, 20, 20, 0.95), rgba(20, 20, 20, 0.98), #141414);
   pointer-events: all;
 }
 .EBIL-section[data-id=admin] .EBIL-section__admin-menu {
@@ -236,12 +236,34 @@
   display: flex;
 }
 .EBIL-section[data-id=admin] .EBIL-section__eintrag-wrap {
-  background: linear-gradient(to bottom, #b4b4b4, rgba(180, 180, 180, 0.98), rgba(180, 180, 180, 0.95), rgba(180, 180, 180, 0.98), #b4b4b4);
+  background: linear-gradient(to bottom, #636363, rgba(99, 99, 99, 0.98), rgba(99, 99, 99, 0.95), rgba(99, 99, 99, 0.98), #636363);
   max-width: calc(100% - 30em);
   height: 25em;
   overflow-x: hidden;
   overflow-y: auto;
   text-align: center;
+}
+.EBIL-section[data-id=admin] .EBIL-section__calendar {
+  display: none;
+  position: fixed;
+  top: 12em;
+  right: 3em;
+}
+.EBIL-section[data-id=admin] .EBIL-section__calendar.JS-act {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.EBIL-section[data-id=admin] .EBIL-section__calendar__item {
+  position: absolute;
+  right: 0.5em;
+  bottom: 0.2em;
+  cursor: pointer;
+  color: black;
+}
+.EBIL-section[data-id=admin] .EBIL-section__calendar__item .EBIL-icon--1 {
+  display: block;
+  font-size: 1em;
 }
 .EBIL-section[data-id=admin] .EBIL-section__auto {
   display: none;
@@ -262,5 +284,35 @@
   .EBIL-section[data-id=admin] .EBIL-section__eintrag-wrap {
     max-width: calc(100% - 10em);
     height: 22em;
+  }
+  .EBIL-section[data-id=admin] .EBIL-section__calendar {
+    top: 19em;
+    right: 3em;
+  }
+  .EBIL-section[data-id=admin] .EBIL-section__calendar > input {
+    width: 10em;
+  }
+  .EBIL-section[data-id=admin] .EBIL-section__tagebuch {
+    align-items: flex-start;
+  }
+  .EBIL-section[data-id=admin] .EBIL-section__neuer-eintrag {
+    margin-left: 1em;
+  }
+  .EBIL-section[data-id=admin] .EBIL-section__eintrag-wrap {
+    margin-left: 1em;
+  }
+}
+@media (max-width: 767px) {
+  .EBIL-section[data-id=admin] .EBIL-section__calendar {
+    right: 2em;
+  }
+  .EBIL-section[data-id=admin] .EBIL-section__calendar > input {
+    width: 9em;
+  }
+  .EBIL-section[data-id=admin] .EBIL-section__calendar__item {
+    right: 0.2em;
+  }
+  .EBIL-section[data-id=admin] .EBIL-section__eintrag-wrap {
+    max-width: calc(100% - 12em);
   }
 }

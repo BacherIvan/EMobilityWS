@@ -299,94 +299,94 @@
 }
 .EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(1) {
   left: 7%;
-  transform: rotate(-53deg);
+  transform: rotate(-62deg);
   animation: makeItRain 1000ms infinite ease-out;
-  animation-delay: 341ms;
-  animation-duration: 902ms;
+  animation-delay: 38ms;
+  animation-duration: 992ms;
 }
 .EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(2) {
   left: 14%;
-  transform: rotate(77deg);
+  transform: rotate(10deg);
   animation: makeItRain 1000ms infinite ease-out;
-  animation-delay: 465ms;
-  animation-duration: 1031ms;
+  animation-delay: 180ms;
+  animation-duration: 1193ms;
 }
 .EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(3) {
   left: 21%;
-  transform: rotate(34deg);
+  transform: rotate(2deg);
   animation: makeItRain 1000ms infinite ease-out;
-  animation-delay: 123ms;
-  animation-duration: 978ms;
+  animation-delay: 140ms;
+  animation-duration: 1029ms;
 }
 .EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(4) {
   left: 28%;
-  transform: rotate(-14deg);
+  transform: rotate(52deg);
   animation: makeItRain 1000ms infinite ease-out;
-  animation-delay: 48ms;
-  animation-duration: 1097ms;
+  animation-delay: 233ms;
+  animation-duration: 1131ms;
 }
 .EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(5) {
   left: 35%;
-  transform: rotate(71deg);
+  transform: rotate(-28deg);
   animation: makeItRain 1000ms infinite ease-out;
-  animation-delay: 223ms;
-  animation-duration: 1102ms;
+  animation-delay: 0ms;
+  animation-duration: 1056ms;
 }
 .EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(6) {
   left: 42%;
-  transform: rotate(37deg);
+  transform: rotate(-71deg);
   animation: makeItRain 1000ms infinite ease-out;
-  animation-delay: 97ms;
-  animation-duration: 1144ms;
+  animation-delay: 37ms;
+  animation-duration: 1187ms;
 }
 .EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(7) {
   left: 49%;
-  transform: rotate(-31deg);
+  transform: rotate(31deg);
   animation: makeItRain 1000ms infinite ease-out;
-  animation-delay: 40ms;
-  animation-duration: 1055ms;
+  animation-delay: 256ms;
+  animation-duration: 945ms;
 }
 .EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(8) {
   left: 56%;
-  transform: rotate(41deg);
+  transform: rotate(-20deg);
   animation: makeItRain 1000ms infinite ease-out;
-  animation-delay: 250ms;
-  animation-duration: 1161ms;
+  animation-delay: 491ms;
+  animation-duration: 1149ms;
 }
 .EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(9) {
   left: 63%;
-  transform: rotate(-52deg);
+  transform: rotate(29deg);
   animation: makeItRain 1000ms infinite ease-out;
-  animation-delay: 216ms;
-  animation-duration: 1005ms;
+  animation-delay: 233ms;
+  animation-duration: 973ms;
 }
 .EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(10) {
   left: 70%;
-  transform: rotate(-20deg);
+  transform: rotate(-23deg);
   animation: makeItRain 1000ms infinite ease-out;
-  animation-delay: 434ms;
-  animation-duration: 1080ms;
+  animation-delay: 139ms;
+  animation-duration: 1188ms;
 }
 .EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(11) {
   left: 77%;
   transform: rotate(-61deg);
   animation: makeItRain 1000ms infinite ease-out;
-  animation-delay: 91ms;
-  animation-duration: 1102ms;
+  animation-delay: 288ms;
+  animation-duration: 1055ms;
 }
 .EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(12) {
   left: 84%;
-  transform: rotate(72deg);
+  transform: rotate(-64deg);
   animation: makeItRain 1000ms infinite ease-out;
-  animation-delay: 457ms;
-  animation-duration: 1026ms;
+  animation-delay: 212ms;
+  animation-duration: 1119ms;
 }
 .EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(13) {
   left: 91%;
-  transform: rotate(7deg);
+  transform: rotate(-69deg);
   animation: makeItRain 1000ms infinite ease-out;
-  animation-delay: 92ms;
-  animation-duration: 1047ms;
+  animation-delay: 70ms;
+  animation-duration: 1037ms;
 }
 .EBIL-section[data-id=hero] .EBIL-section__confetti-wrap__confetti-item:nth-child(even) {
   z-index: 1;

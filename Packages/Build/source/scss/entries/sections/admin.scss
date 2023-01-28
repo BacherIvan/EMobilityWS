@@ -111,7 +111,28 @@ $identifier: 'admin';
       overflow-y: auto;
       text-align: center;
     }
-
+    &__calendar {
+      display: none;
+      position: fixed;
+      top: em(120);
+      right: em(30);
+      &.JS-act {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      &__item {
+        position: absolute;
+        right: em(5);
+        bottom: em(2);
+        cursor: pointer;
+        color: black;
+        .EBIL-icon--1 {
+          display: block;
+          font-size: em(10);
+        }
+      }
+    }
     &__auto {
       display: none;
       &.JS-act {
@@ -145,6 +166,39 @@ $identifier: 'admin';
       &__eintrag-wrap {
         max-width: calc(100% - 10em);
         height: em(220);
+      }
+      &__calendar {
+        top: em(190);
+        right: em(30);
+        > input {
+          width: em(100);
+        }
+      }
+      &__tagebuch {
+        align-items: flex-start;
+      }
+      &__neuer-eintrag {
+        margin-left: em(10);
+      }
+
+      &__eintrag-wrap {
+        margin-left: em(10);
+      }
+    }
+  }
+  @media #{$mq-phablet} {
+    #{$sect} {
+      &__calendar {
+        right: em(20);
+        > input {
+          width: em(90);
+        }
+        &__item {
+          right: em(2);
+        }
+      }
+      &__eintrag-wrap {
+        max-width: calc(100% - 12em);
       }
     }
   }

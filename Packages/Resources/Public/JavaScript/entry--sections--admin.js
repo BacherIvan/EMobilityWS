@@ -11,12 +11,14 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var cash_dom__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! cash-dom */ "./node_modules/cash-dom/dist/cash.js");
 /* harmony import */ var cash_dom__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(cash_dom__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! tk-source-root/js/variables/variables */ "./source/js/variables/variables.js");
+/* harmony import */ var flatpickr__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! flatpickr */ "./node_modules/flatpickr/dist/esm/index.js");
+/* harmony import */ var tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! tk-source-root/js/variables/variables */ "./source/js/variables/variables.js");
 /*  ==========================================================================
     HERO
     ========================================================================== */
 
 // node modules imports
+
 
 
 // local imports
@@ -29,7 +31,7 @@ __webpack_require__.r(__webpack_exports__);
 const identifier = 'admin';
 
 // initialize module
-const $section = cash_dom__WEBPACK_IMPORTED_MODULE_0___default()(`.${tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_1__["CLASSNAMES"].sect}[data-id="${identifier}"]`);
+const $section = cash_dom__WEBPACK_IMPORTED_MODULE_0___default()(`.${tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__["CLASSNAMES"].sect}[data-id="${identifier}"]`);
 if ($section.length) {
   // Tagebuch-Einträge
   var xhttp = new XMLHttpRequest();
@@ -93,6 +95,23 @@ if ($section.length) {
   xhttpPersons.open("GET", "/config/db/Persons.php");
   xhttpPersons.send(null);
 
+  // Datum empfangen
+  var dates = [];
+  var xhttpDates = new XMLHttpRequest();
+  xhttpDates.onreadystatechange = function () {
+    if (this.readyState == 4 && this.status == 200) {
+      var rows = JSON.parse(xhttpDates.responseText);
+      for (const item of rows) {
+        dates.push(item["datum"]);
+      }
+      Object(flatpickr__WEBPACK_IMPORTED_MODULE_1__["default"])("#JS-calendar", {
+        enable: dates
+      });
+    }
+  };
+  xhttpDates.open("GET", "/config/db/Dates.php");
+  xhttpDates.send(null);
+
   // Auf den Menüpunkt, der gecklickt wurde, die Klasse 'JS-act' setzen
   $section.find('.JS-anchor').on('click', function () {
     $section.find('.JS-act').removeClass('JS-act');
@@ -100,19 +119,23 @@ if ($section.length) {
     const target = cash_dom__WEBPACK_IMPORTED_MODULE_0___default()(this).attr('data-target'),
       $element = cash_dom__WEBPACK_IMPORTED_MODULE_0___default()(`#${target}`);
     if (target == 'c51') {
+      var remove_calender = document.getElementById('JS-calendar');
       var remove_element = document.getElementById('c50');
       var add_element = document.getElementById('c51');
       remove_element.classList.remove('JS-act');
       add_element.classList.add('JS-act');
+      remove_calender.classList.remove('JS-act');
     } else {
+      var add_calender = document.getElementById('JS-calendar');
       var remove_element = document.getElementById('c51');
       var add_element = document.getElementById('c50');
       remove_element.classList.remove('JS-act');
       add_element.classList.add('JS-act');
+      add_calender.classList.add('JS-act');
     }
   });
 }
 
 /***/ })
 
-},[["./source/js/entries/sections/admin.js","webpack--runtime","vendor--cash-dom","tk-internal-functions"]]]);
+},[["./source/js/entries/sections/admin.js","webpack--runtime","vendor--cash-dom","tk-internal-functions","vendor--flatpickr"]]]);

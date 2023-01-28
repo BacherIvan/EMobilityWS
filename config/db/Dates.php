@@ -11,13 +11,20 @@
         die('Sorry - gerade gibt es ein Problem');
     }
 
-    //Personen senden
-    $result = $db->query("Select distinct datum from Eintrag;");
+    // Datum senden
+    $result = $db->query("Select distinct datum from Eintrag");
     if($result->num_rows > 0){
-        $dates = $result->fetch_all();
+        $dates = array();
+        $i = 0;
+        while($row = $result->fetch_assoc()){
+            $dates[$i] = $row;
+            $i++;
+        }
         echo json_encode($dates);
     } else{
         echo "Fehler";
     }
+    $result->free();
+    $db->close();
 ?>
 

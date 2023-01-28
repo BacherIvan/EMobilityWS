@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" promptOnRemoteOverwrite="CHECK_CONTENT" confirmBeforeUploading="false" notifyRemoteChanges="true">
+  <component name="PublishConfigData" promptOnRemoteOverwrite="CHECK_CONTENT" serverName="emobility.tk" confirmBeforeUploading="false" notifyRemoteChanges="true">
     <option name="confirmBeforeUploading" value="false" />
     <serverData>
       <paths name="emobility.tk">
