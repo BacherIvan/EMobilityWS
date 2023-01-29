@@ -43,6 +43,8 @@ if ($section.length) {
         vars.LAYOUT.$hero.attr('data-login-open', menuOpenHero = 1 - menuOpenHero);
         vars.LAYOUT.$body.attr('data-scroll', pageScrollable = 1 - pageScrollable);
         $section.attr('data-login-error', 0);
+        document.getElementById('JS-username').value = '';
+        document.getElementById('JS-password').value = '';
     });
 
     var login = document.getElementById('JS-login');
