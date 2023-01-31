@@ -18,33 +18,35 @@ const identifier = 'admin';
 // initialize module
 const $section = $(`.${vars.CLASSNAMES.sect}[data-id="${identifier}"]`);
 if ($section.length) {
-    // Tagebuch-Einträge
-    var xhttp = new XMLHttpRequest();
-    xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            var rows = JSON.parse(xhttp.responseText);
-            for (const item of rows) {
+    function getTagebuch(datum) {
+        // Tagebuch-Einträge
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                var rows = JSON.parse(xhttp.responseText);
                 const span = document.getElementById('JS-eintrag');
+                span.innerHTML = '';
+                for (const item of rows) {
+                    var name = document.createTextNode(item['vorname'] + ' ' + item['nachname']);
+                    span.appendChild(name);
+                    var linebreak = document.createElement('br');
+                    span.appendChild(linebreak);
 
-                var name = document.createTextNode(item['vorname'] + ' ' + item['nachname']);
-                span.appendChild(name);
-                var linebreak = document.createElement('br');
-                span.appendChild(linebreak);
+                    var time = document.createTextNode(item['startzeit'] + ' - ' + item['entzeit']);
+                    span.appendChild(time);
+                    linebreak = document.createElement('br');
+                    span.appendChild(linebreak);
 
-                var time = document.createTextNode(item['startzeit'] + ' - ' + item['entzeit']);
-                span.appendChild(time);
-                linebreak = document.createElement('br');
-                span.appendChild(linebreak);
-
-                var entry = document.createTextNode(item['eintrag']);
-                span.appendChild(entry);
-                linebreak = document.createElement('br');
-                span.appendChild(linebreak);
+                    var entry = document.createTextNode(item['eintrag']);
+                    span.appendChild(entry);
+                    linebreak = document.createElement('br');
+                    span.appendChild(linebreak);
+                }
             }
-        }
-    };
-    xhttp.open("GET", "/config/db/Tagebuch.php?datum=" + "2022-11-21");
-    xhttp.send(null);
+        };
+        xhttp.open("GET", "/config/db/Tagebuch.php?datum=" + datum);
+        xhttp.send(null);
+    }
 
     // Personen für Drop-Down Menü
     class Person {
@@ -97,9 +99,19 @@ if ($section.length) {
             for(const item of rows) {
                 dates.push(item["datum"]);
             }
+            var x = document.getElementById('JS-datum');
+            x.innerHTML = '';
             flatpickr("#JS-calendar", {
-                enable: dates
+                enable: dates,
+                onChange: function(selectedDates, dateStr, instance) {
+                    getTagebuch(dateStr);
+                    x.innerHTML = '';
+                    x.innerHTML = "Datum: " + dateStr;
+                },
             });
+            // Letzten Eintrag Standartmäßig übergeben
+           getTagebuch(dates[dates.length - 1]);
+            x.innerHTML = "Letzter Eintrag: " + dates[dates.length - 1];
         }
     };
     xhttpDates.open("GET", "/config/db/Dates.php");

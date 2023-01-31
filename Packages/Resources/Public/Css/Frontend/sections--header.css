@@ -290,7 +290,7 @@
   margin: 5% auto 15% auto;
   border: 1px solid #888;
   width: 50%;
-  height: calc(100% - 16em);
+  height: 78%;
 }
 .EBIL-section[data-id=header] .EBIL-section__login-wrap {
   position: relative;
