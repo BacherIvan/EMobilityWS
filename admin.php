@@ -61,14 +61,14 @@
                 </li>
         </div>
         <div class="EBIL-section__tagebuch JS-act" id="c50">
-            <div class="EBIL-section__neuer-eintrag">
-                <span>Neuer Eintrag</span>
+            <div class="EBIL-section__datum" id="JS-datum">
+                <span>Datum</span>
             </div>
             <div class="EBIL-section__eintrag-wrap">
                 <div id="JS-eintrag"></div>
             </div>
         </div>
-        <div class="EBIL-section__calendar JS-act">
+        <div class="EBIL-section__calendar JS-act" id="JS-calendar">
             <span>Datum auswählen</span>
             <input type="date" placeholder="Tagebuch-Datum" id="JS-calendar" readonly>
             <a class="EBIL-section__calendar__item">

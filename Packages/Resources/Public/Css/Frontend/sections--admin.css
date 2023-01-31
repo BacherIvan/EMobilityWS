@@ -235,9 +235,13 @@
 .EBIL-section[data-id=admin] .EBIL-section__tagebuch.JS-act {
   display: flex;
 }
+.EBIL-section[data-id=admin] .EBIL-section__datum {
+  font-size: 1.5em;
+  font-weight: 600;
+}
 .EBIL-section[data-id=admin] .EBIL-section__eintrag-wrap {
   background: linear-gradient(to bottom, #636363, rgba(99, 99, 99, 0.98), rgba(99, 99, 99, 0.95), rgba(99, 99, 99, 0.98), #636363);
-  max-width: calc(100% - 30em);
+  max-width: 32em;
   height: 25em;
   overflow-x: hidden;
   overflow-y: auto;
@@ -295,7 +299,7 @@
   .EBIL-section[data-id=admin] .EBIL-section__tagebuch {
     align-items: flex-start;
   }
-  .EBIL-section[data-id=admin] .EBIL-section__neuer-eintrag {
+  .EBIL-section[data-id=admin] .EBIL-section__datum {
     margin-left: 1em;
   }
   .EBIL-section[data-id=admin] .EBIL-section__eintrag-wrap {

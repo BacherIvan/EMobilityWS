@@ -103,9 +103,14 @@ $identifier: 'admin';
       }
     }
 
+    &__datum {
+      font-size: em(15);
+      font-weight: $fw-bold;
+    }
+
     &__eintrag-wrap {
       background: linear-gradient(to bottom, rgba($clr-tk-admin, 1), rgba($clr-tk-admin, 0.98), rgba($clr-tk-admin, 0.95), rgba($clr-tk-admin, 0.98), rgba($clr-tk-admin, 1));
-      max-width: calc(100% - 30em);
+      max-width: em(320);
       height: em(250);
       overflow-x: hidden;
       overflow-y: auto;
@@ -177,7 +182,7 @@ $identifier: 'admin';
       &__tagebuch {
         align-items: flex-start;
       }
-      &__neuer-eintrag {
+      &__datum {
         margin-left: em(10);
       }
 

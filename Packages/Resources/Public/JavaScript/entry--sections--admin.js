@@ -33,30 +33,33 @@ const identifier = 'admin';
 // initialize module
 const $section = cash_dom__WEBPACK_IMPORTED_MODULE_0___default()(`.${tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_2__["CLASSNAMES"].sect}[data-id="${identifier}"]`);
 if ($section.length) {
-  // Tagebuch-Einträge
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function () {
-    if (this.readyState == 4 && this.status == 200) {
-      var rows = JSON.parse(xhttp.responseText);
-      for (const item of rows) {
+  function getTagebuch(datum) {
+    // Tagebuch-Einträge
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4 && this.status == 200) {
+        var rows = JSON.parse(xhttp.responseText);
         const span = document.getElementById('JS-eintrag');
-        var name = document.createTextNode(item['vorname'] + ' ' + item['nachname']);
-        span.appendChild(name);
-        var linebreak = document.createElement('br');
-        span.appendChild(linebreak);
-        var time = document.createTextNode(item['startzeit'] + ' - ' + item['entzeit']);
-        span.appendChild(time);
-        linebreak = document.createElement('br');
-        span.appendChild(linebreak);
-        var entry = document.createTextNode(item['eintrag']);
-        span.appendChild(entry);
-        linebreak = document.createElement('br');
-        span.appendChild(linebreak);
+        span.innerHTML = '';
+        for (const item of rows) {
+          var name = document.createTextNode(item['vorname'] + ' ' + item['nachname']);
+          span.appendChild(name);
+          var linebreak = document.createElement('br');
+          span.appendChild(linebreak);
+          var time = document.createTextNode(item['startzeit'] + ' - ' + item['entzeit']);
+          span.appendChild(time);
+          linebreak = document.createElement('br');
+          span.appendChild(linebreak);
+          var entry = document.createTextNode(item['eintrag']);
+          span.appendChild(entry);
+          linebreak = document.createElement('br');
+          span.appendChild(linebreak);
+        }
       }
-    }
-  };
-  xhttp.open("GET", "/config/db/Tagebuch.php?datum=" + "2022-11-21");
-  xhttp.send(null);
+    };
+    xhttp.open("GET", "/config/db/Tagebuch.php?datum=" + datum);
+    xhttp.send(null);
+  }
 
   // Personen für Drop-Down Menü
   class Person {
@@ -104,9 +107,21 @@ if ($section.length) {
       for (const item of rows) {
         dates.push(item["datum"]);
       }
+      var x = document.getElementById('JS-datum');
+      x.innerHTML = '';
       Object(flatpickr__WEBPACK_IMPORTED_MODULE_1__["default"])("#JS-calendar", {
-        enable: dates
+        enable: dates,
+        onChange: function (selectedDates, dateStr, instance) {
+          getTagebuch(dateStr);
+          x.innerHTML = '';
+          const displayDatum = dateStr.split("-");
+          x.innerHTML = "Datum: " + displayDatum[2] + "." + displayDatum[1] + "." + displayDatum[0];
+        }
       });
+      // Letzten Eintrag Standartmäßig übergeben
+      getTagebuch(dates[dates.length - 1]);
+      const letzterEintrag = dates[dates.length - 1].split("-");
+      x.innerHTML = "Letzter Eintrag: " + letzterEintrag[2] + "." + letzterEintrag[1] + "." + letzterEintrag[0];
     }
   };
   xhttpDates.open("GET", "/config/db/Dates.php");

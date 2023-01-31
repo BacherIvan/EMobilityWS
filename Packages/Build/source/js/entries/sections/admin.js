@@ -106,12 +106,14 @@ if ($section.length) {
                 onChange: function(selectedDates, dateStr, instance) {
                     getTagebuch(dateStr);
                     x.innerHTML = '';
-                    x.innerHTML = "Datum: " + dateStr;
+                    const displayDatum = dateStr.split("-");
+                    x.innerHTML = "Datum: " + displayDatum[2] + "." + displayDatum[1] + "." + displayDatum[0];
                 },
             });
             // Letzten Eintrag Standartmäßig übergeben
            getTagebuch(dates[dates.length - 1]);
-            x.innerHTML = "Letzter Eintrag: " + dates[dates.length - 1];
+           const letzterEintrag = dates[dates.length - 1].split("-");
+           x.innerHTML = "Letzter Eintrag: "  + letzterEintrag[2] + "." + letzterEintrag[1] + "." + letzterEintrag[0];
         }
     };
     xhttpDates.open("GET", "/config/db/Dates.php");
