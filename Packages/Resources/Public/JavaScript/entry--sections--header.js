@@ -72,6 +72,8 @@ if ($section.length) {
       $section.attr('data-login-error', 0);
     }
   };
+
+  // Wenn enter gedrückt wird, einen Button click "simulieren"
   var input = document.getElementById('JS-login');
   input.addEventListener("keypress", function (event) {
     if (event.key === "Enter") {
@@ -79,10 +81,11 @@ if ($section.length) {
     }
   });
   $section.on('click', '.JS-login-button', () => {
-    // Cookies überprüfen und direkt weiterleiten
+    // Cookies überprüfen und direkt weiterleiten oder Fehlermeldung ausgeben
     var xhttp = new XMLHttpRequest();
     var user = document.getElementById('JS-username').value;
     var pwd = document.getElementById('JS-password').value;
+    $section.attr('data-login-error', 0);
     xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
         var values = JSON.parse(xhttp.responseText);
@@ -94,15 +97,11 @@ if ($section.length) {
           js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.set('pwd', pwd, {
             expires: 7
           });
-          $section.attr('data-login-error', 0);
           // Weiterleitung
           window.open('admin.php', '_blank');
-        } else if (values.statusCode == 1) {
-          $section.attr('data-login-error', 1);
-          document.getElementById('JS-displayError').innerHTML = "Benutzername nicht gefunden";
         } else {
           $section.attr('data-login-error', 1);
-          document.getElementById('JS-displayError').innerHTML = "Falsches Passwort";
+          document.getElementById('JS-displayError').innerHTML = "Benutzername oder Passwort sind nicht korrekt!";
         }
       }
     };
