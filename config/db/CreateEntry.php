@@ -20,7 +20,7 @@
 
     //eintrag einfügen
     $stmt = $db->prepare("Insert into Eintrag values(null, ?, ?, ?, ?)");
-    $stmt->bind_param("ssss", $_GET['datum'], $_GET['startzeit'], $_GET['entzeit'], $_GET['eintrag']);
+    $stmt->bind_param("ssss", $_GET['datum'], $_GET['startzeit'], $_GET['endzeit'], $_GET['eintrag']);
     $stmt->execute();
     $result = $stmt->get_result();
 
@@ -31,9 +31,15 @@
             $stmt-> bind_param("ii", $p, $ide);
             $stmt->execute();
         }
+        if ($stmt -> affected_rows > 0) {
+            echo json_encode(0);
+        } else {
+            echo json_encode(1);
+        }
 
     }else{
-        echo 1;
+        // FEHLER zurücksenden
+        echo json_encode(1);
     }
 
     $result->free();
