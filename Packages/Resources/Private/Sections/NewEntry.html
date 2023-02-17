@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="de">
+    <div class="EBIL-section__neuer-eintrag JS-act" id="JS-newEntry">
+        <div class="EBIL-section__eintrag-item JS-entry">
+            <span>Neuer Eintrag</span>
+        </div>
+        <div class="EBIL-section__plus-item JS-entry">
+            <i class="EBIL-icon EBIL-icon--p EBIL-icon--add-outline"></i>
+        </div>
+        <div class="EBIL-section__neu-wrap">
+            <div class="EBIL-section__close-item JS-entry">
+                <i class="EBIL-icon EBIL-icon--c EBIL-icon--close"></i>
+            </div>
+            <div class="EBIL-section__container">
+                <h2>Neuen Eintrag erstellen:</h2>
+                <div class="EBIL-section__person-wrap">
+                    <fieldset class="EBIL-section__persons">
+                        <legend>Personen auswählen:</legend>
+                        <input type="checkbox" id="JS-person1" name="person" value="1">Diego Grünberger<br>
+                        <input type="checkbox" id="JS-person2" name="person" value="2">Ivan Bacher<br>
+                        <input type="checkbox" id="JS-person3" name="person" value="3">Matthias Ulpmer<br>
+                        <input type="checkbox" id="JS-person4" name="person" value="4">Simon Rainer<br>
+                        <input type="checkbox" id="JS-person5" name="person" value="5">Ivan Saxl<br>
+                        <input type="checkbox" id="JS-person6" name="person" value="6">Alex Pastore<br>
+                    </fieldset>
+                    <div class="EBIL-section__checkbox-required">
+                        <span>Mindestens eine Person muss ausgewählt sein!</span>
+                    </div>
+                </div>
+                <div class="EBIL-section__date-time-selection">
+                    <div class="EBIL-section__new-entry-calendar">
+                        <b>Datum und Uhrzeit auswählen:</b>
+                        <input type="text" placeholder="Neuer Eintrag" id="JS-new-entry-calendar" readonly required/>
+                        <a class="EBIL-section__new-entry-calendar__item">
+                            <i class="EBIL-icon EBIL-icon--cal EBIL-icon--calendar"></i>
+                        </a>
+                    </div>
+                    <div class="EBIL-section__select-time">
+                        <div class="EBIL-section__start-time">
+                            <b>Von:</b>
+                            <input type="text" placeholder="Von:" id="JS-fromTime" readonly required/>
+                        </div>
+                        <div class="EBIL-section__end-time">
+                            <b>Bis:</b>
+                            <input type="text"  placeholder="Bis:" id="JS-toTime" readonly required/>
+                        </div>
+                    </div>
+                    <div class="EBIL-section__date-required">
+                        <span>Die drei Felder zum Datum und Uhrzeit müssen ausgefüllt werden!</span>
+                    </div>
+                </div>
+                <div class="EBIL-section__message-wrap">
+                    <div class="EBIL-section__message">
+                        <label class="EBIL-section__lbl" for="message"><b>Nachricht:</b></label>
+                        <textarea id="JS-message" name="message" rows="4" cols="50" placeholder="Tagebuch-Eintrag eingeben" required></textarea>
+                    </div>
+                    <div class="EBIL-section__message-required">
+                        <span>Es muss eine Nachricht eingegeben werden!</span>
+                    </div>
+                </div>
+                <div class="EBIL-section__submit">
+                    <button id="JS-submit-button" class="EBIL-section__button JS-submit-button" type="button">Submit</button>
+                    <div class="EBIL-section__entry-success">
+                        <span>Eintrag hinzugefügt!</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</html>

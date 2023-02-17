@@ -18,30 +18,28 @@
      * EintragID auslesen und mit allen PersonenIDs in hatEintrag einfügen;
     */
 
-    //eintrag einfügen
+   //eintrag einfügen
     $stmt = $db->prepare("Insert into Eintrag values(null, ?, ?, ?, ?)");
     $stmt->bind_param("ssss", $_GET['datum'], $_GET['startzeit'], $_GET['endzeit'], $_GET['eintrag']);
     $stmt->execute();
-    $result = $stmt->get_result();
 
-    if ($result) {
-        $ide = $db->query("SELECT MAX(IDE) FROM Eintrag");
-        foreach ($_GET['persons'] as $p){
+    if ($stmt) {
+        $ide = $db->query("SELECT MAX(IDE) FROM Eintrag")->fetch_row()[0];
+
+        $person = explode(",", $_GET["persons"]);
+        foreach ($person as $p) {
             $stmt = $db->prepare("Insert into hatEintrag values(?, ?)");
-            $stmt-> bind_param("ii", $p, $ide);
+            $stmt->bind_param("ii", $p, $ide);
             $stmt->execute();
         }
-        if ($stmt -> affected_rows > 0) {
+        if ($stmt->affected_rows > 0) {
             echo json_encode(0);
         } else {
-            echo json_encode(1);
+            echo json_encode(2);
         }
-
     }else{
-        // FEHLER zurücksenden
-        echo json_encode(1);
+       // FEHLER zurücksenden
+       echo json_encode(1);
     }
-
-    $result->free();
     $db->close();
 ?>

@@ -16,7 +16,6 @@
                 </div>
                 <div class="EBIL-section__login-failed">
                     <span id="JS-displayError"></span>
-
                 </div>
             </div>
         </form>

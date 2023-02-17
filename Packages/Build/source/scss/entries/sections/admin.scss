@@ -10,11 +10,36 @@
 
 /* STYLING
  * --------------------------------------------------------------------------- */
-
+@mixin magic-border($width, $color, $duration, $direction){
+  &:before{
+    content:'';
+    position:absolute;
+    width:calc(100% + #{$width * 2});
+    height:calc(100% + #{$width * 2});
+    top:calc(#{$width}/-1);
+    left:calc(#{$width}/-1);
+    background:linear-gradient(to right, $color 0%, $color 100%), linear-gradient(to top, $color 50%, transparent 50%), linear-gradient(to top, $color 50%, transparent 50%), linear-gradient(to right, $color 0%, $color 100%), linear-gradient(to left, $color 0%, $color 100%);
+    background-size:100% $width, $width 200%, $width 200%, 0% $width, 0% $width;
+    background-position:50% 100%, 0% 0%, 100% 0%, 100% 0%, 0% 0%;
+    background-repeat:no-repeat, no-repeat;
+    transition:transform $duration ease-in-out, background-position $duration ease-in-out, background-size $duration ease-in-out;
+    transform:scaleX(0) rotate(180deg * $direction);
+    transition-delay:$duration*2, $duration, 0s;
+  }
+  &:hover{
+    &:before{
+      background-size:200% $width, $width 400%, $width 400%, 55% $width, 55% $width;
+      background-position:50% 100%, 0% 100%, 100% 100%, 100% 0%, 0% 0%;
+      transform:scaleX(1) rotate(180deg * $direction);
+      transition-delay:0s, $duration, $duration*2;
+    }
+  }
+}
 $identifier: 'admin';
 
 #{$sect}[data-id="#{$identifier}"] {
   color: #fff;
+  font-family: "Inter", sans-serif;
   // --- children ---
   #{$sect} {
     &__wrap {
@@ -25,6 +50,7 @@ $identifier: 'admin';
       height: 100%;
       background: linear-gradient(to bottom, rgba($clr-tk-grey-dark, 1), rgba($clr-tk-grey-dark, 0.98), rgba($clr-tk-grey-dark, 0.95), rgba($clr-tk-grey-dark, 0.98), rgba($clr-tk-grey-dark, 1));
       pointer-events: all;
+      overflow-y: auto;
     }
 
     &__admin-menu {
@@ -35,9 +61,10 @@ $identifier: 'admin';
         justify-content: space-between;
         column-gap: em(30);
         overflow: hidden;
+        padding: 0;
+        row-gap: em(15);
         > li {
           display: flex;
-          margin-bottom: em(15);
           padding: 0 em(50);
           opacity: 0.5;
           transition: opacity 0.2s;
@@ -56,7 +83,7 @@ $identifier: 'admin';
             user-select: none;
             > span {
               font-size: em(15);
-              font-weight: $fw-semi-bold;
+              font-weight: $fw-bold;
               text-transform: uppercase;
               display: flex;
               align-items: center;
@@ -92,6 +119,187 @@ $identifier: 'admin';
       }
     }
 
+    &__neuer-eintrag {
+      display: none;
+      position: absolute;
+      right: em(37);
+      top: em(58);
+      &.JS-act {
+        display: block;
+      }
+    }
+    &__eintrag-item {
+      cursor: pointer;
+      @include magic-border(4px, $clr-white, 0.2s, 1);
+      > span {
+        font-size: em(15);
+        font-weight: $fw-light;
+      }
+    }
+
+    &__plus-item {
+      .EBIL-icon--p {
+        font-size: em(10);
+        display: none;
+      }
+    }
+
+    &__neu-wrap {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: $clr-black;
+      pointer-events: all;
+      z-index: 1;
+      transition: all 0.6s ease-in-out;
+      overflow-y: auto;
+    }
+    &__close-item {
+      position: absolute;
+      right: em(7);
+      top: em(8);
+      pointer-events: none;
+      cursor: pointer;
+      .EBIL-icon--1 {
+        font-size: em(10);
+        display: none;
+      }
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      row-gap: em(5);
+    }
+    &__person-wrap {
+      width: em(170);
+      margin-bottom: em(5);
+      display: flex;
+      flex-direction: column;
+    }
+    &__persons {
+      border-radius: 4%;
+    }
+
+    &__checkbox-required {
+      text-align: center;
+      display:  none;
+      > span {
+        color: $clr-tk-red;
+        font-size: em(7);
+      }
+    }
+
+    &__date-time-selection {
+      display: flex;
+      flex-direction: column;
+      row-gap: em(3);
+      margin-bottom: em(5);
+      width: em(170);
+    }
+    &__new-entry-calendar {
+      position: relative;
+      width: em(165);
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      row-gap: em(3);
+      margin-left: em(2);
+      > input {
+        width: inherit;
+      }
+      &__item {
+        position: absolute;
+        right: em(5);
+        bottom: em(2);
+        color: black;
+        pointer-events: none;
+        .EBIL-icon--cal {
+          display: block;
+          font-size: em(10);
+        }
+      }
+    }
+
+    &__select-time {
+      display: flex;
+      width: em(170);
+      align-items: center;
+      gap: em(26);
+      text-align: center;
+      > div {
+        width: em(70);
+        > input {
+          width: inherit;
+        }
+      }
+    }
+
+    &__date-required {
+      text-align: center;
+      display: none;
+      > span {
+        color: $clr-tk-red;
+        font-size: em(7);
+      }
+    }
+    &__message-wrap {
+      display: flex;
+      flex-direction: column;
+      row-gap: em(3);
+      width: em(170);
+    }
+
+    &__message {
+      display: flex;
+      flex-direction: column;
+      row-gap: em(3);
+      width: em(170);
+      align-items: center;
+      > textarea {
+        resize: none;
+        width: inherit;
+      }
+    }
+    &__message-required {
+      text-align: center;
+      display: none;
+      > span {
+        color: $clr-tk-red;
+        font-size: em(7);
+      }
+    }
+
+    &__submit {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: em(173);
+    }
+    &__button {
+      background-color: $clr-tk-green;
+      color: white;
+      padding: em(14) em(20);
+      margin: em(8) 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    &__entry-success {
+      display: none;
+      > span {
+        color: $clr-tk-green;
+        font-size: em(7);
+      }
+    }
+
     &__tagebuch {
       display: none;
       flex-direction: column;
@@ -105,21 +313,31 @@ $identifier: 'admin';
 
     &__datum {
       font-size: em(15);
-      font-weight: $fw-bold;
+      font-weight: $fw-light;
     }
 
     &__eintrag-wrap {
       background: linear-gradient(to bottom, rgba($clr-tk-admin, 1), rgba($clr-tk-admin, 0.98), rgba($clr-tk-admin, 0.95), rgba($clr-tk-admin, 0.98), rgba($clr-tk-admin, 1));
-      max-width: em(320);
+      width: em(290);
       height: em(250);
       overflow-x: hidden;
       overflow-y: auto;
       text-align: center;
     }
+    &__name {
+      font-weight: $fw-bold;
+    }
+    &__time {
+      font-weight: $fw-semi-bold;
+      font-style: italic;
+    }
+    &__entry {
+      font-weight: $fw-light;
+    }
     &__calendar {
       display: none;
-      position: fixed;
-      top: em(120);
+      position: absolute;
+      top: em(118);
       right: em(30);
       &.JS-act {
         display: flex;
@@ -130,8 +348,8 @@ $identifier: 'admin';
         position: absolute;
         right: em(5);
         bottom: em(2);
-        cursor: pointer;
         color: black;
+        pointer-events: none;
         .EBIL-icon--1 {
           display: block;
           font-size: em(10);
@@ -141,6 +359,61 @@ $identifier: 'admin';
     &__auto {
       display: none;
       &.JS-act {
+        display: block;
+      }
+    }
+  }
+
+  &[data-new-entry="1"] {
+    #{$sect} {
+      &__admin-menu {
+        display: none;
+      }
+      &__neu-wrap {
+        right: 0;
+      }
+      &__close-item {
+        pointer-events: all;
+        .EBIL-icon--c {
+          display: block;
+        }
+      }
+      &__calendar {
+        display: none;
+      }
+      &__tagebuch {
+        display: none;
+      }
+      &__plus-item {
+        display: none;
+      }
+    }
+  }
+  &[data-person-required="1"] {
+    #{$sect} {
+      &__checkbox-required {
+        display: block;
+      }
+    }
+  }
+  &[data-date-time-required="1"] {
+    #{$sect} {
+      &__date-required {
+        display: block;
+      }
+    }
+  }
+  &[data-text-required="1"] {
+    #{$sect} {
+      &__message-required {
+        display: block;
+      }
+    }
+  }
+
+  &[data-entry-success="1"] {
+    #{$sect} {
+      &__entry-success {
         display: block;
       }
     }
@@ -173,37 +446,76 @@ $identifier: 'admin';
         height: em(220);
       }
       &__calendar {
-        top: em(190);
-        right: em(30);
+        top: em(180);
+        right: em(10);
         > input {
           width: em(100);
         }
       }
       &__tagebuch {
         align-items: flex-start;
+        padding-bottom: em(30);
       }
       &__datum {
         margin-left: em(10);
+        max-width: calc(100% - 7.3em);
       }
 
       &__eintrag-wrap {
         margin-left: em(10);
       }
+      &__neuer-eintrag {
+        top: em(128);
+        right: em(15);
+      }
+      &__eintrag-wrap {
+        width: em(270);
+      }
     }
   }
   @media #{$mq-phablet} {
     #{$sect} {
+      &__neuer-eintrag {
+        top: em(135);
+      }
+      &__eintrag-item {
+        > span {
+          display: none;
+        }
+      }
+      &__plus-item {
+        .EBIL-icon--p {
+          display: block;
+        }
+      }
       &__calendar {
-        right: em(20);
         > input {
           width: em(90);
         }
         &__item {
-          right: em(2);
+          right: em(4);
         }
       }
+    }
+  }
+  @media #{$mq-cutsom-dim} {
+    #{$sect} {
       &__eintrag-wrap {
-        max-width: calc(100% - 12em);
+        width: em(190);
+      }
+    }
+  }
+  @media #{$mq-phone} {
+    #{$sect} {
+      &__neuer-eintrag {
+        top: em(134);
+      }
+      &__eintrag-wrap {
+        width: 100%;
+        max-width: calc(100% - 2em);
+      }
+      &__calendar {
+        top: em(155);
       }
     }
   }
