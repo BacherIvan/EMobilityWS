@@ -10,16 +10,70 @@
 $identifier: 'impressions';
 
 #{$mod}[data-id="#{$identifier}"] {
-
   // --- children ---
   #{$mod} {
-    &__swiper-wrapper {
-      width: 50%;
+    &__impression-wrap {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      opacity: 0;
+      transform: translateY(10em);
+      transition: 1.5s ease-out;
+      transition-delay: 0.5s;
+      overflow: hidden;
+    }
+    &__item-wrap {
+      margin-top: em(-200);
+      position: relative;
+      width: 100%;
+      aspect-ratio: 10/6;
     }
     &__item {
+      position: absolute;
+      z-index: 1;
+      width: 100%;
+      aspect-ratio: 10/6;
+      display: grid;
+      place-items: center;
+      transform-origin: center -150%;
+      pointer-events: none;
+      user-select: none;
       img {
-        width: 100%;
+        width: 33%;
         height: auto;
+        border-radius: 1rem;
+        transition: all 250ms ease-in-out;
+      }
+    }
+    &__arrows {
+      position: absolute;
+      top: 46%;
+      display: flex;
+      flex-direction: row-reverse;
+      gap: em(770);
+    }
+    &__arrow-right{
+      .EBIL-icon--r {
+        font-size: em(40);
+      }
+    }
+    &__arrow-left{
+      .EBIL-icon--l {
+        font-size: em(40);
+      }
+    }
+  }
+
+  &.JS-fade-in {
+    #{$mod} {
+      &__impression-wrap {
+        opacity: 1;
+        transform: translateY(0);
+      }
+      &__impression-headlines {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
     }
   }
@@ -35,10 +89,75 @@ $identifier: 'impressions';
    * --------------------------------------------------------------------------- */
 
   @media #{$mq-tablet} {
-
     // --- children ---
     #{$mod} {
-
+      &__item-wrap {
+        margin-top: em(-80);
+      }
+      &__arrows {
+        top: 53%;
+        gap: em(440);
+      }
+      &__item {
+        img {
+          width: 43%;
+        }
+      }
+    }
+  }
+  @media #{$mq-phablet} {
+    // --- children ---
+    #{$mod} {
+      &__item-wrap {
+        margin-top: em(-30);
+      }
+      &__arrows {
+        top: 80%;
+        gap: em(180);
+      }
+      &__arrow-right{
+        .EBIL-icon--r {
+          font-size: em(30);
+        }
+      }
+      &__arrow-left{
+        .EBIL-icon--l {
+          font-size: em(30);
+        }
+      }
+    }
+  }
+  @media #{$mq-custom} {
+    // --- children ---
+    #{$mod} {
+      &__arrows {
+        top: 85%;
+      }
+      &__headline {
+        max-width: em(160);
+      }
+      &__item {
+        img {
+          width: 48%;
+        }
+      }
+    }
+  }
+  @media #{$mq-phone} {
+    // --- children ---
+    #{$mod} {
+      &__arrows {
+        top: 88%;
+      }
+    }
+  }
+  @media #{$mq-phone-small} {
+    // --- children ---
+    #{$mod} {
+      &__arrows {
+        top: 90%;
+        gap: em(130);
+      }
     }
   }
 }

@@ -245,6 +245,7 @@ body {
  * TYPOGRAPHY
  */
 body {
+  overflow-x: hidden;
   background-color: #141414;
   color: #FFFFFF;
   font-family: "Inter", sans-serif;

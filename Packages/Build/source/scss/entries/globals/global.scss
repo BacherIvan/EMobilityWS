@@ -182,6 +182,7 @@ body {
  */
 
 body {
+  overflow-x: hidden;
   background-color: $clr-tk-grey-dark;
   color: $clr-body;
   font-family: $ff-body;
