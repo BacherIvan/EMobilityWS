@@ -205,7 +205,6 @@ if ($section.length) {
         xhttpNewEntry.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 var rows = JSON.parse(xhttpNewEntry.responseText);
-                console.log(rows);
                 if (rows === 0) {
                     $section.attr('data-entry-success', 1);
                 }

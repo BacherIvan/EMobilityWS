@@ -103,8 +103,6 @@ Object(tk_source_root_js_utilities_in_view__WEBPACK_IMPORTED_MODULE_2__["inView"
   const images = document.querySelectorAll(".JS-impression-item");
   const wrapper = document.querySelector(".JS-impression-wrap");
   const imagesAndChilds = [];
-  console.log(images);
-  console.log(wrapper);
   const animationoptions = {
     duration: 850,
     easing: "ease-in-out",
