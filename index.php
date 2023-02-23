@@ -2,7 +2,7 @@
 <html lang="de">
     <head>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes, maximum-scale=1, minimum-scale=1, viewport-fit=cover">
+        <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes, maximum-scale=6, minimum-scale=1, viewport-fit=cover">
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="theme-color" content="#ffffff">
         <title> EMobility - Wir bewegen Südtirol</title>
@@ -10,6 +10,7 @@
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--globals--global.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--modules--text-pic.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--modules--impressions.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--modules--team.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--sections--main.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--sections--sidenav.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--sections--header.js"></script>
@@ -81,6 +82,7 @@
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/sections--hero.css">
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/modules--text-pic.css">
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/modules--impressions.css">
+        <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/modules--team.css">
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Fonts/style.css">
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Icons/Icomoon/style.css">
 
