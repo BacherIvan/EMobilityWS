@@ -1,5 +1,5 @@
 <html lang="de">
-    <div data-id="impressions" data-space-bottom="medium" class="EBIL-module" id="c32">
+    <div data-id="impressions" data-space-bottom="none" class="EBIL-module" id="c32">
         <div class="EBIL-module__impression-wrap">
             <div class="EBIL-module__col EBIL-module__col--text">
                 <div class="EBIL-module__header">
@@ -11,7 +11,7 @@
                             <span>Impressionen</span>
                         </h2>
                         <h1 class="EBIL-module__headline EBIL-headline">
-                            <span>Einblicke hinter die Kulissen</span>
+                            <span>Einblicke</span>
                         </h1>
                     </div>
                 </div>
