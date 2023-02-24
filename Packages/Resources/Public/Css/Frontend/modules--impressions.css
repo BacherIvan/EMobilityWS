@@ -241,9 +241,6 @@
   .EBIL-module[data-id=impressions] .EBIL-module__arrows {
     top: 85%;
   }
-  .EBIL-module[data-id=impressions] .EBIL-module__headline {
-    max-width: 16em;
-  }
   .EBIL-module[data-id=impressions] .EBIL-module__item img {
     width: 48%;
   }

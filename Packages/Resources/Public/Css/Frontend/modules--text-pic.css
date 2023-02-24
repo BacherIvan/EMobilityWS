@@ -169,12 +169,19 @@
 .EBIL-module[data-id=text-pic] .EBIL-module__col--text {
   max-width: 70em;
 }
+.EBIL-module[data-id=text-pic] .EBIL-module__image {
+  filter: grayscale(1);
+  transition: all 1s ease;
+}
 .EBIL-module[data-id=text-pic] .EBIL-module__image img {
   width: 100%;
   height: auto;
 }
 .EBIL-module[data-id=text-pic] .EBIL-module__image > a {
   cursor: zoom-in;
+}
+.EBIL-module[data-id=text-pic] .EBIL-module__image:hover {
+  filter: none;
 }
 .EBIL-module[data-id=text-pic].JS-fade-in .EBIL-module__wrap {
   opacity: 1;
@@ -191,5 +198,8 @@
     margin-top: 5em;
     max-width: none;
     width: 100%;
+  }
+  .EBIL-module[data-id=text-pic] .EBIL-module__image {
+    filter: none;
   }
 }
