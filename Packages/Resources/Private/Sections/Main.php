@@ -5,6 +5,7 @@
             <?php
                 include $_SERVER["DOCUMENT_ROOT"] . "/Packages/Resources/Private/Mask/TextPic.html";
                 include $_SERVER["DOCUMENT_ROOT"] . "/Packages/Resources/Private/Mask/Impressions.php";
+                include $_SERVER["DOCUMENT_ROOT"] . "/Packages/Resources/Private/Mask/Team.html";
             ?>
         </div>
     </section>

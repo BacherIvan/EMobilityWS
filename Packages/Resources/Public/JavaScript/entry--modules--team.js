@@ -94,7 +94,7 @@ __webpack_require__.r(__webpack_exports__);
 // define identifier
 const identifier = 'team';
 
-// initialize module
+// initialize team-module
 const $modules = cash_dom__WEBPACK_IMPORTED_MODULE_0___default()(`.${tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_1__["CLASSNAMES"].mod}[data-id="${identifier}"]`);
 Object(tk_source_root_js_utilities_in_view__WEBPACK_IMPORTED_MODULE_2__["inView"])($modules.get(), item => {
   const $container = cash_dom__WEBPACK_IMPORTED_MODULE_0___default()(item.target);

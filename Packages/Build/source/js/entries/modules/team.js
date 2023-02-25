@@ -12,7 +12,7 @@ import { initLightBoxGallery } from 'tk-source-root/js/utilities/lightbox';
 // define identifier
 const identifier = 'team';
 
-// initialize module
+// initialize team-module
 const $modules = $(`.${vars.CLASSNAMES.mod}[data-id="${identifier}"]`);
 inView($modules.get(), (item) => {
     const $container = $(item.target);

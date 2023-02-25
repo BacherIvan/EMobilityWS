@@ -4,6 +4,7 @@
   "globals/print": "globals--print.css",
   "globals/vendors": "globals--vendors.css",
   "modules/impressions": "modules--impressions.css",
+  "modules/team": "modules--team.css",
   "modules/text-pic": "modules--text-pic.css",
   "sections/admin": "sections--admin.css",
   "sections/header": "sections--header.css",
