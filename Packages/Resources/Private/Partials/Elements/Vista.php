@@ -2,22 +2,22 @@
     <div class="EBIL-section__vista JS-vista" data-hero-layout="full">
         <div class="EBIL-section__vista__slide">
             <div class="EBIL-section__vista__item EBIL-section__vista__item--image">
-                <img src="/Packages/Resources/Public/Images/_custom/HeroImage1.webp" alt="Berge">
+                <img src="/Packages/Resources/Public/Images/_custom/HeroImage1.jpeg" alt="Berge">
             </div>
         </div>
         <div class="EBIL-section__vista__slide">
             <div class="EBIL-section__vista__item EBIL-section__vista__item--image">
-                <img src="/Packages/Resources/Public/Images/_custom/HeroImage7.webp" alt="WInterlandschaft">
+                <img src="/Packages/Resources/Public/Images/_custom/HeroImage7.jpeg" alt="WInterlandschaft">
             </div>
         </div>
         <div class="EBIL-section__vista__slide">
             <div class="EBIL-section__vista__item EBIL-section__vista__item--image">
-                <img src="/Packages/Resources/Public/Images/_custom/HeroImage6.webp" alt="Lichtung">
+                <img src="/Packages/Resources/Public/Images/_custom/HeroImage6.jpeg" alt="Lichtung">
             </div>
         </div>
         <div class="EBIL-section__vista__slide">
             <div class="EBIL-section__vista__item EBIL-section__vista__item--image">
-                <img src="/Packages/Resources/Public/Images/_custom/HeroImage4.webp" alt="See">
+                <img src="/Packages/Resources/Public/Images/_custom/HeroImage4.jpeg" alt="See">
             </div>
         </div>
     </div>
