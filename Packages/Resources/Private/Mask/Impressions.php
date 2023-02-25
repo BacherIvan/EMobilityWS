@@ -18,52 +18,52 @@
             </div>
             <div class="EBIL-module__item-wrap JS-impression-wrap">
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage1.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage1.jpeg" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage2.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage2.jpeg" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage3.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage3.jpeg" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage4.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage4.jpeg" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage5.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage5.jpeg" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage6.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage6.jpeg" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage7.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage7.jpeg" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/Luftaufnahme_2.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage4.jpeg" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage1.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage1.jpeg" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage7.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage7.jpeg" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage7.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage7.jpeg" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage7.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage7.jpeg" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage7.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage7.jpeg" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage7.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage7.jpeg" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage7.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage7.jpeg" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/Luftaufnahme_2.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/HeroImage4.jpeg" alt="Test">
                 </div>
             </div>
             <div class="EBIL-module__arrows">
