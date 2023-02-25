@@ -7,7 +7,7 @@
         </div>
         <div class="EBIL-section__vista__slide">
             <div class="EBIL-section__vista__item EBIL-section__vista__item--image">
-                <img src="/Packages/Resources/Public/Images/_custom/HeroImage7.jpeg" alt="WInterlandschaft">
+                <img src="/Packages/Resources/Public/Images/_custom/HeroImage7.jpeg" alt="Winterlandschaft">
             </div>
         </div>
         <div class="EBIL-section__vista__slide">
