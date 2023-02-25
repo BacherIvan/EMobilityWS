@@ -190,22 +190,4 @@ if ($section.length) {
 
         await tsParticles.load('particle-animation', particlesOptions);
     })();
-
-    // initialize the slider and what it needs after the first user interaction
-    onFirstUserAction()
-        .then(() => {
-            // slider
-            const $slider = $section.find('.JS-vista');
-            const sliderOverrides = {
-                mode: 'gallery',
-                loop: false,
-                rewind: true,
-            };
-            const sliderItems = { desktop: 1, tablet: 1, mobile: 1 };
-            const sliderInstance = initSlider($slider, sliderOverrides, sliderItems);
-            return {
-                $slider,
-                sliderInstance,
-            };
-        });
 }

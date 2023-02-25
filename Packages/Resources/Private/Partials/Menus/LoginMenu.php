@@ -3,7 +3,7 @@
         <form class="EBIL-section__login__content EBIL-section__animate" action="">
             <div class="EBIL-section__login-wrap">
                 <div class="EBIL-section__image ">
-                    <img src="/Packages/Resources/Public/Images/_custom/avatar.png" alt="Avatar">
+                    <img src="/Packages/Resources/Public/Images/_custom/avatar-min.webp" alt="Avatar">
                 </div>
                 <div class="EBIL-section__container">
                     <label class="EBIL-section__lbl" for="uname"><b>Username</b></label>

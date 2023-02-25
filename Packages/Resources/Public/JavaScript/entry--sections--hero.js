@@ -283,27 +283,6 @@ if ($section.length) {
 
     await tsparticles_engine__WEBPACK_IMPORTED_MODULE_1__["tsParticles"].load('particle-animation', particlesOptions);
   })();
-
-  // initialize the slider and what it needs after the first user interaction
-  Object(tk_source_root_js_utilities_first_user_interaction__WEBPACK_IMPORTED_MODULE_5__["onFirstUserAction"])().then(() => {
-    // slider
-    const $slider = $section.find('.JS-vista');
-    const sliderOverrides = {
-      mode: 'gallery',
-      loop: false,
-      rewind: true
-    };
-    const sliderItems = {
-      desktop: 1,
-      tablet: 1,
-      mobile: 1
-    };
-    const sliderInstance = Object(tk_source_root_js_utilities_slider__WEBPACK_IMPORTED_MODULE_4__["initSlider"])($slider, sliderOverrides, sliderItems);
-    return {
-      $slider,
-      sliderInstance
-    };
-  });
 }
 
 /***/ })
