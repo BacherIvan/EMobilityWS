@@ -18,52 +18,52 @@
             </div>
             <div class="EBIL-module__item-wrap JS-impression-wrap">
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/City.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression3-min.webp" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/City.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression1-min.webp" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/City.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression2-min.webp" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/City.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression3-min.webp" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/City.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression1-min.webp" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/City.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression2-min.webp" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/City.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression3-min.webp" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/City.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression1-min.webp" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/City.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression2-min.webp" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/City.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression3-min.webp" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/City.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression1-min.webp" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/City.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression2-min.webp" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/City.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression3-min.webp" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/City.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression1-min.webp" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/City.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression2-min.webp" alt="Test">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/City.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression3-min.webp" alt="Test">
                 </div>
             </div>
             <div class="EBIL-module__arrow-wrap">

@@ -42,6 +42,9 @@ $identifier: 'impressions';
       img {
         width: 33%;
         height: auto;
+        object-fit: contain;
+        max-height: em(420);
+        max-width: em(420);
         border-radius: 1rem;
         transition: all 250ms ease-in-out;
       }
@@ -94,8 +97,18 @@ $identifier: 'impressions';
   @media #{$mq-laptop} {
     // --- children ---
     #{$mod} {
+      &__impression-wrap {
+        gap: em(90);
+      }
       &__arrows {
         gap: em(555);
+      }
+      &__item {
+        img {
+          margin-top: em(-120);
+          max-height: em(380);
+          max-width: em(380);
+        }
       }
     }
   }
@@ -104,16 +117,19 @@ $identifier: 'impressions';
     #{$mod} {
       &__item-wrap {
         margin-top: em(-80);
+        gap: em(110);
       }
       &__arrow-wrap {
-        margin-top: 55%;
+        margin-top: 45%;
       }
       &__arrows {
-        gap: em(250);
+        gap: em(310);
       }
       &__item {
         img {
           width: 43%;
+          max-height: em(360);
+          max-width: em(360);
         }
       }
     }
@@ -124,11 +140,18 @@ $identifier: 'impressions';
       &__item-wrap {
         margin-top: em(-30);
       }
+      &__item {
+        img {
+          max-height: em(300);
+          max-width: em(300);
+        }
+      }
       &__arrow-wrap {
-        margin-top: 65%;
+        top: 100%;
+        margin-top: -11%;
       }
       &__arrows {
-        gap: em(220);
+        gap: em(180);
       }
       &__arrow-right{
         .EBIL-icon--r {
@@ -145,24 +168,29 @@ $identifier: 'impressions';
   @media #{$mq-custom} {
     // --- children ---
     #{$mod} {
-      &__arrow-wrap {
-        margin-top: 70%;
-      }
       &__item {
         img {
-          width: 48%;
+          max-height: em(240);
+          max-width: em(240);
         }
+      }
+      &__arrows {
+        gap: em(150);
       }
     }
   }
-  @media #{$mq-phone} {
+  @media #{$mq-custom} {
     // --- children ---
     #{$mod} {
-      &__arrow-wrap {
-        margin-top: 77%;
+      &__item {
+        img {
+          width: 38%;
+          max-height: em(190);
+          max-width: em(190);
+        }
       }
-      &__arrows {
-        gap: em(180);
+      &__arrow-wrap {
+        margin-top: -20%;
       }
     }
   }
