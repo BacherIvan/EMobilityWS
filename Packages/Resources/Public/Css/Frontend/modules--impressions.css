@@ -164,6 +164,7 @@
   transition: 1.5s ease-out;
   transition-delay: 0.5s;
   overflow: hidden;
+  max-height: 70em;
 }
 .EBIL-module[data-id=impressions] .EBIL-module__item-wrap {
   margin-top: -20em;
@@ -188,12 +189,15 @@
   border-radius: 1rem;
   transition: all 250ms ease-in-out;
 }
-.EBIL-module[data-id=impressions] .EBIL-module__arrows {
+.EBIL-module[data-id=impressions] .EBIL-module__arrow-wrap {
   position: absolute;
-  top: 46%;
+  top: 0;
+  margin-top: 27%;
+}
+.EBIL-module[data-id=impressions] .EBIL-module__arrows {
   display: flex;
   flex-direction: row-reverse;
-  gap: 77em;
+  gap: 60em;
 }
 .EBIL-module[data-id=impressions] .EBIL-module__arrow-right .EBIL-icon--r {
   font-size: 4em;
@@ -210,13 +214,20 @@
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 1366px) {
+  .EBIL-module[data-id=impressions] .EBIL-module__arrows {
+    gap: 55.5em;
+  }
+}
 @media (max-width: 1024px) {
   .EBIL-module[data-id=impressions] .EBIL-module__item-wrap {
     margin-top: -8em;
   }
+  .EBIL-module[data-id=impressions] .EBIL-module__arrow-wrap {
+    margin-top: 55%;
+  }
   .EBIL-module[data-id=impressions] .EBIL-module__arrows {
-    top: 53%;
-    gap: 44em;
+    gap: 25em;
   }
   .EBIL-module[data-id=impressions] .EBIL-module__item img {
     width: 43%;
@@ -226,9 +237,11 @@
   .EBIL-module[data-id=impressions] .EBIL-module__item-wrap {
     margin-top: -3em;
   }
+  .EBIL-module[data-id=impressions] .EBIL-module__arrow-wrap {
+    margin-top: 65%;
+  }
   .EBIL-module[data-id=impressions] .EBIL-module__arrows {
-    top: 80%;
-    gap: 18em;
+    gap: 22em;
   }
   .EBIL-module[data-id=impressions] .EBIL-module__arrow-right .EBIL-icon--r {
     font-size: 3em;
@@ -238,21 +251,23 @@
   }
 }
 @media (max-width: 570px) {
-  .EBIL-module[data-id=impressions] .EBIL-module__arrows {
-    top: 85%;
+  .EBIL-module[data-id=impressions] .EBIL-module__arrow-wrap {
+    margin-top: 70%;
   }
   .EBIL-module[data-id=impressions] .EBIL-module__item img {
     width: 48%;
   }
 }
 @media (max-width: 480px) {
+  .EBIL-module[data-id=impressions] .EBIL-module__arrow-wrap {
+    margin-top: 77%;
+  }
   .EBIL-module[data-id=impressions] .EBIL-module__arrows {
-    top: 88%;
+    gap: 18em;
   }
 }
 @media (max-width: 350px) {
   .EBIL-module[data-id=impressions] .EBIL-module__arrows {
-    top: 90%;
     gap: 13em;
   }
 }

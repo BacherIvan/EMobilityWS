@@ -13,7 +13,6 @@ $identifier: 'team';
   // --- children ---
   #{$mod} {
     &__team-wrap {
-      margin-top: em(-200);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -162,9 +161,6 @@ $identifier: 'team';
   @media #{$mq-tablet} {
     // --- children ---
     #{$mod} {
-      &__team-wrap {
-        margin-top: em(-100);
-      }
       &__card {
         &::before {
           z-index: 0;
@@ -180,20 +176,11 @@ $identifier: 'team';
       }
     }
   }
-  @media #{$mq-phablet} {
-    // --- children ---
-    #{$mod} {
-      &__team-wrap {
-        margin-top: 0;
-      }
-    }
-  }
+
   @media #{$mq-phone} {
     // --- children ---
     #{$mod} {
-      &__team-wrap {
-        margin-top: em(100);
-      }
+
       &__cards {
         gap: 1.5rem;
       }

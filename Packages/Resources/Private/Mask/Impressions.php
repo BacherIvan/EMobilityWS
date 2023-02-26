@@ -1,5 +1,5 @@
 <html lang="de">
-    <div data-id="impressions" data-space-bottom="none" class="EBIL-module" id="c32">
+    <div data-id="impressions" data-space-bottom="small" class="EBIL-module" id="c32">
         <div class="EBIL-module__impression-wrap">
             <div class="EBIL-module__col EBIL-module__col--text">
                 <div class="EBIL-module__header">
@@ -66,12 +66,14 @@
                     <img src="/Packages/Resources/Public/Images/_custom/City.webp" alt="Test">
                 </div>
             </div>
-            <div class="EBIL-module__arrows">
-                <div class="EBIL-module__arrow-right JS-arrow-right">
-                    <i class="EBIL-icon EBIL-icon--r EBIL-icon--cheveron-right"></i>
-                </div>
-                <div class="EBIL-module__arrow-left JS-arrow-left">
-                    <i class="EBIL-icon EBIL-icon--l EBIL-icon--cheveron-left"></i>
+            <div class="EBIL-module__arrow-wrap">
+                <div class="EBIL-module__arrows">
+                    <div class="EBIL-module__arrow-right JS-arrow-right">
+                        <i class="EBIL-icon EBIL-icon--r EBIL-icon--cheveron-right"></i>
+                    </div>
+                    <div class="EBIL-module__arrow-left JS-arrow-left">
+                        <i class="EBIL-icon EBIL-icon--l EBIL-icon--cheveron-left"></i>
+                    </div>
                 </div>
             </div>
         </div>

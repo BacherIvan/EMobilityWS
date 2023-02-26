@@ -156,7 +156,6 @@
    * --------------------------------------------------------------------------- */
 }
 .EBIL-module[data-id=team] .EBIL-module__team-wrap {
-  margin-top: -20em;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -260,9 +259,6 @@
   align-items: center;
 }
 @media (max-width: 1024px) {
-  .EBIL-module[data-id=team] .EBIL-module__team-wrap {
-    margin-top: -10em;
-  }
   .EBIL-module[data-id=team] .EBIL-module__card::before {
     z-index: 0;
   }
@@ -271,15 +267,7 @@
     height: 39%;
   }
 }
-@media (max-width: 767px) {
-  .EBIL-module[data-id=team] .EBIL-module__team-wrap {
-    margin-top: 0;
-  }
-}
 @media (max-width: 480px) {
-  .EBIL-module[data-id=team] .EBIL-module__team-wrap {
-    margin-top: 10em;
-  }
   .EBIL-module[data-id=team] .EBIL-module__cards {
     gap: 1.5rem;
   }

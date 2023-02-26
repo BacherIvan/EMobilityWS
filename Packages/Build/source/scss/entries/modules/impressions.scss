@@ -21,6 +21,7 @@ $identifier: 'impressions';
       transition: 1.5s ease-out;
       transition-delay: 0.5s;
       overflow: hidden;
+      max-height: em(700);
     }
     &__item-wrap {
       margin-top: em(-200);
@@ -45,12 +46,15 @@ $identifier: 'impressions';
         transition: all 250ms ease-in-out;
       }
     }
-    &__arrows {
+    &__arrow-wrap {
       position: absolute;
-      top: 46%;
+      top: 0;
+      margin-top: 27%;
+    }
+    &__arrows {
       display: flex;
       flex-direction: row-reverse;
-      gap: em(770);
+      gap: em(600);
     }
     &__arrow-right{
       .EBIL-icon--r {
@@ -87,16 +91,25 @@ $identifier: 'impressions';
 
   /* RESPONSIVE
    * --------------------------------------------------------------------------- */
-
+  @media #{$mq-laptop} {
+    // --- children ---
+    #{$mod} {
+      &__arrows {
+        gap: em(555);
+      }
+    }
+  }
   @media #{$mq-tablet} {
     // --- children ---
     #{$mod} {
       &__item-wrap {
         margin-top: em(-80);
       }
+      &__arrow-wrap {
+        margin-top: 55%;
+      }
       &__arrows {
-        top: 53%;
-        gap: em(440);
+        gap: em(250);
       }
       &__item {
         img {
@@ -111,9 +124,11 @@ $identifier: 'impressions';
       &__item-wrap {
         margin-top: em(-30);
       }
+      &__arrow-wrap {
+        margin-top: 65%;
+      }
       &__arrows {
-        top: 80%;
-        gap: em(180);
+        gap: em(220);
       }
       &__arrow-right{
         .EBIL-icon--r {
@@ -130,8 +145,8 @@ $identifier: 'impressions';
   @media #{$mq-custom} {
     // --- children ---
     #{$mod} {
-      &__arrows {
-        top: 85%;
+      &__arrow-wrap {
+        margin-top: 70%;
       }
       &__item {
         img {
@@ -143,8 +158,11 @@ $identifier: 'impressions';
   @media #{$mq-phone} {
     // --- children ---
     #{$mod} {
+      &__arrow-wrap {
+        margin-top: 77%;
+      }
       &__arrows {
-        top: 88%;
+        gap: em(180);
       }
     }
   }
@@ -152,7 +170,6 @@ $identifier: 'impressions';
     // --- children ---
     #{$mod} {
       &__arrows {
-        top: 90%;
         gap: em(130);
       }
     }
