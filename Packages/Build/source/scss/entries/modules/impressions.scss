@@ -192,13 +192,16 @@ $identifier: 'impressions';
       &__arrow-wrap {
         margin-top: -20%;
       }
+      &__arrows {
+        gap: em(90);
+      }
     }
   }
   @media #{$mq-phone-small} {
     // --- children ---
     #{$mod} {
       &__arrows {
-        gap: em(130);
+        gap: em(80);
       }
     }
   }
