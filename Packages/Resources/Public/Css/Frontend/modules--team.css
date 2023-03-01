@@ -172,7 +172,7 @@
   align-items: center;
   gap: 0.5rem;
   width: 90%;
-  padding: 2rem;
+  padding: 3rem;
 }
 .EBIL-module[data-id=team] .EBIL-module__cards:hover .EBIL-module__card {
   background: radial-gradient(100rem circle at var(--xPos) var(--yPos), rgba(0, 255, 241, 0.4), transparent 15%);
@@ -259,6 +259,9 @@
   align-items: center;
 }
 @media (max-width: 1024px) {
+  .EBIL-module[data-id=team] .EBIL-module__cards {
+    padding: 2rem;
+  }
   .EBIL-module[data-id=team] .EBIL-module__card::before {
     z-index: 0;
   }
