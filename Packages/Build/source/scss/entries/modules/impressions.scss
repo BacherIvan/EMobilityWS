@@ -47,6 +47,7 @@ $identifier: 'impressions';
         max-width: em(420);
         border-radius: 1rem;
         transition: all 250ms ease-in-out;
+        padding-bottom: em(70);
       }
     }
     &__arrow-wrap {
@@ -94,6 +95,16 @@ $identifier: 'impressions';
 
   /* RESPONSIVE
    * --------------------------------------------------------------------------- */
+  @media #{$mq-desktop-custom} {
+    // --- children ---
+    #{$mod} {
+      &__item {
+        img {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
   @media #{$mq-laptop} {
     // --- children ---
     #{$mod} {

@@ -191,6 +191,7 @@
   max-width: 42em;
   border-radius: 1rem;
   transition: all 250ms ease-in-out;
+  padding-bottom: 7em;
 }
 .EBIL-module[data-id=impressions] .EBIL-module__arrow-wrap {
   position: absolute;
@@ -216,6 +217,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+@media (max-width: 1690px) {
+  .EBIL-module[data-id=impressions] .EBIL-module__item img {
+    padding-bottom: 0;
+  }
 }
 @media (max-width: 1366px) {
   .EBIL-module[data-id=impressions] .EBIL-module__impression-wrap {
