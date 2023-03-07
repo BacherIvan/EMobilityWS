@@ -161,6 +161,7 @@
   bottom: 50%;
   transform: translateY(50%);
   z-index: 20;
+  mix-blend-mode: difference;
   /* RESPONSIVE
    * --------------------------------------------------------------------------- */
 }

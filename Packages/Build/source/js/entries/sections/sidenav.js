@@ -41,7 +41,7 @@ inView($modules.get(), (item) => {
         });
     });
 
-    inView($('.EBIL-section[data-id="footer"] .EBIL-section__row--2').get(), (item) => {
+    inView($('.EBIL-section[data-id="footer"] .EBIL-section__legal-menu').get(), (item) => {
         const $elementInView = $(item.target);
         const elementInViewCID = $elementInView.attr('id');
         $sideNavItems.find('.JS-item').removeClass('JS-act');

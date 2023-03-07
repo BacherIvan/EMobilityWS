@@ -121,7 +121,7 @@ Object(tk_source_root_js_utilities_in_view__WEBPACK_IMPORTED_MODULE_2__["inView"
       once: false
     });
   });
-  Object(tk_source_root_js_utilities_in_view__WEBPACK_IMPORTED_MODULE_2__["inView"])(cash_dom__WEBPACK_IMPORTED_MODULE_0___default()('.EBIL-section[data-id="footer"] .EBIL-section__row--2').get(), item => {
+  Object(tk_source_root_js_utilities_in_view__WEBPACK_IMPORTED_MODULE_2__["inView"])(cash_dom__WEBPACK_IMPORTED_MODULE_0___default()('.EBIL-section[data-id="footer"] .EBIL-section__legal-menu').get(), item => {
     const $elementInView = cash_dom__WEBPACK_IMPORTED_MODULE_0___default()(item.target);
     const elementInViewCID = $elementInView.attr('id');
     $sideNavItems.find('.JS-item').removeClass('JS-act');

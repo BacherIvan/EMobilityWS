@@ -19,6 +19,7 @@ $identifier: 'sidenav';
   bottom: 50%;
   transform: translateY(50%);
   z-index: $zi-sidenav;
+  mix-blend-mode: difference;
   // --- children ---
   #{$sect} {
     &__item {
