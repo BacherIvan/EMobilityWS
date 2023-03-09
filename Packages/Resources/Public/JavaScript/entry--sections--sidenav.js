@@ -125,7 +125,8 @@ Object(tk_source_root_js_utilities_in_view__WEBPACK_IMPORTED_MODULE_2__["inView"
     const $elementInView = cash_dom__WEBPACK_IMPORTED_MODULE_0___default()(item.target);
     const elementInViewCID = $elementInView.attr('id');
     $sideNavItems.find('.JS-item').removeClass('JS-act');
-    $sideNavItems.find('[data-cid="EBIL-section--footer"]').addClass('JS-act');
+    let x = document.getElementById('JS-footer-id');
+    x.classList.add('JS-act');
     tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_1__["LAYOUT"].$header.find('.JS-anchor').removeClass('JS-act');
     tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_1__["LAYOUT"].$header.find('[data-target="EBIL-section--footer"]').addClass('JS-act');
   }, {

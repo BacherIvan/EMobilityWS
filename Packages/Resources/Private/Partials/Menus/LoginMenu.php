@@ -10,7 +10,7 @@
                     <input id="JS-username" class="EBIL-section__input" type="text" placeholder="Enter Username" name="uname" required>
 
                     <label class="EBIL-section__lbl" for="psw"><b>Password</b></label>
-                    <input id="JS-password" class="EBIL-section__input" type="password" placeholder="Enter Password" name="pwd" required>
+                    <input id="JS-password" class="EBIL-section__input" type="password" placeholder="Enter Password" name="pwd" autocomplete="on" required>
 
                     <button id="JS-button" class="EBIL-section__button JS-login-button" type="button">Login</button>
                 </div>
