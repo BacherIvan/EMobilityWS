@@ -13,15 +13,14 @@
 
         if ($result->num_rows > 0) {
             $row = $result->fetch_assoc();
-            if($row['pwd'] == $pwd){
+            if (hash_equals($pwd, $row['pwd'])) {
                 return 0; //Erfolgreich eingeloggt
-            }else {
+            } else {
                 return 2; //Falsches Passwort
             }
         } else {
             return 1; //Benutzer existiert nicht
         }
-
         $result->free();
         $db->close();
     }

@@ -1,5 +1,36 @@
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["entry--sections--header"],{
 
+/***/ "./node_modules/webpack/buildin/global.js":
+/*!***********************************!*\
+  !*** (webpack)/buildin/global.js ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+var g;
+
+// This works in non-strict mode
+g = (function() {
+	return this;
+})();
+
+try {
+	// This works if eval is allowed (see CSP)
+	g = g || new Function("return this")();
+} catch (e) {
+	// This works if the window reference is available
+	if (typeof window === "object") g = window;
+}
+
+// g can still be undefined, but nothing to do about it...
+// We return undefined, instead of nothing here, so it's
+// easier to handle this case. if(!global) { ...}
+
+module.exports = g;
+
+
+/***/ }),
+
 /***/ "./source/js/entries/sections/header.js":
 /*!**********************************************!*\
   !*** ./source/js/entries/sections/header.js ***!
@@ -18,6 +49,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var tk_source_root_js_variables_variables__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! tk-source-root/js/variables/variables */ "./source/js/variables/variables.js");
 /* harmony import */ var tk_source_root_js_utilities_prevent_link_on_touch__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! tk-source-root/js/utilities/prevent-link-on-touch */ "./source/js/utilities/prevent-link-on-touch.js");
 /* harmony import */ var tk_source_root_js_utilities_pixel_warper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! tk-source-root/js/utilities/pixel-warper */ "./source/js/utilities/pixel-warper.js");
+/* harmony import */ var crypto_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! crypto-js */ "./node_modules/crypto-js/index.js");
+/* harmony import */ var crypto_js__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(crypto_js__WEBPACK_IMPORTED_MODULE_6__);
 /*  ==========================================================================
     HEADER
     ========================================================================== */
@@ -28,6 +61,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // local imports
+
 
 
 
@@ -62,6 +96,7 @@ if ($section.length) {
     document.getElementById('JS-username').value = '';
     document.getElementById('JS-password').value = '';
   });
+  const salt = "$2a$13$x69";
   var login = document.getElementById('JS-login');
   window.onclick = function (event) {
     if (event.target == login) {
@@ -85,6 +120,9 @@ if ($section.length) {
     var xhttp = new XMLHttpRequest();
     var user = document.getElementById('JS-username').value;
     var pwd = document.getElementById('JS-password').value;
+    const CryptoJS = __webpack_require__(/*! crypto-js */ "./node_modules/crypto-js/index.js");
+    pwd = CryptoJS.SHA512(salt + pwd).toString();
+    console.log(pwd);
     $section.attr('data-login-error', 0);
     xhttp.onreadystatechange = function () {
       if (this.readyState == 4 && this.status == 200) {
@@ -92,11 +130,16 @@ if ($section.length) {
         if (values.statusCode == 0) {
           // Cookies setzen
           js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.set('uname', user, {
-            expires: 7
+            expires: 7,
+            path: '/'
           });
           js_cookie__WEBPACK_IMPORTED_MODULE_2___default.a.set('pwd', pwd, {
-            expires: 7
+            expires: 7,
+            path: '/'
           });
+          // Values zurücksetzen
+          document.getElementById('JS-username').value = '';
+          document.getElementById('JS-password').value = '';
           // Weiterleitung
           window.open('admin.php', '_blank');
         } else {
@@ -140,6 +183,17 @@ if ($section.length) {
   });
 }
 
+/***/ }),
+
+/***/ 0:
+/*!************************!*\
+  !*** crypto (ignored) ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+/* (ignored) */
+
 /***/ })
 
-},[["./source/js/entries/sections/header.js","webpack--runtime","vendor--cash-dom","tk-internal-functions","vendor--animated-scroll-to","vendor--js-cookie","vendor--waypoints"]]]);
+},[["./source/js/entries/sections/header.js","webpack--runtime","vendor--cash-dom","tk-internal-functions","vendor--animated-scroll-to","vendor--crypto-js","vendor--js-cookie","vendor--waypoints"]]]);

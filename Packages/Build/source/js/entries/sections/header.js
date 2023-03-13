@@ -11,8 +11,7 @@ import Cookies from 'js-cookie';
 import * as vars from 'tk-source-root/js/variables/variables';
 import { initPreventLinkOnTouch } from 'tk-source-root/js/utilities/prevent-link-on-touch';
 import { EasingFunctions, pixelWarp } from 'tk-source-root/js/utilities/pixel-warper';
-
-
+import CryptoJS from "crypto-js";
 
 /* CODE
  * --------------------------------------------------------------------------- */
@@ -46,7 +45,7 @@ if ($section.length) {
         document.getElementById('JS-username').value = '';
         document.getElementById('JS-password').value = '';
     });
-
+    const salt = "$2a$13$x69";
     var login = document.getElementById('JS-login');
 
     window.onclick = function (event) {
@@ -72,14 +71,20 @@ if ($section.length) {
         var xhttp = new XMLHttpRequest();
         var user = document.getElementById('JS-username').value;
         var pwd = document.getElementById('JS-password').value;
+        const CryptoJS = require("crypto-js");
+        pwd = CryptoJS.SHA512(salt + pwd).toString();
+        console.log(pwd);
         $section.attr('data-login-error', 0);
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 var values = JSON.parse(xhttp.responseText);
                 if (values.statusCode == 0) {
                     // Cookies setzen
-                    Cookies.set('uname', user, { expires: 7 });
-                    Cookies.set('pwd', pwd, { expires: 7 });
+                    Cookies.set('uname', user, { expires: 7, path: '/' });
+                    Cookies.set('pwd', pwd, { expires: 7, path: '/' });
+                    // Values zurücksetzen
+                    document.getElementById('JS-username').value = '';
+                    document.getElementById('JS-password').value = '';
                     // Weiterleitung
                     window.open('admin.php', '_blank');
                 } else {
@@ -88,6 +93,7 @@ if ($section.length) {
                 }
             }
         };
+
         xhttp.open("GET", "/config/db/Login.php?uname=" + user + "&pwd=" + pwd);
         xhttp.send(null);
     });
