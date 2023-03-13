@@ -35,6 +35,25 @@
     }
   }
 }
+// scroll bar
+$clr-scroll-track: $clr-tk-admin;
+$clr-scroll-thumb: $clr-white;
+::-webkit-scrollbar {
+  height: em(1);
+  width: em(1);
+
+  &-track {
+    background-color: $clr-scroll-track;
+  }
+
+  &-thumb {
+    background-color: $clr-scroll-thumb;
+  }
+
+  &-button {
+    display: none;
+  }
+}
 $identifier: 'admin';
 
 #{$sect}[data-id="#{$identifier}"] {
