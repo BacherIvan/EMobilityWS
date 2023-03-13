@@ -1,0 +1,180 @@
+@import 'source/scss/storage/storage';
+
+/* STYLING
+ * --------------------------------------------------------------------------- */
+
+$identifier: 'footer';
+
+#{$sect}[data-id="#{$identifier}"] {
+  // --- children ---
+  #{$sect} {
+    &__footer-headline {
+      text-align: center;
+    }
+    &__footer-wrap {
+      display: flex;
+      background-color: $clr-white;
+      padding-top: em(50);
+      color: $clr-black;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__contact-wrap {
+      border-bottom: solid black;
+    }
+    &__footer-headlines {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__number {
+      > span {
+        color: $clr-black;
+      }
+    }
+    &__subheadline {
+      &::before {
+        background-color: $clr-black;
+      }
+      > span {
+        color: $clr-black;
+      }
+    }
+    &__headline {
+      > span {
+        color: $clr-black;
+      }
+    }
+    &__item-wrap {
+      padding-top: em(50);
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      gap: em(30);
+    }
+    &__email {
+      margin-bottom: em(15);
+      > a {
+        position: relative;
+        display: flex;
+        column-gap: em(30);
+        > span {
+          display: flex;
+          align-items: center;
+          font-size: em(15);
+        }
+        .EBIL-icon--email {
+          font-size: em(30);
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 4px;
+          border-radius: 4px;
+          background-color: #18272F;
+          bottom: em(-8);
+          left: 0;
+          transform-origin: right;
+          transform: scaleX(0);
+          transition: transform .3s ease-in-out;
+        }
+        &:hover {
+          &::before {
+            transform-origin: left;
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+    &__tel {
+      > a {
+        position: relative;
+        display: flex;
+        column-gap: em(30);
+        > span {
+          display: flex;
+          align-items: center;
+          font-size: em(15);
+        }
+        .EBIL-icon--tel {
+          font-size: em(30);
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 4px;
+          border-radius: 4px;
+          background-color: #18272F;
+          bottom: em(-8);
+          left: 0;
+          transform-origin: right;
+          transform: scaleX(0);
+          transition: transform .3s ease-in-out;
+        }
+        &:hover {
+          &::before {
+            transform-origin: left;
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+    &__location {
+      > a {
+        display: flex;
+        column-gap: em(30);
+        position: relative;
+        > span {
+          display: flex;
+          align-items: center;
+          font-size: em(15);
+        }
+        .EBIL-icon--loc {
+          font-size: em(30);
+        }
+        &::before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 4px;
+          border-radius: 4px;
+          background-color: #18272F;
+          bottom: em(-8);
+          left: 0;
+          transform-origin: right;
+          transform: scaleX(0);
+          transition: transform .3s ease-in-out;
+        }
+        &:hover {
+          &::before {
+            transform-origin: left;
+            transform: scaleX(1);
+          }
+        }
+      }
+    }
+    &__legal-menu {
+      padding-top: em(5);
+      font-size: em(15);
+      font-style: italic;
+    }
+  }
+
+
+  /* RESPONSIVE
+   * --------------------------------------------------------------------------- */
+
+  @media #{$mq-tablet} {
+
+    // --- children ---
+    #{$sect} {
+      &__footer-wrap {
+        padding: em(50) em(50) 0 em(50);
+      }
+    }
+  }
+}
+
+

@@ -15,6 +15,7 @@
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--sections--sidenav.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--sections--header.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--sections--hero.js"></script>
+        <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/entry--sections--footer.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/tk-internal-functions.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--cash-dom.js"></script>
         <script type="text/javascript" async src="/Packages/Resources/Public/JavaScript/vendor--countup-js.js"></script>
@@ -80,6 +81,7 @@
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/sections--sidenav.css">
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/sections--header.css">
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/sections--hero.css">
+        <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/sections--footer.css">
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/modules--text-pic.css">
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/modules--impressions.css">
         <link media="screen" rel="stylesheet" type="text/css" href="/Packages/Resources/Public/Css/Frontend/modules--team.css">
@@ -98,6 +100,7 @@
                 include("./Packages/Resources/Private/Sections/Header.php");
                 include("./Packages/Resources/Private/Sections/Hero.php");
                 include("./Packages/Resources/Private/Sections/Main.php");
+                include("./Packages/Resources/Private/Sections/Footer.php");
             ?>
             <div id="JS-waypoint--1" class="EBIL-waypoint EBIL-waypoint--1"></div>
         </div>
