@@ -77,7 +77,18 @@ $identifier: 'text-pic';
       &__wrap {
         flex-direction: column;
       }
+      &__text-headlines {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      &__text-headline {
+        text-align: center;
+      }
       &__col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         &--media {
           margin-right: 0;
         }

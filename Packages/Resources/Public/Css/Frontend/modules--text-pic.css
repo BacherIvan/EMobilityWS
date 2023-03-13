@@ -191,6 +191,19 @@
   .EBIL-module[data-id=text-pic] .EBIL-module__wrap {
     flex-direction: column;
   }
+  .EBIL-module[data-id=text-pic] .EBIL-module__text-headlines {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .EBIL-module[data-id=text-pic] .EBIL-module__text-headline {
+    text-align: center;
+  }
+  .EBIL-module[data-id=text-pic] .EBIL-module__col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .EBIL-module[data-id=text-pic] .EBIL-module__col--media {
     margin-right: 0;
   }
