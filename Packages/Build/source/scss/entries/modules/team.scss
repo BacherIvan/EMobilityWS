@@ -66,7 +66,7 @@ $identifier: 'team';
         #{$mod} {
           &__description {
             opacity: 1;
-            height: 30%;
+            height: 36%;
           }
         }
       }
@@ -100,9 +100,12 @@ $identifier: 'team';
         height: auto;
         cursor: zoom-in;
       }
+    }
+    &__pic {
+      width: inherit;
+      position: absolute;
       img {
-        position: absolute;
-        width: inherit;
+        width: 100%;
         height: auto;
       }
     }
@@ -157,12 +160,25 @@ $identifier: 'team';
 
   /* RESPONSIVE
    * --------------------------------------------------------------------------- */
-
+  @media #{$mq-desktop-small} {
+    #{$mod} {
+      &__card {
+        &:hover {
+          #{$mod} {
+            &__description {
+              height: 30%;
+            }
+          }
+        }
+      }
+    }
+  }
   @media #{$mq-tablet} {
     // --- children ---
     #{$mod} {
       &__cards {
         padding: 2rem;
+        gap: 3.5rem;
       }
       &__card {
         &::before {
@@ -180,15 +196,51 @@ $identifier: 'team';
     }
   }
 
+  @media #{$mq-tablet-custom} {
+    #{$mod} {
+      &__cards {
+        padding: 4rem 2rem 2rem 2rem;
+      }
+      &__card-content {
+        height: em(270);
+      }
+    }
+  }
+
+  @media #{$mq-phablet} {
+    // --- children ---
+    #{$mod} {
+      &__card {
+        height: 20rem;
+        &:hover {
+          #{$mod} {
+            &__description {
+              height: 26%;
+            }
+          }
+        }
+      }
+      &__card-content {
+        height: em(320);
+      }
+      &__cards {
+        gap: 2.5rem;
+      }
+    }
+  }
+
   @media #{$mq-phone} {
     // --- children ---
     #{$mod} {
-
+      &__card {
+        height: 19.5rem;
+      }
+      &__card-content {
+        height: em(360);
+      }
       &__cards {
         gap: 1.5rem;
-      }
-      &__description {
-        bottom: em(-10);
+        padding: 4rem 0 2rem 0;
       }
     }
   }
@@ -196,10 +248,7 @@ $identifier: 'team';
     // --- children ---
     #{$mod} {
       &__cards {
-        gap: 3.5rem;
-      }
-      &__card {
-        height: 11rem;
+        padding: 4rem 0 2rem 0;
       }
     }
   }
@@ -207,7 +256,21 @@ $identifier: 'team';
     // --- children ---
     #{$mod} {
       &__card {
-        height: 10.1rem;
+        height: 19rem;
+      }
+      &__card-content {
+        height: em(390);
+      }
+    }
+  }
+  @media #{$mq-phone-small-custom} {
+    // --- children ---
+    #{$mod} {
+      &__card {
+        height: 18rem;
+      }
+      &__card-content {
+        height: em(370);
       }
     }
   }

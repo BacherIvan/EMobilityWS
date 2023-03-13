@@ -196,7 +196,7 @@
 }
 .EBIL-module[data-id=team] .EBIL-module__card:hover .EBIL-module__description {
   opacity: 1;
-  height: 30%;
+  height: 36%;
 }
 .EBIL-module[data-id=team] .EBIL-module__card::before {
   content: "";
@@ -222,9 +222,12 @@
   height: auto;
   cursor: zoom-in;
 }
-.EBIL-module[data-id=team] .EBIL-module__card-content img {
-  position: absolute;
+.EBIL-module[data-id=team] .EBIL-module__pic {
   width: inherit;
+  position: absolute;
+}
+.EBIL-module[data-id=team] .EBIL-module__pic img {
+  width: 100%;
   height: auto;
 }
 .EBIL-module[data-id=team] .EBIL-module__description {
@@ -258,9 +261,15 @@
   flex-direction: column;
   align-items: center;
 }
+@media (max-width: 1600px) {
+  .EBIL-module[data-id=team] .EBIL-module__card:hover .EBIL-module__description {
+    height: 30%;
+  }
+}
 @media (max-width: 1024px) {
   .EBIL-module[data-id=team] .EBIL-module__cards {
     padding: 2rem;
+    gap: 3.5rem;
   }
   .EBIL-module[data-id=team] .EBIL-module__card::before {
     z-index: 0;
@@ -270,24 +279,58 @@
     height: 39%;
   }
 }
+@media (max-width: 991px) {
+  .EBIL-module[data-id=team] .EBIL-module__cards {
+    padding: 4rem 2rem 2rem 2rem;
+  }
+  .EBIL-module[data-id=team] .EBIL-module__card-content {
+    height: 27em;
+  }
+}
+@media (max-width: 767px) {
+  .EBIL-module[data-id=team] .EBIL-module__card {
+    height: 20rem;
+  }
+  .EBIL-module[data-id=team] .EBIL-module__card:hover .EBIL-module__description {
+    height: 26%;
+  }
+  .EBIL-module[data-id=team] .EBIL-module__card-content {
+    height: 32em;
+  }
+  .EBIL-module[data-id=team] .EBIL-module__cards {
+    gap: 2.5rem;
+  }
+}
 @media (max-width: 480px) {
+  .EBIL-module[data-id=team] .EBIL-module__card {
+    height: 19.5rem;
+  }
+  .EBIL-module[data-id=team] .EBIL-module__card-content {
+    height: 36em;
+  }
   .EBIL-module[data-id=team] .EBIL-module__cards {
     gap: 1.5rem;
-  }
-  .EBIL-module[data-id=team] .EBIL-module__description {
-    bottom: -1em;
+    padding: 4rem 0 2rem 0;
   }
 }
 @media (max-width: 415px) {
   .EBIL-module[data-id=team] .EBIL-module__cards {
-    gap: 3.5rem;
-  }
-  .EBIL-module[data-id=team] .EBIL-module__card {
-    height: 11rem;
+    padding: 4rem 0 2rem 0;
   }
 }
 @media (max-width: 350px) {
   .EBIL-module[data-id=team] .EBIL-module__card {
-    height: 10.1rem;
+    height: 19rem;
+  }
+  .EBIL-module[data-id=team] .EBIL-module__card-content {
+    height: 39em;
+  }
+}
+@media (max-width: 330px) {
+  .EBIL-module[data-id=team] .EBIL-module__card {
+    height: 18rem;
+  }
+  .EBIL-module[data-id=team] .EBIL-module__card-content {
+    height: 37em;
   }
 }
