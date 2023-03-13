@@ -164,6 +164,9 @@
   transition: 1.5s ease-out;
   transition-delay: 0.5s;
 }
+.EBIL-module[data-id=team] .EBIL-module__team-headline {
+  text-align: center;
+}
 .EBIL-module[data-id=team] .EBIL-module__cards {
   display: flex;
   flex-wrap: wrap;

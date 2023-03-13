@@ -21,6 +21,9 @@ $identifier: 'team';
       transition: 1.5s ease-out;
       transition-delay: 0.5s;
     }
+    &__team-headline {
+      text-align: center;
+    }
     &__cards {
       display: flex;
       flex-wrap: wrap;
