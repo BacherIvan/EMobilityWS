@@ -73,7 +73,6 @@ if ($section.length) {
         var pwd = document.getElementById('JS-password').value;
         const CryptoJS = require("crypto-js");
         pwd = CryptoJS.SHA512(salt + pwd).toString();
-        console.log(pwd);
         $section.attr('data-login-error', 0);
         xhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
