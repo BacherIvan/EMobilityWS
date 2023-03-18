@@ -381,6 +381,329 @@ $identifier: 'admin';
         display: block;
       }
     }
+    &__auto-headline {
+      > span {
+        font-size: em(25);
+        font-weight: $fw-bold;
+      }
+    }
+    &__auto-wrap {
+      padding-top: em(40);
+      gap: em(30);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    &__auto-data {
+      display: flex;
+      flex-direction: column;
+      gap: em(20);
+    }
+    &__status {
+      display: flex;
+      flex-direction: column;
+    }
+    &__description {
+      > span {
+        font-size: em(15);
+        font-weight: $fw-semi-bold;
+      }
+    }
+    &__lights {
+      display: flex;
+      align-items: center;
+      gap: em(106);
+    }
+    &__switch {
+      position: relative;
+      display: inline-block;
+      width: em(30);
+      height: em(14);
+      > input {
+        opacity: 0;
+        width: 0;
+        height: 0;
+        &:checked {
+          + .EBIL-section__slider-round {
+            background-color: $clr-tk-sliderBlue;
+            &:before {
+              transform: translateX(em(14));
+            }
+          }
+        }
+        &:focus {
+          #{$sect} {
+            &__slider-round {
+              box-shadow: 0 0 1px $clr-tk-sliderBlue;
+            }
+          }
+        }
+      }
+    }
+    &__slider-round {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $clr-tk-grey;
+      transition: all 0.4s;
+      border-radius: 34px;
+      &:before {
+        position: absolute;
+        content: "";
+        height: em(8);
+        width: em(8);
+        left: em(4);
+        bottom: em(3);
+        background-color: $clr-white;
+        transition: all 0.4s;
+        border-radius: 50%;
+      }
+    }
+    &__drive {
+      display: flex;
+      gap: em(112);
+      align-items: center;
+    }
+    &__directions {
+      display: flex;
+      flex-direction: column;
+      gap: em(5);
+    }
+    &__drive-button {
+      transition: transform 0.2s ease-in-out;
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+    &__autonomousDriving {
+      display: flex;
+      align-items: center;
+      gap: em(20);
+    }
+    &__special-description {
+      padding-top: em(5);
+    }
+    &__selectRoadColor {
+      display: flex;
+      gap: em(30);
+    }
+    &__dropdown {
+      position: relative;
+      width: em(100);
+      filter: url(#goo);
+      input {
+        display: none;
+
+        &:checked ~ .EBIL-section__dropdown-items {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+    &__dropdown-face,
+    &__dropdown-items {
+      background-color: $clr-tk-admin;
+      padding: em(7);
+      border-radius: em(25);
+    }
+    &__dropdown-face {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: relative;
+      justify-content: space-between;
+      .EBIL-icon--chevDown {
+        font-size: em(15);
+        color: black;
+      }
+    }
+    &__dropdown-items {
+      margin: 0;
+      position: absolute;
+      right: 0;
+      top: 40%;
+      width: 100%;
+      list-style: none;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      visibility: hidden;
+      z-index: 1;
+      opacity: 0;
+      transition: all 0.7s cubic-bezier(0.93, 0.88, 0.1, 0.8);
+
+      &::before {
+        content: "";
+        background-color: $clr-tk-admin;
+        position: absolute;
+        bottom: 100%;
+        right: 20%;
+        height: em(40);
+        width: em(20);
+      }
+      > li {
+        cursor: pointer;
+        .EBIL-icon--red {
+          display: block;
+          font-size: em(10);
+          color: red;
+        }
+        .EBIL-icon--blue {
+          display: block;
+          font-size: em(10);
+          color: blue;
+        }
+        .EBIL-icon--black {
+          display: block;
+          font-size: em(10);
+          color: black;
+        }
+        .EBIL-icon--green {
+          display: block;
+          font-size: em(10);
+          color: green;
+        }
+        .EBIL-icon--yellow {
+          display: block;
+          font-size: em(10);
+          color: yellow;
+        }
+        .EBIL-icon--white {
+          display: block;
+          font-size: em(10);
+          color: white;
+        }
+        &:hover {
+          transform: scale(1.2);
+        }
+        &.JS-clrRoad-act {
+          border-style: solid;
+          border-radius: em(10);
+          padding: em(1.5);
+        }
+      }
+    }
+    &__selectBusStopColor {
+      display: flex;
+      gap: em(45);
+      margin-top: em(-50);
+    }
+    &__dropdown-bus {
+      position: relative;
+      width: em(100);
+      filter: url(#goo);
+      input {
+        display: none;
+        &:checked ~ .EBIL-section__dropdown-bus-items {
+          visibility: visible;
+          opacity: 1;
+        }
+      }
+    }
+    &__dropdown-bus-face,
+    &__dropdown-bus-items {
+      background-color: $clr-tk-admin;
+      padding: em(7);
+      border-radius: em(25);
+    }
+    &__dropdown-bus-face {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      position: relative;
+      justify-content: space-between;
+      .EBIL-icon--chevDown {
+        font-size: em(15);
+        color: black;
+      }
+    }
+    &__dropdown-bus-items {
+      margin: 0;
+      position: absolute;
+      right: 0;
+      top: 40%;
+      width: 100%;
+      list-style: none;
+      list-style-type: none;
+      display: flex;
+      justify-content: space-between;
+      visibility: hidden;
+      z-index: 1;
+      opacity: 0;
+      transition: all 0.7s cubic-bezier(0.93, 0.88, 0.1, 0.8);
+
+      &::before {
+        content: "";
+        background-color: $clr-tk-admin;
+        position: absolute;
+        bottom: 100%;
+        right: 20%;
+        height: em(40);
+        width: em(20);
+      }
+      > li {
+        cursor: pointer;
+        .EBIL-icon--red1 {
+          display: block;
+          font-size: em(10);
+          color: red;
+        }
+        .EBIL-icon--blue1 {
+          display: block;
+          font-size: em(10);
+          color: blue;
+        }
+        .EBIL-icon--black1 {
+          display: block;
+          font-size: em(10);
+          color: black;
+        }
+        .EBIL-icon--green1 {
+          display: block;
+          font-size: em(10);
+          color: green;
+        }
+        .EBIL-icon--yellow1 {
+          display: block;
+          font-size: em(10);
+          color: yellow;
+        }
+        .EBIL-icon--white1 {
+          display: block;
+          font-size: em(10);
+          color: white;
+        }
+        &:hover {
+          transform: scale(1.2);
+        }
+        &.JS-clrBus-act {
+          border-style: solid;
+          border-radius: em(10);
+          padding: em(1.5);
+        }
+      }
+    }
+    &__svg {
+      pointer-events: none;
+    }
+    &__response {
+      display: flex;
+    }
+    &__response-err {
+      display: none;
+      > span {
+        color: $clr-tk-red;
+      }
+    }
+    &__response-success {
+      display: none;
+      > span {
+        color: $clr-tk-green;
+      }
+    }
   }
 
   &[data-new-entry="1"] {
@@ -433,6 +756,22 @@ $identifier: 'admin';
   &[data-entry-success="1"] {
     #{$sect} {
       &__entry-success {
+        display: block;
+      }
+    }
+  }
+
+  &[data-REST-Err="1"] {
+    #{$sect} {
+      &__response-err {
+        display: block;
+      }
+    }
+  }
+
+  &[data-REST-Success="1"] {
+    #{$sect} {
+      &__response-success {
         display: block;
       }
     }
@@ -535,6 +874,39 @@ $identifier: 'admin';
       }
       &__calendar {
         top: em(155);
+      }
+    }
+  }
+  @media #{$mq-phone-small} {
+    #{$sect} {
+      &__auto-headline {
+        > span {
+          font-size: em(22);
+        }
+      }
+      &__auto-data {
+        width: 100%;
+        padding-left: em(30);
+      }
+      &__lights {
+        gap: em(94);
+      }
+      &__drive {
+        gap: em(101);
+      }
+      &__autonomousDriving {
+        gap: em(8);
+      }
+      &__selectRoadColor {
+        column-gap: em(70);
+        row-gap: em(20);
+        flex-wrap: wrap;
+      }
+      &__selectBusStopColor {
+        column-gap: em(70);
+        row-gap: em(20);
+        flex-wrap: wrap;
+        margin-top: em(-60);
       }
     }
   }

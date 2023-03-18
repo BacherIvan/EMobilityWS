@@ -490,6 +490,314 @@
 .EBIL-section[data-id=admin] .EBIL-section__auto.JS-act {
   display: block;
 }
+.EBIL-section[data-id=admin] .EBIL-section__auto-headline > span {
+  font-size: 2.5em;
+  font-weight: 600;
+}
+.EBIL-section[data-id=admin] .EBIL-section__auto-wrap {
+  padding-top: 4em;
+  gap: 3em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.EBIL-section[data-id=admin] .EBIL-section__auto-data {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+.EBIL-section[data-id=admin] .EBIL-section__status {
+  display: flex;
+  flex-direction: column;
+}
+.EBIL-section[data-id=admin] .EBIL-section__description > span {
+  font-size: 1.5em;
+  font-weight: 500;
+}
+.EBIL-section[data-id=admin] .EBIL-section__lights {
+  display: flex;
+  align-items: center;
+  gap: 10.6em;
+}
+.EBIL-section[data-id=admin] .EBIL-section__switch {
+  position: relative;
+  display: inline-block;
+  width: 3em;
+  height: 1.4em;
+}
+.EBIL-section[data-id=admin] .EBIL-section__switch > input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.EBIL-section[data-id=admin] .EBIL-section__switch > input:checked + .EBIL-section__slider-round {
+  background-color: #2196F3;
+}
+.EBIL-section[data-id=admin] .EBIL-section__switch > input:checked + .EBIL-section__slider-round:before {
+  transform: translateX(1.4em);
+}
+.EBIL-section[data-id=admin] .EBIL-section__switch > input:focus .EBIL-section__slider-round {
+  box-shadow: 0 0 1px #2196F3;
+}
+.EBIL-section[data-id=admin] .EBIL-section__slider-round {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #c5c6c6;
+  transition: all 0.4s;
+  border-radius: 34px;
+}
+.EBIL-section[data-id=admin] .EBIL-section__slider-round:before {
+  position: absolute;
+  content: "";
+  height: 0.8em;
+  width: 0.8em;
+  left: 0.4em;
+  bottom: 0.3em;
+  background-color: #FFFFFF;
+  transition: all 0.4s;
+  border-radius: 50%;
+}
+.EBIL-section[data-id=admin] .EBIL-section__drive {
+  display: flex;
+  gap: 11.2em;
+  align-items: center;
+}
+.EBIL-section[data-id=admin] .EBIL-section__directions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+.EBIL-section[data-id=admin] .EBIL-section__drive-button {
+  transition: transform 0.2s ease-in-out;
+}
+.EBIL-section[data-id=admin] .EBIL-section__drive-button:hover {
+  transform: scale(1.2);
+}
+.EBIL-section[data-id=admin] .EBIL-section__autonomousDriving {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+}
+.EBIL-section[data-id=admin] .EBIL-section__special-description {
+  padding-top: 0.5em;
+}
+.EBIL-section[data-id=admin] .EBIL-section__selectRoadColor {
+  display: flex;
+  gap: 3em;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown {
+  position: relative;
+  width: 10em;
+  filter: url(#goo);
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown input {
+  display: none;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown input:checked ~ .EBIL-section__dropdown-items {
+  visibility: visible;
+  opacity: 1;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-face, .EBIL-section[data-id=admin] .EBIL-section__dropdown-items {
+  background-color: #636363;
+  padding: 0.7em;
+  border-radius: 2.5em;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-face {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-face .EBIL-icon--chevDown {
+  font-size: 1.5em;
+  color: black;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-items {
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 40%;
+  width: 100%;
+  list-style: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  visibility: hidden;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.7s cubic-bezier(0.93, 0.88, 0.1, 0.8);
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-items::before {
+  content: "";
+  background-color: #636363;
+  position: absolute;
+  bottom: 100%;
+  right: 20%;
+  height: 4em;
+  width: 2em;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-items > li {
+  cursor: pointer;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-items > li .EBIL-icon--red {
+  display: block;
+  font-size: 1em;
+  color: red;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-items > li .EBIL-icon--blue {
+  display: block;
+  font-size: 1em;
+  color: blue;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-items > li .EBIL-icon--black {
+  display: block;
+  font-size: 1em;
+  color: black;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-items > li .EBIL-icon--green {
+  display: block;
+  font-size: 1em;
+  color: green;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-items > li .EBIL-icon--yellow {
+  display: block;
+  font-size: 1em;
+  color: yellow;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-items > li .EBIL-icon--white {
+  display: block;
+  font-size: 1em;
+  color: white;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-items > li:hover {
+  transform: scale(1.2);
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-items > li.JS-clrRoad-act {
+  border-style: solid;
+  border-radius: 1em;
+  padding: 0.15em;
+}
+.EBIL-section[data-id=admin] .EBIL-section__selectBusStopColor {
+  display: flex;
+  gap: 4.5em;
+  margin-top: -5em;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-bus {
+  position: relative;
+  width: 10em;
+  filter: url(#goo);
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-bus input {
+  display: none;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-bus input:checked ~ .EBIL-section__dropdown-bus-items {
+  visibility: visible;
+  opacity: 1;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-bus-face, .EBIL-section[data-id=admin] .EBIL-section__dropdown-bus-items {
+  background-color: #636363;
+  padding: 0.7em;
+  border-radius: 2.5em;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-bus-face {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  justify-content: space-between;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-bus-face .EBIL-icon--chevDown {
+  font-size: 1.5em;
+  color: black;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-bus-items {
+  margin: 0;
+  position: absolute;
+  right: 0;
+  top: 40%;
+  width: 100%;
+  list-style: none;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+  visibility: hidden;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.7s cubic-bezier(0.93, 0.88, 0.1, 0.8);
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-bus-items::before {
+  content: "";
+  background-color: #636363;
+  position: absolute;
+  bottom: 100%;
+  right: 20%;
+  height: 4em;
+  width: 2em;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-bus-items > li {
+  cursor: pointer;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-bus-items > li .EBIL-icon--red1 {
+  display: block;
+  font-size: 1em;
+  color: red;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-bus-items > li .EBIL-icon--blue1 {
+  display: block;
+  font-size: 1em;
+  color: blue;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-bus-items > li .EBIL-icon--black1 {
+  display: block;
+  font-size: 1em;
+  color: black;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-bus-items > li .EBIL-icon--green1 {
+  display: block;
+  font-size: 1em;
+  color: green;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-bus-items > li .EBIL-icon--yellow1 {
+  display: block;
+  font-size: 1em;
+  color: yellow;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-bus-items > li .EBIL-icon--white1 {
+  display: block;
+  font-size: 1em;
+  color: white;
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-bus-items > li:hover {
+  transform: scale(1.2);
+}
+.EBIL-section[data-id=admin] .EBIL-section__dropdown-bus-items > li.JS-clrBus-act {
+  border-style: solid;
+  border-radius: 1em;
+  padding: 0.15em;
+}
+.EBIL-section[data-id=admin] .EBIL-section__svg {
+  pointer-events: none;
+}
+.EBIL-section[data-id=admin] .EBIL-section__response {
+  display: flex;
+}
+.EBIL-section[data-id=admin] .EBIL-section__response-err {
+  display: none;
+}
+.EBIL-section[data-id=admin] .EBIL-section__response-err > span {
+  color: #ae173b;
+}
+.EBIL-section[data-id=admin] .EBIL-section__response-success {
+  display: none;
+}
+.EBIL-section[data-id=admin] .EBIL-section__response-success > span {
+  color: #04AA6D;
+}
 .EBIL-section[data-id=admin][data-new-entry="1"] .EBIL-section__admin-menu {
   display: none;
 }
@@ -521,6 +829,12 @@
   display: block;
 }
 .EBIL-section[data-id=admin][data-entry-success="1"] .EBIL-section__entry-success {
+  display: block;
+}
+.EBIL-section[data-id=admin][data-REST-Err="1"] .EBIL-section__response-err {
+  display: block;
+}
+.EBIL-section[data-id=admin][data-REST-Success="1"] .EBIL-section__response-success {
   display: block;
 }
 @media (max-width: 1024px) {
@@ -595,5 +909,34 @@
   }
   .EBIL-section[data-id=admin] .EBIL-section__calendar {
     top: 15.5em;
+  }
+}
+@media (max-width: 350px) {
+  .EBIL-section[data-id=admin] .EBIL-section__auto-headline > span {
+    font-size: 2.2em;
+  }
+  .EBIL-section[data-id=admin] .EBIL-section__auto-data {
+    width: 100%;
+    padding-left: 3em;
+  }
+  .EBIL-section[data-id=admin] .EBIL-section__lights {
+    gap: 9.4em;
+  }
+  .EBIL-section[data-id=admin] .EBIL-section__drive {
+    gap: 10.1em;
+  }
+  .EBIL-section[data-id=admin] .EBIL-section__autonomousDriving {
+    gap: 0.8em;
+  }
+  .EBIL-section[data-id=admin] .EBIL-section__selectRoadColor {
+    column-gap: 7em;
+    row-gap: 2em;
+    flex-wrap: wrap;
+  }
+  .EBIL-section[data-id=admin] .EBIL-section__selectBusStopColor {
+    column-gap: 7em;
+    row-gap: 2em;
+    flex-wrap: wrap;
+    margin-top: -6em;
   }
 }

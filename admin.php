@@ -31,7 +31,7 @@
         <link rel="stylesheet" type="text/css" href="Packages/Resources/Public/Css/Frontend/flatpickr_light.css">
     </head>
     <body data-hero-layout="full">
-        <section id="EBIL-section--admin" class="EBIL-section" data-id="admin" data-new-entry="0" data-person-required="0" data-date-time-required="0" data-text-required="0" data-entry-success="0" data-hero-layout="full">
+        <section id="EBIL-section--admin" class="EBIL-section" data-id="admin" data-new-entry="0" data-person-required="0" data-date-time-required="0" data-text-required="0" data-entry-success="0" data-REST-Err="0" data-REST-Success="0" data-hero-layout="full">
             <div class="EBIL-section__wrap">
                 <?php
                     include $_SERVER["DOCUMENT_ROOT"] . "/Packages/Resources/Private/Partials/Menus/AdminMenu.html";
