@@ -233,6 +233,7 @@ if ($section.length) {
   const busStopColor = document.querySelector('.JS-busStopColor');
   const lightMode = document.querySelector('.JS-lightMode');
   const autonomousMode = document.querySelector('.JS-autonomousMode');
+  const speed = document.querySelector('.JS-speed');
   var lightSwitch = document.getElementById('JS-lightSwitch');
   var autonomousSwitch = document.getElementById('JS-autonomousSwitch');
   function updateStatus(status) {
@@ -241,6 +242,7 @@ if ($section.length) {
     busStopColor.innerHTML = status.bus_stop_color;
     lightMode.innerHTML = status.light_on ? 'On' : 'Off';
     autonomousMode.innerHTML = status.autonomous_mode ? 'On' : 'Off';
+    speed.innerHTML = status.speed;
     if (status.light_on) {
       lightSwitch.checked = true;
       lightMode.style.color = 'green';
@@ -437,7 +439,7 @@ if ($section.length) {
   let selectedv2 = null;
   dropdownBusItems.forEach(item => {
     if (!checkBus) {
-      document.getElementById('yellow1').classList.remove('JS-clrRoad-act');
+      document.getElementById('yellow1').classList.remove('JS-clrBus-act');
       checkBus = true;
     }
     item.addEventListener('click', () => {
