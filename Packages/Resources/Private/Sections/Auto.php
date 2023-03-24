@@ -28,7 +28,7 @@
                             <span class="JS-autonomousMode"></span>
                         </li>
                         <li class="EBIL-section__speed">
-                            <span><b>Autonomes Fahren:</b></span>
+                            <span><b>Speed:</b></span>
                             <span class="JS-speed"></span>
                         </li>
                     </ul>
