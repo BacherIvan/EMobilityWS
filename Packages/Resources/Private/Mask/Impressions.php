@@ -18,52 +18,52 @@
             </div>
             <div class="EBIL-module__item-wrap JS-impression-wrap">
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/Impression3-min.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression3-min.webp" alt="Programmierung des Spurhaltungsprogramms">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/Impression1-min.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression8.webp" alt="Finales Auto">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/Impression2-min.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression6.webp" alt="Finales Autodesign mit Platzierung der Komponenten im Inneren">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/Impression3-min.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression5.webp" alt="Finales Autodesign von Außen">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/Impression1-min.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression7.webp" alt="Auto von Innen">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/Impression2-min.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression4.webp" alt="Schnappschuss des Ersten Prototyps">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/Impression3-min.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression2-min.webp" alt="Ausfresen des ersten Prototypen">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/Impression1-min.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression1-min.webp" alt="Ausfresen des ersten Prototypen">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/Impression2-min.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression3-min.webp" alt="Programmierung des Spurhaltungsprogramms">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/Impression3-min.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression8.webp" alt="Finales Auto">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/Impression1-min.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression6.webp" alt="Finales Autodesign mit Platzierung der Komponenten im Inneren">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/Impression2-min.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression5.webp" alt="Finales Autodesign von Außen">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/Impression3-min.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression7.webp" alt="Auto von Innen">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/Impression1-min.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression4.webp" alt="Schnappschuss des Ersten Prototyps">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/Impression2-min.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression2-min.webp" alt="Ausfresen des ersten Prototypen">
                 </div>
                 <div class="EBIL-module__item JS-impression-item">
-                    <img src="/Packages/Resources/Public/Images/_custom/Impression3-min.webp" alt="Test">
+                    <img src="/Packages/Resources/Public/Images/_custom/Impression1-min.webp" alt="Erster Plan und Design des finalen Autos">
                 </div>
             </div>
             <div class="EBIL-module__arrow-wrap">
