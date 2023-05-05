@@ -308,7 +308,7 @@ if ($section.length) {
   function setAutonomousDrive(onOff) {
     $section.attr('data-REST-Err', 0);
     $section.attr('data-REST-Success', 0);
-    fetch(`${baseUrl}/autonomous/${onOff}`, {
+    fetch(`${baseUrl}/autonomousDrive/${onOff}`, {
       method: "POST",
       headers: {
         Authorization: `Basic ${btoa(username + ":" + password)}`
