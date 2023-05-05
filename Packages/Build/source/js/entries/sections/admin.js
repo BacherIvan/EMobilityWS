@@ -392,7 +392,7 @@ if ($section.length) {
     // call getStatus every second
     setInterval(() => {
         getStatus();
-    }, 1000);
+    }, 2000);
 
     var stop = false;
     $section.on('click', '.JS-driveForwards-button', () => {
